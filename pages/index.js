@@ -12,7 +12,7 @@ export const Home = ({content}) => {
             <div className="title font-saira font-bold text-white text-[4em] mx-24 my-10 leading-tight">H-town can help: <br></br> Donate Now</div>
           </div>
           <div className="w-full h-full">
-            <img src={content[0].fields.heroImage.fields.file.url} alt="hero image" class="w-full h-full object-cover"></img>
+            <img src={content[0].fields.heroImage.fields.file.url} alt="hero image" className="w-full h-full object-cover"></img>
           </div>
         </div>
         {/* yellow section */}
