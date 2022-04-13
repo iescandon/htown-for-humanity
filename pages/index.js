@@ -1,5 +1,7 @@
 import { createClient } from "contentful";
 import ContactForm from '../components/form'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHandHoldingDollar, faHouseChimney, faMoneyBill1Wave } from '@fortawesome/free-solid-svg-icons'
 
 export const Home = ({content}) => {
   console.log(content);
@@ -36,8 +38,22 @@ export const Home = ({content}) => {
         </div>
       </section>
       {/* 1st white section */}
-      <section className="h-[300px]">
-
+      <section className="h-[300px] flex flex-row">
+        <div className="w-1/3 flex flex-col justify-center items-center text-center">
+          <FontAwesomeIcon className="text-5xl mb-6 bg-black text-white p-4 rounded-full" icon={faMoneyBill1Wave} />
+          <p className="text-5xl font-saira font-semibold">$300</p>
+          <p>raised since April 12, 2022</p>
+        </div>
+        <div className="w-1/3 flex flex-col justify-center items-center text-center">
+          <FontAwesomeIcon className="text-5xl mb-6 bg-black text-white p-4 rounded-full" icon={faHouseChimney} />
+          <p className="text-5xl font-saira font-semibold">15</p>
+          <p>families placed in homes</p>
+        </div>
+        <div className="w-1/3 flex flex-col justify-center items-center text-center">
+          <FontAwesomeIcon className="text-5xl mb-6 bg-black text-white p-4 rounded-full" icon={faHandHoldingDollar} />
+          <p className="text-5xl font-saira font-semibold">100%</p>
+          <p>of donations given to refugees in need</p>
+        </div>
       </section>
       {/* blue section */}
       <section className="h-[500px] flex flex-row">

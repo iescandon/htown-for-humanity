@@ -51,7 +51,7 @@ function MyForm({ contactFormTitle }) {
       onSubmit={handleOnSubmit}
     >
         <div className="font-saira font-bold text-[3em]">{contactFormTitle}</div>
-      <label className="mt-5 font-semibold" htmlFor="reason">
+      <label className="mt-5s" htmlFor="reason">
         I would love to help by
       </label>
       <select
@@ -59,23 +59,14 @@ function MyForm({ contactFormTitle }) {
         id="reason"
         className="border rounded border-platinum"
       >
-        <option value="I'd like for you to make me a website">
-          I&apos;d like for you to make me a website
+        <option value="I'd like to take in a family">
+          I&apos;d like to take in a family
         </option>
-        <option value="I'd like to interview you for a job">
-          I&apos;d like to interview you for a job
-        </option>
-        <option value="I want to work with you on a project">
-          I want to work with you on a project
-        </option>
-        <option value="I just want to give you a compliment">
-          I just want to give you a compliment
-        </option>
-        <option value="I'd like to pet your dog">
-          I&apos;d like to pet your dog
+        <option value="I'd like to volunteer to work with H-Town for Humanity">
+          I&apos;d like to volunteer to work with H-Town for Humanity
         </option>
       </select>
-      <label className="mt-5 font-semibold" htmlFor="name">
+      <label className="mt-5" htmlFor="name">
         My name is
       </label>
       <input
@@ -86,7 +77,7 @@ function MyForm({ contactFormTitle }) {
         placeholder="your name"
         required
       />
-      <label className="mt-5 font-semibold" htmlFor="email">
+      <label className="mt-5" htmlFor="email">
         You can reply to me at
       </label>
       <input
