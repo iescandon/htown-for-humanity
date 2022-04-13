@@ -19,7 +19,7 @@ export const Home = ({content}) => {
         <div className="w-screen h-[350px] bg-flagYellow">
         </div>
         <div className="absolute w-full h-full flex top-0 justify-end items-center">
-          <div className="card relative bg-white w-[375px] h-[750px] mr-20"></div>
+          <div className="relative bg-white w-[375px] h-[750px] mr-20"></div>
         </div>
       </section>
       {/* 1st white section */}
@@ -27,15 +27,16 @@ export const Home = ({content}) => {
 
       </section>
       {/* blue section */}
-      <section className="h-[450px] flex flex-row">
-        <div className="bg-flagBlue h-full w-1/2">
+      <section className="h-[500px] flex flex-row">
+        <div className="bg-flagBlue h-full w-2/3 flex flex-row justify-center items-center">
+          <p className="card bg-white m-8 w-full h-90percent"></p>
         </div>
-        <img src="https://www.politico.com/dims4/default/0081a6d/2147483647/strip/true/crop/8015x5346+0+0/resize/1260x840!/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Ff7%2F13%2F25c33f46427190c964a69f15dcae%2Fgettyimages-1366284970.jpg" className="bg-white h-full w-1/2 object-cover"/>
+        <img className="bg-white h-full w-1/3 object-cover" src="https://www.politico.com/dims4/default/0081a6d/2147483647/strip/true/crop/8015x5346+0+0/resize/1260x840!/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2Ff7%2F13%2F25c33f46427190c964a69f15dcae%2Fgettyimages-1366284970.jpg"/>
       </section>  
       {/* 2nd white section */}
-      <section className="h-[500px]">
+      {/* <section className="h-[500px]">
 
-      </section>
+      </section> */}
       {/* footer */}
       <footer className="bg-black h-[100px]">
 
