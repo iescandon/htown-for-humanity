@@ -1,4 +1,5 @@
 import { createClient } from "contentful";
+import ContactForm from '../components/form'
 
 export const Home = ({content}) => {
   console.log(content);
@@ -41,10 +42,12 @@ export const Home = ({content}) => {
       {/* blue section */}
       <section className="h-[500px] flex flex-row">
         <div className="bg-flagBlue h-full w-2/3 flex flex-row justify-center items-center">
-          <p className="card bg-white m-8 w-full h-90percent"></p>
+          <div className="card bg-white m-8 w-full h-90percent p-6">
+          <ContactForm contactFormTitle={content[0].fields.contactFormTitle}/>  
+          </div>
         </div>
         <img className="bg-white h-full w-1/3 object-cover" src={content[0].fields.contactAsideImage.fields.file.url}/>
-      </section>  
+      </section>      
       {/* 2nd white section */}
       {/* <section className="h-[500px]">
 
