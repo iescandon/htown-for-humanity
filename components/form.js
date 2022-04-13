@@ -60,10 +60,10 @@ function MyForm({ contactFormTitle }) {
         className="border rounded border-platinum"
       >
         <option value="I'd like for you to make me a website">
-          I'd like for you to make me a website
+          I&apos;d like for you to make me a website
         </option>
         <option value="I'd like to interview you for a job">
-          I'd like to interview you for a job
+          I&apos;d like to interview you for a job
         </option>
         <option value="I want to work with you on a project">
           I want to work with you on a project
@@ -72,7 +72,7 @@ function MyForm({ contactFormTitle }) {
           I just want to give you a compliment
         </option>
         <option value="I'd like to pet your dog">
-          I'd like to pet your dog
+          I&apos;d like to pet your dog
         </option>
       </select>
       <label className="mt-5 font-semibold" htmlFor="name">
