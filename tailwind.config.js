@@ -10,8 +10,10 @@ module.exports = {
         flagYellow: '#ffd700',
       },
       fontFamily: {
-        secular: ['Secular One'],
-        saira: 'Saira'
+        // secular: ['Secular One'],
+        // openSans: ['Open Sans'],
+        // saira: 'Saira'
+        lato: 'Lato'
       },
       height: (theme) => ({
         '5screen': '5vh',

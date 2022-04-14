@@ -31,76 +31,66 @@ function MyForm({ contactFormTitle }) {
       data: new FormData(form),
     })
       .then((r) => {
-        handleServerResponse(true, "Thanks!", form);
+        handleServerResponse(true, "Submission successful!", form);
       })
       .catch((r) => {
         handleServerResponse(false, r.response.data.error, form);
       });
   };
 
-//   window.onload = function() { 
-//     var el = document.getElementById('g-recaptcha-response'); 
-//     if (el) { 
-//       el.setAttribute('required', 'required'); 
-//     } 
-//   }
+  //   window.onload = function() {
+  //     var el = document.getElementById('g-recaptcha-response');
+  //     if (el) {
+  //       el.setAttribute('required', 'required');
+  //     }
+  //   }
 
   return (
     <form
-      className="h-full flex flex-col justify-center focus:outline-goldenrod"
+      className="p-6 h-full flex flex-col justify-center"
       onSubmit={handleOnSubmit}
     >
-        <div className="font-saira font-bold text-[3em]">{contactFormTitle}</div>
-      <label className="mt-5s" htmlFor="reason">
+      <div className="font-lato font-bold text-[3em]">{contactFormTitle}</div>
+      {/* <label className="mt-5s" htmlFor="reason">
         I would love to help by
-      </label>
-      <select
-        name="reason"
-        id="reason"
-        className="border rounded border-platinum"
-      >
+      </label> */}
+      <select name="reason" id="reason" className="mt-5 border rounded">
         <option value="I'd like to take in a family">
           I&apos;d like to take in a family
         </option>
-        <option value="I'd like to volunteer to work with H-Town for Humanity">
-          I&apos;d like to volunteer to work with H-Town for Humanity
+        <option value="I'd like to sponsor a family">
+          I&apos;d like to sponsor a family
         </option>
+        <option value="I'd like to volunteer to work with H-Town for Humanity">
+          I&apos;d like to volunteer to work for H-Town for Humanity
+        </option>
+        <option value="Other">Other</option>
       </select>
-      <label className="mt-5" htmlFor="name">
-        My name is
-      </label>
       <input
-        className="border rounded border-platinum"
+        className="mt-5 border rounded"
         id="name"
         type="name"
         name="name"
         placeholder="your name"
         required
       />
-      <label className="mt-5" htmlFor="email">
-        You can reply to me at
-      </label>
       <input
-        className="border rounded border-platinum"
+        className="mt-5 border rounded"
         id="email"
         type="email"
         name="email"
         placeholder="your e-mail"
         required
       />
-      {/* <label className="mt-5 font-semibold" htmlFor="message">
-        I just want to say
-      </label>
       <textarea
-        className="border rounded border-platinum"
+        className="mt-5 border rounded"
         id="message"
         name="message"
         placeholder="your message"
-      ></textarea> */}
-
+      ></textarea>
       {/* <div className="g-recaptcha" data-sitekey={process.env.RECAPTCHA_SITE_KEY}></div> */}
       <button
-        className="self-end w-1/3 p-3 mt-10 bg-flagYellow text-black md:transition md:duration-200 md:ease-in-out md:w-1/6 submit-btn"
+        className="self-end w-1/3 p-3 mt-10 bg-black text-white md:transition md:duration-200 md:ease-in-out md:w-1/6 submit-btn"
         type="submit"
         disabled={serverState.submitting}
       >
@@ -108,10 +98,13 @@ function MyForm({ contactFormTitle }) {
       </button>
       {serverState.status && (
         <p
-          className={`fixed rounded top-5 right-5 py-6 px-12 bg-green-700 text-4xl text-white ${
+          className={`fixed rounded top-5 right-5 py-6 px-6 bg-green-700 w-[300px] text-lg text-white text-center ${
             !serverState.status.ok ? "errorMsg" : ""
           }`}
         >
+                {/* <p
+          className="fixed rounded top-5 right-5 py-6 px-6 bg-green-700 w-[300px] text-lg text-white text-center"
+        > */}
           {serverState.status.msg}
         </p>
       )}
