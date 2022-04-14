@@ -82,6 +82,14 @@ function MyForm({ contactFormTitle }) {
         placeholder="your e-mail"
         required
       />
+       {/* <input
+        className="mt-5 border rounded"
+        id="phonenumber"
+        type="phonenumber"
+        name="phonenumber"
+        placeholder="your phone number"
+        required
+      /> */}
       <textarea
         className="mt-5 border rounded"
         id="message"

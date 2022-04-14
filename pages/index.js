@@ -135,13 +135,13 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* extra section/social media/contact/alexa? */}
-      <section className="bg-white h-[550px] flex flex-row justify-center items-center">
+      <section className="bg-gradient-to-b from-[#ECF4FA] to-white h-[550px] flex flex-row justify-center items-center">
         {/* <div className="card w-90percent h-90percent"> */}
           <h1>extra section</h1>
         {/* </div> */}
       </section>
       {/* footer */}
-      <footer className="bg-flagBlue h-[100px]"></footer>
+      <footer className="bg-white h-[100px]"></footer>
     </>
   );
 };
