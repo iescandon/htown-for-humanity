@@ -25,7 +25,8 @@ export const Home = ({ content }) => {
 
   useEffect(() => {
     fetch(
-      process.env.INSTAGRAM_API_URL
+      // process.env.INSTAGRAM_API_URL
+      "https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url&access_token=IGQVJWMFpaWU9qMlJFZAVdaVk1HLVBxU25RN19oYWxGSWdRMm5fUnEwRzhGQVFkMmhuVDhna1QxdGtlWlh6SGxxOURiZAURKbHZAvZAXFvbTVZAVXlyREFaQ05hSFBNUWxxSDZARclc4UmxYQVdyekdyTmRvdgZDZD"
     )
       .then((res) => res.json())
       .then((data) => {
