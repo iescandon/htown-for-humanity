@@ -50,7 +50,7 @@ function MyForm({ contactFormTitle }) {
       className="px-6 h-full flex flex-col justify-center"
       onSubmit={handleOnSubmit}
     >
-      <div className="font-lato font-bold text-[3em]">{contactFormTitle}</div>
+      <div className="font-lato font-extrabold text-[3em]">{contactFormTitle}</div>
       {/* <label className="mt-5s" htmlFor="reason">
         I would love to help by
       </label> */}

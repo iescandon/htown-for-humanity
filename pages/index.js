@@ -25,8 +25,7 @@ export const Home = ({ content }) => {
 
   useEffect(() => {
     fetch(
-      // process.env.INSTAGRAM_API_URL
-      "https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url&access_token=IGQVJWMFpaWU9qMlJFZAVdaVk1HLVBxU25RN19oYWxGSWdRMm5fUnEwRzhGQVFkMmhuVDhna1QxdGtlWlh6SGxxOURiZAURKbHZAvZAXFvbTVZAVXlyREFaQ05hSFBNUWxxSDZARclc4UmxYQVdyekdyTmRvdgZDZD"
+      process.env.INSTAGRAM_API_URL
     )
       .then((res) => res.json())
       .then((data) => {
@@ -39,8 +38,9 @@ export const Home = ({ content }) => {
       });
   }, []);
 
-  console.log(content);
-  console.log(instagramFeed);
+  // console.log(content);
+  // console.log(instagramFeed);
+  // console.log(process.env.INSTAGRAM_API_URL);
   return (
     <>
       <section className="relative">
@@ -114,8 +114,8 @@ export const Home = ({ content }) => {
               className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
               icon={faMoneyBill1Wave}
             />
-            <p className="text-5xl font-lato font-semibold">$300</p>
-            <p>raised in total</p>
+            <p className="text-5xl font-lato font-extrabold">$300</p>
+            <p className="uppercase text-light">raised in total</p>
           </div>
         </div>
         <div className="w-1/3 flex flex-row justify-center items-center">
@@ -124,8 +124,8 @@ export const Home = ({ content }) => {
               className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
               icon={faPeopleGroup}
             />
-            <p className="text-5xl font-lato font-semibold">15</p>
-            <p>refugees helped</p>
+            <p className="text-5xl font-lato font-extrabold">15</p>
+            <p className="uppercase text-light">refugees helped</p>
           </div>
         </div>
         <div className="w-1/3 flex flex-row justify-center items-center">
@@ -134,8 +134,8 @@ export const Home = ({ content }) => {
               className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
               icon={faHandHoldingDollar}
             />
-            <p className="text-5xl font-lato font-semibold">100%</p>
-            <p>of donations given to refugees in need</p>
+            <p className="text-5xl font-lato font-extrabold">100%</p>
+            <p className="uppercase text-light">of donations distributed</p>
           </div>
         </div>
       </section>
@@ -171,7 +171,7 @@ export const Home = ({ content }) => {
         </div>
       </section>
       <section className="bg-white h-[200px] flex flex-row justify-center items-center">
-        <p className="text-[2em] font-roboto font-semibold">
+        <p className="text-[2em] font-roboto font-extrabold">
           Якщо ви біженець, який потребує допомоги, натисніть
         </p>
         <button className="bg-flagYellow rounded px-4 py-2 ml-4 text-[2em] font-roboto font-semibold uppercase">
