@@ -30,7 +30,10 @@ export const Home = ({ content }) => {
     )
       .then((res) => res.json())
       .then((data) => {
-        const filteredArray = data?.data?.filter((item) => item.media_type === "IMAGE" || item.media_type === "CAROUSEL_ALBUM")
+        const filteredArray = data?.data?.filter(
+          (item) =>
+            item.media_type === "IMAGE" || item.media_type === "CAROUSEL_ALBUM"
+        );
         const slicedArray = filteredArray?.slice(0, 10);
         setInstagramFeed(slicedArray);
       });
@@ -143,8 +146,7 @@ export const Home = ({ content }) => {
             className="w-full h-full object-cover mx-4"
             src={content[0].fields.contactAsideImage.fields.file.url}
           />
-          <div className="blueOverlayLight absolute w-full h-full flex flex-col top-0 justify-between">
-          </div>
+          <div className="blueOverlayLight absolute w-full h-full flex flex-col top-0 justify-between"></div>
         </div>
         <div className="h-full w-2/3 flex flex-row justify-center items-center">
           <ContactForm contactFormTitle={content[0].fields.contactFormTitle} />
@@ -152,33 +154,38 @@ export const Home = ({ content }) => {
       </section>
       {/* social media */}
       <section className="px-12 bg-gradient-to-b from-[#ECF4FA] to-white flex flex-col">
-      {/* <div className="pb-6 text-center font-lato font-bold text-[3em]">Follow us on IG</div> */}
-      <div className="flex flex-row h-full w-full min-h-min flex-wrap justify-center">
-        {instagramFeed?.map((pic) => {
-          console.log(pic);
-          return (
-            <div key={`div-${pic.id}`}className="h-[250px] w-[250px]">
-              <img
-                className="h-full w-full object-cover"
-                key={pic.id}
-                src={pic.media_url}
-              />
-            </div>
-          );
-        })}
+        {/* <div className="pb-6 text-center font-lato font-bold text-[3em]">Follow us on IG</div> */}
+        <div className="flex flex-row h-full w-full min-h-min flex-wrap justify-center">
+          {instagramFeed?.map((pic) => {
+            console.log(pic);
+            return (
+              <div key={`div-${pic.id}`} className="h-[250px] w-[250px]">
+                <img
+                  className="h-full w-full object-cover"
+                  key={pic.id}
+                  src={pic.media_url}
+                />
+              </div>
+            );
+          })}
         </div>
       </section>
       <section className="bg-white h-[200px] flex flex-row justify-center items-center">
-        <p className="text-[2.5em] font-lato font-bold">If you are a refugee in need of help please click</p>
+        <p className="text-[2.5em] font-lato font-bold">
+          Якщо ви біженець, який потребує допомоги, натисніть
+        </p>
         <button className="bg-flagYellow rounded px-4 py-2 ml-4 text-[2.5em] font-lato font-bold uppercase">
-          here
+          тут
         </button>
       </section>
       {/* footer */}
       <footer className="bg-black text-white text-xs font-light h-[80px] flex flex-row items-center p-6">
         <div className="flex flex-col">
-        <p>International Rescue Committee is a 501(c)(3) not-for-profit organization. EIN number 13-5660870.</p>
-        <p>Copyright International Rescue Committee, 2022.</p>
+          <p>
+            International Rescue Committee is a 501(c)(3) not-for-profit
+            organization. EIN number 13-5660870.
+          </p>
+          <p>Copyright International Rescue Committee, 2022.</p>
         </div>
       </footer>
     </>
