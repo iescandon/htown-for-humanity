@@ -63,7 +63,9 @@ export const Home = ({ content }) => {
             <h1 className="text-[3em] font-lato font-extrabold text-white pb-8 leading-tight">
               {content[0].fields.paragraphTitle}
             </h1>
-            <p className="">{content[0].fields.paragraphText.content[0].content[0].value}</p>
+            <p className="">
+              {content[0].fields.paragraphText.content[0].content[0].value}
+            </p>
             {/* {content[0].fields.paragraphText.content.map((paragraph) => {
               <p>{paragraph.content[0].value}</p>;
               console.log(paragraph.content[0].value);
@@ -86,46 +88,57 @@ export const Home = ({ content }) => {
       </section>
       {/* stats section */}
       <section className="h-[350px] flex flex-row">
-        <div className="w-1/3 flex flex-col justify-center items-center text-center">
-          <FontAwesomeIcon
-            className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
-            icon={faMoneyBill1Wave}
-          />
-          <p className="text-5xl font-lato font-semibold">$300</p>
-          <p>raised since April 12, 2022</p>
+        <div className="w-1/3 flex flex-row justify-center items-center">
+          <div className="card w-80percent h-80percent flex flex-col justify-center items-center text-center">
+            <FontAwesomeIcon
+              className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
+              icon={faMoneyBill1Wave}
+            />
+            <p className="text-5xl font-lato font-semibold">$300</p>
+            <p>raised since April 12, 2022</p>
+          </div>
         </div>
-        <div className="w-1/3 flex flex-col justify-center items-center text-center">
-          <FontAwesomeIcon
-            className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
-            icon={faHouseChimney}
-          />
-          <p className="text-5xl font-lato font-semibold">15</p>
-          <p>families placed in homes</p>
+        <div className="w-1/3 flex flex-row items-center">
+          <div className="card w-80percent h-80percent flex flex-col justify-center items-center text-center">
+            <FontAwesomeIcon
+              className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
+              icon={faHouseChimney}
+            />
+            <p className="text-5xl font-lato font-semibold">15</p>
+            <p>families placed in homes</p>
+          </div>
         </div>
-        <div className="w-1/3 flex flex-col justify-center items-center text-center">
-          <FontAwesomeIcon
-            className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
-            icon={faHandHoldingDollar}
-          />
-          <p className="text-5xl font-lato font-semibold">100%</p>
-          <p>of donations given to refugees in need</p>
+        <div className="w-1/3 flex flex-row items-center">
+          <div className="card w-80percent h-80percent flex flex-col justify-center items-center text-center">
+            <FontAwesomeIcon
+              className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
+              icon={faHandHoldingDollar}
+            />
+            <p className="text-5xl font-lato font-semibold">100%</p>
+            <p>of donations given to refugees in need</p>
+          </div>
         </div>
       </section>
       {/* contact form section */}
-      <section className="h-[500px] flex flex-row">
-        <img
-          className="bg-white h-full w-1/3 object-cover px-4"
-          src={content[0].fields.contactAsideImage.fields.file.url}
-        />
-        <div className="bg-[#ECF4FA] h-full w-2/3 flex flex-row justify-center items-center mr-4">
+      <section className="h-[500px] flex flex-row mb-8">
+        <div className="mask w-1/3">
+          <img
+            className="h-full w-full object-cover mx-4"
+            // className="h-full w-full object-cover mx-4 w-1/3"
+            src={content[0].fields.contactAsideImage.fields.file.url}
+          />
+        </div>
+        <div className="h-full w-2/3 flex flex-row justify-center items-center">
           {/* <div className="card bg-white m-8 w-full h-90percent"> */}
           <ContactForm contactFormTitle={content[0].fields.contactFormTitle} />
           {/* </div> */}
         </div>
       </section>
       {/* extra section/social media/contact/alexa? */}
-      <section className="h-[550px]">
-
+      <section className="bg-white h-[550px] flex flex-row justify-center items-center">
+        {/* <div className="card w-90percent h-90percent"> */}
+          <h1>extra section</h1>
+        {/* </div> */}
       </section>
       {/* footer */}
       <footer className="bg-flagBlue h-[100px]"></footer>

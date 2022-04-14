@@ -8,6 +8,7 @@ body {
   padding: 0;
   margin: 0;
   @apply font-lato;
+  background-color: #ECF4FA;
 }
 
 a {
@@ -55,3 +56,11 @@ input, select, textarea {
   .container.main {
     outline-color: #000000!important;
   }
+
+  .mask {
+  -webkit-mask-image: url(https://i.imgur.com/Ryhs05J.png);
+  mask-image: url(https://i.imgur.com/Ryhs05J.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;   
+
+}
