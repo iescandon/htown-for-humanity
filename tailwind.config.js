@@ -10,9 +10,7 @@ module.exports = {
         flagYellow: '#ffd700',
       },
       fontFamily: {
-        // secular: ['Secular One'],
-        // openSans: ['Open Sans'],
-        // saira: 'Saira'
+        roboto: 'Roboto',
         lato: 'Lato'
       },
       height: (theme) => ({

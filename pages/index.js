@@ -171,10 +171,10 @@ export const Home = ({ content }) => {
         </div>
       </section>
       <section className="bg-white h-[200px] flex flex-row justify-center items-center">
-        <p className="text-[2.5em] font-lato font-bold">
+        <p className="text-[2em] font-roboto font-semibold">
           Якщо ви біженець, який потребує допомоги, натисніть
         </p>
-        <button className="bg-flagYellow rounded px-4 py-2 ml-4 text-[2.5em] font-lato font-bold uppercase">
+        <button className="bg-flagYellow rounded px-4 py-2 ml-4 text-[2em] font-roboto font-semibold uppercase">
           тут
         </button>
       </section>
