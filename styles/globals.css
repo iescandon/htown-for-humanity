@@ -39,6 +39,11 @@ input, select, textarea {
   /* @apply bg-flagBlue bg-opacity-40 */
 }
 
+.blueOverlayLight {
+  /* background-image: linear-gradient(to bottom, rgba(0, 87, 184, .4), rgba(0, 0, 0, .8)); */
+  @apply bg-flagBlue bg-opacity-75
+}
+
 .card {
   border-radius: 4px;
   box-shadow: 0 3px 15px 0 rgba(52, 51, 66, 0.12);
@@ -62,5 +67,6 @@ input, select, textarea {
   mask-image: url(https://i.imgur.com/Ryhs05J.png);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;   
-
+  mask-size: 100%;
+  mask-position: center;
 }

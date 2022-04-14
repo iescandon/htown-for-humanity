@@ -47,14 +47,20 @@ function MyForm({ contactFormTitle }) {
 
   return (
     <form
-      className="p-6 h-full flex flex-col justify-center"
+      className="px-6 h-full flex flex-col justify-center"
       onSubmit={handleOnSubmit}
     >
       <div className="font-lato font-bold text-[3em]">{contactFormTitle}</div>
       {/* <label className="mt-5s" htmlFor="reason">
         I would love to help by
       </label> */}
-      <select name="reason" id="reason" className="mt-5 border rounded">
+      <select name="reason" id="reason" className="mt-5 border bg-white rounded">
+      <option value="I'd like to volunteer to work with H-Town for Humanity">
+          I&apos;d like to donate by cash, check, or gift card
+        </option>
+        <option value="I'd like to volunteer to work with H-Town for Humanity">
+          I am part of an organization that would like to donate
+        </option>
         <option value="I'd like to take in a family">
           I&apos;d like to take in a family
         </option>
