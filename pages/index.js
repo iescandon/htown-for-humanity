@@ -43,10 +43,6 @@ export const Home = ({ content }) => {
         setInstagramFeed(slicedArray);
       });
   }, []);
-
-  // console.log(content);
-  // console.log(instagramFeed);
-  // console.log(process.env.INSTAGRAM_API_URL);
   return (
     <>
       <section className="relative">
@@ -94,16 +90,17 @@ export const Home = ({ content }) => {
               {content[0].fields.paragraphTitle}
             </h1>
             {content[0].fields.paragraphText.content.map((paragraph) => {
-              // console.log(paragraph)
               return (
                 <p className="pb-4" key={paragraph.content[0].value}>
                   {paragraph.content[0].value}
                 </p>
               );
             })}
-            <Link href="/help"><span className="font-roboto underline cursor-pointer max-w-max">
-            натисніть тут, якщо ви біженець, який потребує допомоги
-            </span></Link>
+            <Link href="/help">
+              <span className="font-roboto underline cursor-pointer max-w-max">
+                натисніть тут, якщо ви біженець, який потребує допомоги
+              </span>
+            </Link>
           </div>
           <div className="relative flex flex-col w-40percent h-full items-center justify-center">
             <div className="absolute w-[425px] h-[381] top-0 right-12">
@@ -166,7 +163,7 @@ export const Home = ({ content }) => {
           <ContactForm contactFormTitle={content[0].fields.contactFormTitle} />
         </div>
       </section>
-      {/* other donations accepted */}
+      {/* other donations section */}
       <section className="bg-gradient-to-b from-[#ECF4FA] to-white h-[400px] flex flex-col px-12">
         <h2 className="font-lato font-extrabold text-[3em] pb-4">
           We also accept
@@ -249,11 +246,12 @@ export const Home = ({ content }) => {
       {/* social media */}
       <section className="bg-white flex flex-col px-12 pb-12 relative">
         <div className="absolute bottom-12 right-16">
-          <h2 className="font-lato font-extrabold text-[3em] text-white title">#htownforhumanity🇺🇦</h2>
+          <h2 className="font-lato font-extrabold text-[3em] text-white title">
+            #htownforhumanity🇺🇦
+          </h2>
         </div>
         <div className="flex flex-row h-[600px] w-full min-h-min flex-wrap justify-center">
           {instagramFeed?.map((pic) => {
-            // console.log(pic);
             return (
               <div key={`div-${pic.id}`} className="h-1/2 w-1/4">
                 <img

@@ -25,23 +25,19 @@ input, select, textarea {
 }
 
 .title {
-  /* text-shadow: 0 0 5px #0057b8; */
   text-shadow: 0 0 20px #000000;
 }
 
 .softTitle {
-  /* text-shadow: 0 0 5px #0057b8; */
   text-shadow: 5px 5px 10px #000000;
 }
 
 .blueOverlay {
   background-image: linear-gradient(to bottom, rgba(0, 87, 184, .5), rgba(0, 0, 0, 1));
-  /* @apply bg-flagBlue bg-opacity-40 */
 }
 
 .blueOverlayLight {
   background-image: linear-gradient(to bottom, rgba(0, 87, 184, .3), rgba(0, 0, 0, .7));
-  @apply bg-flagBlue bg-opacity-50
 }
 
 .card {
@@ -49,18 +45,14 @@ input, select, textarea {
   box-shadow: 0 3px 15px 0 rgba(52, 51, 66, 0.12);
   background-color: rgba(255, 255, 255);
 }
-
+/* 
 #g-recaptcha-response {
   display: block !important;
   position: absolute;
   margin: -50px 0 0 0 !important;
   z-index: -999999;
   opacity: 0;
-  }
-
-  .container.main {
-    outline-color: #000000!important;
-  }
+  } */
 
   .mask {
   -webkit-mask-image: url(https://i.imgur.com/Ryhs05J.png);

@@ -11,7 +11,7 @@ import {
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 import React, { useState, useEffect } from "react";
-
+import Link from "next/link";
 
 export const Help = ({ content }) => {
   const [data, setData] = useState(null);
@@ -21,7 +21,13 @@ export const Help = ({ content }) => {
   }, []);
 
   return (
-<h1>HELP</h1>
+    <div className="m-20">
+      <h1>HELP</h1>
+      <br></br>
+      <Link href="/">
+        <button>BACK</button>
+      </Link>
+    </div>
   );
 };
 
