@@ -6,6 +6,11 @@ import {
   faPeopleGroup,
   faMoneyBill1Wave,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faTiktok,
+} from "@fortawesome/free-brands-svg-icons";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -26,7 +31,7 @@ export const Home = ({ content }) => {
 
   useEffect(() => {
     fetch(
-      `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url&access_token=${process.env.INSTAGRAM_API_ACCESS_TOKEN}`
+      `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_API_ACCESS_TOKEN}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -64,6 +69,11 @@ export const Home = ({ content }) => {
               </span>
             </div>
           </div>
+          <div className="absolute border-l-4 border-flagYellow h-[250px] top-16 left-16"></div>
+          <div className="absolute border-r-4 border-flagYellow h-[250px] bottom-16 right-16"></div>
+          <div className="absolute border-t-4 border-flagYellow w-[250px] top-16 left-16"></div>
+          <div className="absolute border-b-4 border-flagYellow w-[250px] bottom-16 right-16"></div>
+          {/* <div className="absolute border-l-8 border-flagYellow h-[140px] bottom-14 left-16"></div> */}
           <div className="w-full h-full">
             <img
               src={content[0].fields.heroImage.fields.file.url}
@@ -91,9 +101,12 @@ export const Home = ({ content }) => {
                 </p>
               );
             })}
+            <p className="font-roboto underline">
+              Якщо ви біженець, який потребує допомоги, натисніть тут
+            </p>
           </div>
           <div className="relative flex flex-col w-40percent h-full items-center justify-center">
-            <div className="absolute w-[423px] h-[381] top-0 right-12">
+            <div className="absolute w-[425px] h-[381] top-0 right-12">
               <iframe
                 src="https://donorbox.org/embed/h-town-for-humanity"
                 name="donorbox"
@@ -141,7 +154,7 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* contact form section */}
-      <section className="h-[500px] flex flex-row mb-8">
+      <section className="h-[500px] flex flex-row">
         <div className="mask w-1/3 relative">
           <img
             className="w-full h-full object-cover mx-4"
@@ -153,17 +166,95 @@ export const Home = ({ content }) => {
           <ContactForm contactFormTitle={content[0].fields.contactFormTitle} />
         </div>
       </section>
-      {/* social media */}
-      <section className=" bg-gradient-to-b from-[#ECF4FA] to-white flex flex-col px-12">
-        <div className="flex flex-row justify-between">
-          <h2 className=" font-lato font-extrabold text-[3em]">#htownforhumanity<span className="ml-2">🇺🇦</span></h2>
-          {/* <div className="text-[3.5em]">
-            <FontAwesomeIcon className="text-5xl" icon={faHandHoldingDollar} />
-          </div> */}
+      {/* other donations accepted */}
+      <section className="bg-gradient-to-b from-[#ECF4FA] to-white h-[400px] flex flex-col px-12">
+        <h2 className="font-lato font-extrabold text-[3em] pb-4">
+          We also accept
+        </h2>
+        <div className="flex flex-row justify-between px-2">
+          <ul>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+          </ul>
+          <ul>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+          </ul>
+          <ul>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+          </ul>
+          <ul>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+          </ul>
+          <ul>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+          </ul>
+          <ul>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+            <li className="uppercase">stuff</li>
+          </ul>
         </div>
+      </section>
+      {/* social media */}
+      <section className="bg-white flex flex-col px-12 pb-12 relative">
+        {/* <div className="absolute bottom-10 right-16">
+          <h2 className="font-lato font-extrabold text-[4em] text-white title">#htownforhumanity<span className="ml-2">🇺🇦</span></h2>
+ 
+        </div> */}
         <div className="flex flex-row h-[600px] w-full min-h-min flex-wrap justify-center">
           {instagramFeed?.map((pic) => {
-            console.log(pic);
+            // console.log(pic);
             return (
               <div key={`div-${pic.id}`} className="h-1/2 w-1/4">
                 <img
@@ -176,23 +267,27 @@ export const Home = ({ content }) => {
           })}
         </div>
       </section>
-      {/* ukrainan help */}
-      <section className="bg-white h-[200px] flex flex-row justify-center items-center p-12">
-        <p className="text-[2.5em] font-roboto font-extrabold">
-          Якщо ви біженець, який потребує допомоги, натисніть
-        </p>
-        <button className="bg-flagYellow rounded px-4 py-2 ml-4 text-[2.5em] font-roboto font-semibold uppercase">
-          тут
-        </button>
-      </section>
-      {/* footer */}
-      <footer className="bg-black text-white text-xs font-light h-[80px] flex flex-row items-center p-6">
-        <div className="flex flex-col">
+      <footer className="bg-black h-[80px] flex flex-row items-center p-6 justify-between">
+        <div className="flex flex-col text-white text-xs font-light">
           <p>
-            International Rescue Committee is a 501(c)(3) not-for-profit
-            organization. EIN number 13-5660870.
+            H Town for humanity is a 501(c)(3) not-for-profit organization. EIN
+            number 13-5660870.
           </p>
-          <p>Copyright International Rescue Committee, 2022.</p>
+          <p>Copyright H Town for humanity, 2022.</p>
+        </div>
+        <div className="text-[3.5em]">
+          <FontAwesomeIcon
+            className="text-3xl text-white rounded-full p-2"
+            icon={faFacebook}
+          />
+          <FontAwesomeIcon
+            className="text-3xl text-white rounded-full p-2"
+            icon={faInstagram}
+          />
+          <FontAwesomeIcon
+            className="text-3xl text-white rounded-full py-2 pl-2"
+            icon={faTiktok}
+          />
         </div>
       </footer>
     </>
