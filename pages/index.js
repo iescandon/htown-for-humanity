@@ -65,10 +65,8 @@ export const Home = ({ content }) => {
               </span>
             </div>
           </div>
-          <div className="absolute border-l-4 border-flagYellow h-[250px] top-16 left-16"></div>
-          <div className="absolute border-r-4 border-flagYellow h-[250px] bottom-16 right-16"></div>
-          <div className="absolute border-t-4 border-flagYellow w-[250px] top-16 left-16"></div>
-          <div className="absolute border-b-4 border-flagYellow w-[250px] bottom-16 right-16"></div>
+          <div className="absolute border-l-4 border-t-4 border-flagYellow w-[250px] h-[250px] top-16 left-16"></div>
+          <div className="absolute border-r-4 border-b-4 border-flagYellow w-[250px] h-[250px] bottom-16 right-16"></div>
           {/* <div className="absolute border-l-8 border-flagYellow h-[140px] bottom-14 left-16"></div> */}
           <div className="w-full h-full">
             <img
