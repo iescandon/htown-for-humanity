@@ -7,6 +7,7 @@ import {
   faMoneyBill1Wave,
 } from "@fortawesome/free-solid-svg-icons";
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 export const Home = ({ content }) => {
   // useEffect(() => {
@@ -25,7 +26,7 @@ export const Home = ({ content }) => {
 
   useEffect(() => {
     fetch(
-      process.env.INSTAGRAM_API_URL
+      `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url&access_token=${process.env.INSTAGRAM_API_ACCESS_TOKEN}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -33,7 +34,7 @@ export const Home = ({ content }) => {
           (item) =>
             item.media_type === "IMAGE" || item.media_type === "CAROUSEL_ALBUM"
         );
-        const slicedArray = filteredArray?.slice(0, 10);
+        const slicedArray = filteredArray?.slice(0, 8);
         setInstagramFeed(slicedArray);
       });
   }, []);
@@ -153,13 +154,18 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* social media */}
-      <section className="px-12 bg-gradient-to-b from-[#ECF4FA] to-white flex flex-col">
-        {/* <div className="pb-6 text-center font-lato font-bold text-[3em]">Follow us on IG</div> */}
-        <div className="flex flex-row h-full w-full min-h-min flex-wrap justify-center">
+      <section className=" bg-gradient-to-b from-[#ECF4FA] to-white flex flex-col px-12">
+        <div className="flex flex-row justify-between">
+          <h2 className=" font-lato font-extrabold text-[3em]">#htownforhumanity<span className="ml-2">🇺🇦</span></h2>
+          {/* <div className="text-[3.5em]">
+            <FontAwesomeIcon className="text-5xl" icon={faHandHoldingDollar} />
+          </div> */}
+        </div>
+        <div className="flex flex-row h-[600px] w-full min-h-min flex-wrap justify-center">
           {instagramFeed?.map((pic) => {
             console.log(pic);
             return (
-              <div key={`div-${pic.id}`} className="h-[250px] w-[250px]">
+              <div key={`div-${pic.id}`} className="h-1/2 w-1/4">
                 <img
                   className="h-full w-full object-cover"
                   key={pic.id}
@@ -170,11 +176,12 @@ export const Home = ({ content }) => {
           })}
         </div>
       </section>
-      <section className="bg-white h-[200px] flex flex-row justify-center items-center">
-        <p className="text-[2em] font-roboto font-extrabold">
+      {/* ukrainan help */}
+      <section className="bg-white h-[200px] flex flex-row justify-center items-center p-12">
+        <p className="text-[2.5em] font-roboto font-extrabold">
           Якщо ви біженець, який потребує допомоги, натисніть
         </p>
-        <button className="bg-flagYellow rounded px-4 py-2 ml-4 text-[2em] font-roboto font-semibold uppercase">
+        <button className="bg-flagYellow rounded px-4 py-2 ml-4 text-[2.5em] font-roboto font-semibold uppercase">
           тут
         </button>
       </section>
@@ -198,6 +205,7 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
   const res = await client.getEntries({ content_type: "pageContent" });
+
   return {
     props: {
       content: res.items,
