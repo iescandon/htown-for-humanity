@@ -12,7 +12,7 @@ import {
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import Link from "next/link";
 
 export const Home = ({ content }) => {
   // useEffect(() => {
@@ -101,9 +101,9 @@ export const Home = ({ content }) => {
                 </p>
               );
             })}
-            <p className="font-roboto underline">
-              Якщо ви біженець, який потребує допомоги, натисніть тут
-            </p>
+            <Link href="/help"><span className="font-roboto underline cursor-pointer max-w-max">
+            натисніть тут, якщо ви біженець, який потребує допомоги
+            </span></Link>
           </div>
           <div className="relative flex flex-col w-40percent h-full items-center justify-center">
             <div className="absolute w-[425px] h-[381] top-0 right-12">
@@ -248,10 +248,9 @@ export const Home = ({ content }) => {
       </section>
       {/* social media */}
       <section className="bg-white flex flex-col px-12 pb-12 relative">
-        {/* <div className="absolute bottom-10 right-16">
-          <h2 className="font-lato font-extrabold text-[4em] text-white title">#htownforhumanity<span className="ml-2">🇺🇦</span></h2>
- 
-        </div> */}
+        <div className="absolute bottom-12 right-16">
+          <h2 className="font-lato font-extrabold text-[3em] text-white title">#htownforhumanity🇺🇦</h2>
+        </div>
         <div className="flex flex-row h-[600px] w-full min-h-min flex-wrap justify-center">
           {instagramFeed?.map((pic) => {
             // console.log(pic);
