@@ -267,12 +267,12 @@ export const Home = ({ content }) => {
       <footer className="bg-black h-[80px] flex flex-row items-center p-6 justify-between">
         <div className="flex flex-col text-white text-xs font-light">
           <p>
-            H Town for humanity is a 501(c)(3) not-for-profit organization. EIN
-            number 13-5660870.
+            H Town for humanity Inc is a 501(c)(3) not-for-profit organization. EIN
+            number 88-1595598.
           </p>
-          <p>Copyright H Town for humanity, 2022.</p>
+          <p>Copyright H Town for humanity Inc, 2022.</p>
         </div>
-        <div className="text-[3.5em]">
+        <div className="text-[3em]">
           <FontAwesomeIcon
             className="text-3xl text-white rounded-full p-2"
             icon={faFacebook}
