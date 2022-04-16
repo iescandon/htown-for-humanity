@@ -124,7 +124,7 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* stats section */}
-      <section className="h-[350px] flex flex-col md:flex-row justify-center items-center mt-10">
+      <section className="bg-gradient-to-t from-[#ECF4FA] to-white md:bg-[#ECF4FA] h-[350px] flex flex-col md:flex-row justify-center items-center pt-10">
         <div className="w-full md:w-1/3 flex flex-row justify-center items-center">
         <div className="card w-60percent md:w-80percent md:h-80percent flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0">
             <FontAwesomeIcon
@@ -183,7 +183,7 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* other donations section */}
-      <section className="bg-gradient-to-b from-[#ECF4FA] to-white flex flex-row px-8 lg:px-12 pb-16 items-center justify-around">
+      <section className="md:bg-gradient-to-b md:from-[#ECF4FA] md:to-white flex flex-row px-8 lg:px-12 pb-16 items-center justify-around">
         <Link href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}>
           <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
             <img className="h-[20px] md:h-[35px] lg:h-[50px]" src="/images/google-sheets.png" />
@@ -230,7 +230,7 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* insta carousel */}
-      <section className="bg-white md:hidden pb-2">
+      <section className=" md:hidden pb-2">
       <Carousel swipeable={true}>
                 {instagramFeed?.map((pic) => {
             return (
