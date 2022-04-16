@@ -87,9 +87,9 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* about/donate section */}
-      <section className="bg-gradient-to-t from-[#ECF4FA] to-white md:bg-[#ECF4FA]">
+      <section className="md:bg-flagYellow">
         <div className="flex flex-col md:flex-row w-screen h-[800px] md:h-[550px] py-12 lg:pl-24 items-center justify-center">
-          <div className="flex flex-col px-8 md:pl-10 md:pr-0 lg:px-16 lg:px-0 w-full md:w-45percent lg:w-60percent">
+          <div className="bg-white md:bg-transparent flex flex-col px-8 md:pl-10 md:pr-0 lg:px-16 lg:px-0 w-full md:w-45percent lg:w-60percent">
             <h3 className="text-[12px] lg:text-lg uppercase hidden md:block">
               {pageContent.paragraphSubtitle}
             </h3>
