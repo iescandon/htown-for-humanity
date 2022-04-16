@@ -173,7 +173,7 @@ export const Home = ({ content }) => {
       {/* other donations section */}
       <section className="bg-gradient-to-b from-[#ECF4FA] to-white flex flex-row px-12 pb-16 justify-around">
         <Link href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}>
-          <div className="flex flex-row justify-center items-center">
+          <div className="flex flex-row justify-center items-center w-[200px]">
             <img className="h-[50px]" src="/images/google-sheets.png" />
             <span className="ml-1 font-roboto">
               Non-perishable food<br></br>& other supplies
@@ -181,10 +181,10 @@ export const Home = ({ content }) => {
           </div>
         </Link>
         <Link href={pageContent.otherDonationUrls.amazonWishlistUrl}>
-          <img className="h-[50px]" src="/images/amazon-wishlist.png" />
+          <img className="w-[200px]" src="/images/amazon-wishlist.png" />
         </Link>
         <Link href={pageContent.otherDonationUrls.targetGiftRegistryUrl}>
-          <img className="h-[50px]" src="/images/target-registry.png" />
+          <img className="w-[200px]" src="/images/target-registry.png" />
         </Link>
       </section>
       {/* social media */}
