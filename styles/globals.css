@@ -67,3 +67,11 @@ input, select, textarea {
   mask-size: 100%;
   mask-position: center;
 }
+
+.carousel .slide img {
+  height: 350px;
+}
+
+.carousel .thumb {
+  height: 80px;
+}

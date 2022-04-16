@@ -15,6 +15,8 @@ import {
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 export const Home = ({ content }) => {
   const [pageContent, setPageContent] = useState(content[0].fields);
@@ -222,8 +224,20 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* insta carousel */}
-      <section className="bg-white flex flex-col px-12 pb-12 md:hidden">
-          <p>add carousel here</p>
+      <section className="bg-white md:hidden">
+      <Carousel swipeable={true}>
+                {instagramFeed?.map((pic) => {
+            return (
+              <div key={`div-${pic.id}`} className="">
+                <img
+                  className="h-full w-full object-cover"
+                  key={pic.id}
+                  src={pic.media_url}
+                />
+              </div>
+            );
+          })}
+            </Carousel>
       </section>
       <footer className="bg-black h-[160px] md:h-[80px] flex flex-col md:flex-row items-center p-6 justify-between">
         <div className="flex flex-col text-white text-xs font-light">
