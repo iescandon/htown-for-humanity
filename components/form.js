@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-function MyForm({ contactFormTitle }) {
+function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
   const [serverState, setServerState] = useState({
     submitting: false,
     status: null,
@@ -55,22 +55,13 @@ function MyForm({ contactFormTitle }) {
         I would love to help by
       </label> */}
       <select name="reason" id="reason" className="mt-5 border bg-white rounded">
-      <option value="I'd like to volunteer to work with H-Town for Humanity">
-          I&apos;d like to donate by cash, check, or gift card
-        </option>
-        <option value="I'd like to volunteer to work with H-Town for Humanity">
-          I am part of an organization that would like to donate
-        </option>
-        <option value="I'd like to take in a family">
-          I&apos;d like to take in a family
-        </option>
-        <option value="I'd like to sponsor a family">
-          I&apos;d like to sponsor a family
-        </option>
-        <option value="I'd like to volunteer to work with H-Town for Humanity">
-          I&apos;d like to volunteer to work for H-Town for Humanity
-        </option>
-        <option value="Other">Other</option>
+      {contactFormDropdownOptions.map((dropdownOption) => {
+              return (
+                <option key={dropdownOption} value={dropdownOption}>
+                {dropdownOption}
+              </option>
+              );
+            })}
       </select>
       <input
         className="mt-5 border rounded"
@@ -104,7 +95,7 @@ function MyForm({ contactFormTitle }) {
       ></textarea>
       {/* <div className="g-recaptcha" data-sitekey={process.env.RECAPTCHA_SITE_KEY}></div> */}
       <button
-        className="self-end w-1/3 p-3 mt-10 bg-black text-white md:transition md:duration-200 md:ease-in-out md:w-1/6 submit-btn"
+        className="self-end w-1/3 p-3 mt-10 bg-black rounded text-white md:transition md:duration-200 md:ease-in-out md:w-1/6 submit-btn"
         type="submit"
         disabled={serverState.submitting}
       >

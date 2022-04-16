@@ -29,7 +29,12 @@ input, select, textarea {
 }
 
 .softTitle {
-  text-shadow: 5px 5px 10px #000000;
+  text-shadow: 0 0 20px #a88f01;
+}
+
+
+.blackOverlay {
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1));
 }
 
 .blueOverlay {
