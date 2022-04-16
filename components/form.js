@@ -47,13 +47,10 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
 
   return (
     <form
-      className="px-6 h-full flex flex-col justify-center"
+      className="px-6 h-full w-full flex flex-col justify-center"
       onSubmit={handleOnSubmit}
     >
-      <div className=" font-extrabold text-[3em]">{contactFormTitle}</div>
-      {/* <label className="mt-5s" htmlFor="reason">
-        I would love to help by
-      </label> */}
+      <h2 className="font-extrabold text-[3em]">{contactFormTitle}</h2>
       <select name="reason" id="reason" className="mt-5 border bg-white rounded">
       {contactFormDropdownOptions.map((dropdownOption) => {
               return (
@@ -79,14 +76,6 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
         placeholder="your e-mail"
         required
       />
-       {/* <input
-        className="mt-5 border rounded"
-        id="phonenumber"
-        type="phonenumber"
-        name="phonenumber"
-        placeholder="your phone number"
-        required
-      /> */}
       <textarea
         className="mt-5 border rounded"
         id="message"
