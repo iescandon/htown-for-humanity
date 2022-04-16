@@ -27,7 +27,6 @@ export const Home = ({ content }) => {
   //     document.body.removeChild(script);
   //   }
   // }, []);
-  // console.log(content[0].fields)
   const [pageContent, setPageContent] = useState(content[0].fields);
   const [instagramFeed, setInstagramFeed] = useState(null);
   console.log(pageContent);
@@ -46,7 +45,7 @@ export const Home = ({ content }) => {
         setInstagramFeed(slicedArray);
       });
   }, []);
-  
+
   return (
     <>
       <section className="relative">
@@ -59,7 +58,7 @@ export const Home = ({ content }) => {
                 className="mx-24 my-12 h-[150px] w-auto"
               />
             </div>
-            <div className="title font-lato font-extrabold text-white leading-tight mx-24 my-12">
+            <div className="title  font-extrabold text-white leading-tight mx-24 my-12">
               <span className="text-[4em] pb-16">
                 {pageContent.headerTitle}
               </span>
@@ -84,10 +83,10 @@ export const Home = ({ content }) => {
       <section>
         <div className="flex flex-row w-screen h-[550px] min-h-[550px] py-12 pl-24 bg-flagYellow items-center justify-center">
           <div className="flex flex-col w-60percent pr-12">
-            <h3 className="text-[1.25em] font-lato uppercase">
+            <h3 className="text-[1.25em]  uppercase">
               {pageContent.paragraphSubtitle}
             </h3>
-            <h1 className="softTitle text-[3em] font-lato font-extrabold text-white pb-8 leading-tight">
+            <h1 className="softTitle text-[3em]  font-extrabold text-white pb-8 leading-tight">
               {pageContent.paragraphTitle}
             </h1>
             {pageContent.paragraphText.content.map((paragraph) => {
@@ -126,7 +125,7 @@ export const Home = ({ content }) => {
               className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
               icon={faMoneyBill1Wave}
             />
-            <p className="text-5xl font-lato font-extrabold">
+            <p className="text-5xl  font-extrabold">
               ${pageContent.numberOfDollarsDonated}
             </p>
             <p className="uppercase text-light">raised in total</p>
@@ -138,7 +137,7 @@ export const Home = ({ content }) => {
               className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
               icon={faPeopleGroup}
             />
-            <p className="text-5xl font-lato font-extrabold">
+            <p className="text-5xl  font-extrabold">
               {pageContent.numberOfRefugeesHelped}
             </p>
             <p className="uppercase text-light">refugees helped</p>
@@ -150,7 +149,7 @@ export const Home = ({ content }) => {
               className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
               icon={faHandHoldingDollar}
             />
-            <p className="text-5xl font-lato font-extrabold">100%</p>
+            <p className="text-5xl  font-extrabold">100%</p>
             <p className="uppercase text-light">of donations distributed</p>
           </div>
         </div>
@@ -172,95 +171,31 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* other donations section */}
-      <section className="bg-gradient-to-b from-[#ECF4FA] to-white h-[400px] flex flex-col px-12">
-        <h2 className="font-lato font-extrabold text-[3em] pb-4">
-          {pageContent.otherDonationTitle}
-        </h2>
-        <div className="flex flex-row justify-between px-2">
-          <ul>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-          </ul>
-          <ul>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-          </ul>
-          <ul>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-          </ul>
-          <ul>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-          </ul>
-          <ul>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-          </ul>
-          <ul>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-            <li className="uppercase">stuff</li>
-          </ul>
-        </div>
+      <section className="bg-gradient-to-b from-[#ECF4FA] to-white flex flex-row px-12 pb-16 justify-around">
+        <Link href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}>
+          <div className="flex flex-row justify-center items-center">
+            <img className="h-[50px]" src="/images/google-sheets.png" />
+            <span className="ml-1 font-roboto">
+              Non-perishable food<br></br>& other supplies
+            </span>
+          </div>
+        </Link>
+        <Link href={pageContent.otherDonationUrls.amazonWishlistUrl}>
+          <img className="h-[50px]" src="/images/amazon-wishlist.png" />
+        </Link>
+        <Link href={pageContent.otherDonationUrls.targetGiftRegistryUrl}>
+          <img className="h-[50px]" src="/images/target-registry.png" />
+        </Link>
       </section>
       {/* social media */}
       <section className="bg-white flex flex-col px-12 pb-12 relative">
         <div className="absolute bottom-12 right-16 z-10">
-          <h2 className="font-lato font-extrabold text-[3em] text-white">
+          <h2 className=" font-extrabold text-[3em] text-white">
             {pageContent.instagramHashtagText}
           </h2>
         </div>
         <div className="flex flex-row h-[600px] w-full min-h-min flex-wrap justify-center">
           {instagramFeed?.map((pic, i) => {
-            console.log(i)
             return (
               <div key={`div-${pic.id}`} className="h-1/2 w-1/4 relative">
                 <img
@@ -268,10 +203,9 @@ export const Home = ({ content }) => {
                   key={pic.id}
                   src={pic.media_url}
                 />
-                {i > 3 ?
-                <div className="absolute h-full w-full inset-0 blackOverlay z-1">
-                  </div> : null
-                }
+                {i > 3 ? (
+                  <div className="absolute h-full w-full inset-0 blackOverlay z-1"></div>
+                ) : null}
               </div>
             );
           })}
@@ -286,18 +220,24 @@ export const Home = ({ content }) => {
           <p>Copyright H Town for humanity Inc, 2022.</p>
         </div>
         <div className="text-[3em]">
-          <FontAwesomeIcon
-            className="text-3xl text-white rounded-full p-2"
-            icon={faFacebook}
-          />
-          <FontAwesomeIcon
-            className="text-3xl text-white rounded-full p-2"
-            icon={faInstagram}
-          />
-          <FontAwesomeIcon
-            className="text-3xl text-white rounded-full py-2 pl-2"
-            icon={faTiktok}
-          />
+          <Link href={pageContent.socialMediaInfo.facebookUrl}>
+            <FontAwesomeIcon
+              className="cursor-pointer text-3xl text-white rounded-full p-2"
+              icon={faFacebook}
+            />
+          </Link>
+          <Link href={pageContent.socialMediaInfo.instagramUrl}>
+            <FontAwesomeIcon
+              className="cursor-pointer text-3xl text-white rounded-full p-2"
+              icon={faInstagram}
+            />
+          </Link>
+          <Link href={pageContent.socialMediaInfo.tikTokUrl}>
+            <FontAwesomeIcon
+              className="cursor-pointer text-3xl text-white rounded-full py-2 pl-2"
+              icon={faTiktok}
+            />
+          </Link>
         </div>
       </footer>
     </>
