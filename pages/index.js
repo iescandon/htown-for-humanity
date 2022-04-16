@@ -87,11 +87,11 @@ export const Home = ({ content }) => {
       {/* about/donate section */}
       <section>
         <div className="flex flex-col md:flex-row w-screen h-[800px] md:h-[550px] py-12 lg:pl-24 bg-white md:bg-flagYellow items-center justify-center">
-          <div className="flex flex-col pl-10 lg:px-16 lg:px-0 w-full md:w-45percent lg:w-60percent">
-            <h3 className="text-[1.25em] uppercase hidden lg:block">
+          <div className="flex flex-col px-8 md:pl-10 md:pr-0 lg:px-16 lg:px-0 w-full md:w-45percent lg:w-60percent">
+            <h3 className="text-[12px] lg:text-lg uppercase hidden md:block">
               {pageContent.paragraphSubtitle}
             </h3>
-            <h2 className="softTitle text-[3em] font-extrabold text-white pb-8 leading-tight hidden lg:block">
+            <h2 className="softTitle text-[2em] lg:text-[3em] font-extrabold text-white pb-8 leading-tight hidden md:block">
               {pageContent.paragraphTitle}
             </h2>
             {pageContent.paragraphText.content.map((paragraph) => {
@@ -124,37 +124,37 @@ export const Home = ({ content }) => {
       {/* stats section */}
       <section className="h-[350px] flex flex-row justify-center items-center mt-10">
         <div className="w-1/3 flex flex-row justify-center items-center">
-          <div className="card w-80percent h-80percent flex flex-col justify-center items-center text-center p-8">
+        <div className="card w-90percent h-90percent md:w-80percent md:h-80percent flex flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8">
             <FontAwesomeIcon
-              className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
+              className="text-2xl md:text-4xl lg:text-5xl mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
               icon={faMoneyBill1Wave}
             />
-            <p className="text-5xl  font-extrabold">
+            <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
               ${pageContent.numberOfDollarsDonated}
             </p>
-            <p className="uppercase text-light">raised in total</p>
+            <p className="uppercase text-light text-xs md:text-base">raised in total</p>
           </div>
         </div>
         <div className="w-1/3 flex flex-row justify-center items-center">
-          <div className="card w-80percent h-80percent flex flex-col justify-center items-center text-center p-8">
+          <div className="card w-90percent h-90percent md:w-80percent md:h-80percent flex flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8">
             <FontAwesomeIcon
-              className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
+                  className="text-2xl md:text-4xl lg:text-5xl mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
               icon={faPeopleGroup}
             />
-            <p className="text-5xl font-extrabold">
+               <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
               {pageContent.numberOfRefugeesHelped}
             </p>
-            <p className="uppercase text-light">refugees helped</p>
+            <p className="uppercase text-light text-xs md:text-base">refugees helped</p>
           </div>
         </div>
         <div className="w-1/3 flex flex-row justify-center items-center">
-          <div className="card w-80percent h-80percent flex flex-col justify-center items-center text-center p-8">
+        <div className="card w-90percent h-90percent md:w-80percent md:h-80percent flex flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8">
             <FontAwesomeIcon
-              className="text-5xl mb-6 bg-flagBlue text-white p-4 rounded-full"
+                   className="text-2xl md:text-4xl lg:text-5xl mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
               icon={faHandHoldingDollar}
             />
-            <p className="text-5xl  font-extrabold">100%</p>
-            <p className="uppercase text-light">of donations distributed</p>
+            <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">100%</p>
+            <p className="uppercase text-light text-xs md:text-base">of donations distributed</p>
           </div>
         </div>
       </section>
@@ -175,24 +175,24 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* other donations section */}
-      <section className="bg-gradient-to-b from-[#ECF4FA] to-white flex flex-col md:flex-row px-12 pb-16 items-center justify-around">
+      <section className="bg-gradient-to-b from-[#ECF4FA] to-white flex flex-col md:flex-row px-12 pb-16 items-center justify-around space-y-8">
         <Link href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}>
-          <div className="flex flex-row justify-center items-center w-[200px] cursor-pointer">
-            <img className="h-[50px]" src="/images/google-sheets.png" />
-            <span className="ml-1 font-roboto">
-              Non-perishable food<br></br>& other supplies
+          <div className="flex flex-row justify-center items-center w-[125px] lg:w-[200px] cursor-pointer">
+            <img className="h-[35px] lg:h-[50px]" src="/images/google-sheets.png" />
+            <span className="ml-1 font-roboto text-xs lg:text-base">
+              Non-perishable food & other supplies
             </span>
           </div>
         </Link>
         <Link href={pageContent.otherDonationUrls.amazonWishlistUrl}>
           <img
-            className="w-[200px] cursor-pointer"
+            className="w-[125px] lg:w-[200px] cursor-pointer"
             src="/images/amazon-wishlist.png"
           />
         </Link>
         <Link href={pageContent.otherDonationUrls.targetGiftRegistryUrl}>
           <img
-            className="w-[200px] cursor-pointer"
+            className="w-[125px] lg:w-[200px] cursor-pointer"
             src="/images/target-registry.png"
           />
         </Link>
@@ -200,7 +200,7 @@ export const Home = ({ content }) => {
       {/* insta feed */}
       <section className="bg-white flex flex-col px-12 pb-12 hidden md:flex relative">
         <div className="bottom-12 right-16 z-10 absolute">
-          <h2 className=" font-extrabold text-[3em] text-white">
+          <h2 className=" font-extrabold text-[2em] lg:text-[3em] text-white">
             {pageContent.instagramHashtagText}
           </h2>
         </div>
