@@ -122,9 +122,9 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* stats section */}
-      <section className="h-[350px] flex flex-row justify-center items-center mt-10">
-        <div className="w-1/3 flex flex-row justify-center items-center">
-        <div className="card w-90percent h-90percent md:w-80percent md:h-80percent flex flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8">
+      <section className="h-[350px] flex flex-col md:flex-row justify-center items-center mt-10">
+        <div className="w-full md:w-1/3 flex flex-row justify-center items-center">
+        <div className="card w-60percent md:w-80percent md:h-80percent flex flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0">
             <FontAwesomeIcon
               className="text-2xl md:text-4xl lg:text-5xl mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
               icon={faMoneyBill1Wave}
@@ -135,8 +135,8 @@ export const Home = ({ content }) => {
             <p className="uppercase text-light text-xs md:text-base">raised in total</p>
           </div>
         </div>
-        <div className="w-1/3 flex flex-row justify-center items-center">
-          <div className="card w-90percent h-90percent md:w-80percent md:h-80percent flex flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8">
+        <div className="w-full md:w-1/3  flex flex-row justify-center items-center">
+          <div className="card w-60percent md:w-80percent md:h-80percent flex flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0">
             <FontAwesomeIcon
                   className="text-2xl md:text-4xl lg:text-5xl mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
               icon={faPeopleGroup}
@@ -147,8 +147,8 @@ export const Home = ({ content }) => {
             <p className="uppercase text-light text-xs md:text-base">refugees helped</p>
           </div>
         </div>
-        <div className="w-1/3 flex flex-row justify-center items-center">
-        <div className="card w-90percent h-90percent md:w-80percent md:h-80percent flex flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8">
+        <div className="w-full md:w-1/3  flex flex-row justify-center items-center">
+        <div className="card w-60percent md:w-80percent md:h-80percent flex flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0">
             <FontAwesomeIcon
                    className="text-2xl md:text-4xl lg:text-5xl mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
               icon={faHandHoldingDollar}
@@ -175,24 +175,24 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* other donations section */}
-      <section className="bg-gradient-to-b from-[#ECF4FA] to-white flex flex-col md:flex-row px-12 pb-16 items-center justify-around space-y-8">
+      <section className="bg-gradient-to-b from-[#ECF4FA] to-white flex flex-row px-8 lg:px-12 pb-16 items-center justify-around">
         <Link href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}>
-          <div className="flex flex-row justify-center items-center w-[125px] lg:w-[200px] cursor-pointer">
-            <img className="h-[35px] lg:h-[50px]" src="/images/google-sheets.png" />
-            <span className="ml-1 font-roboto text-xs lg:text-base">
+          <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
+            <img className="h-[20px] md:h-[35px] lg:h-[50px]" src="/images/google-sheets.png" />
+            <span className="ml-1 font-roboto text-[10px] md:text-xs lg:text-base">
               Non-perishable food & other supplies
             </span>
           </div>
         </Link>
         <Link href={pageContent.otherDonationUrls.amazonWishlistUrl}>
           <img
-            className="w-[125px] lg:w-[200px] cursor-pointer"
+            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer p-4"
             src="/images/amazon-wishlist.png"
           />
         </Link>
         <Link href={pageContent.otherDonationUrls.targetGiftRegistryUrl}>
           <img
-            className="w-[125px] lg:w-[200px] cursor-pointer"
+            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer p-4"
             src="/images/target-registry.png"
           />
         </Link>
