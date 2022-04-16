@@ -126,37 +126,43 @@ export const Home = ({ content }) => {
       {/* stats section */}
       <section className="h-[350px] flex flex-col md:flex-row justify-center items-center mt-10">
         <div className="w-full md:w-1/3 flex flex-row justify-center items-center">
-        <div className="card w-60percent md:w-80percent md:h-80percent flex flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0">
+        <div className="card w-60percent md:w-80percent md:h-80percent flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0">
             <FontAwesomeIcon
               className="text-2xl md:text-4xl lg:text-5xl mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
               icon={faMoneyBill1Wave}
             />
+            <div>
             <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
               ${pageContent.numberOfDollarsDonated}
             </p>
             <p className="uppercase text-light text-xs md:text-base">raised in total</p>
+            </div>
           </div>
         </div>
-        <div className="w-full md:w-1/3  flex flex-row justify-center items-center">
-          <div className="card w-60percent md:w-80percent md:h-80percent flex flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0">
+        <div className="w-full md:w-1/3 flex flex-row justify-center items-center">
+          <div className="card w-60percent md:w-80percent md:h-80percent flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0">
             <FontAwesomeIcon
                   className="text-2xl md:text-4xl lg:text-5xl mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
               icon={faPeopleGroup}
             />
+                     <div>
                <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
               {pageContent.numberOfRefugeesHelped}
             </p>
             <p className="uppercase text-light text-xs md:text-base">refugees helped</p>
+            </div>
           </div>
         </div>
-        <div className="w-full md:w-1/3  flex flex-row justify-center items-center">
-        <div className="card w-60percent md:w-80percent md:h-80percent flex flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0">
+        <div className="w-full md:w-1/3 flex flex-row justify-center items-center">
+        <div className="card w-60percent md:w-80percent md:h-80percent flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0">
             <FontAwesomeIcon
                    className="text-2xl md:text-4xl lg:text-5xl mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
               icon={faHandHoldingDollar}
             />
+            <div>
             <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">100%</p>
             <p className="uppercase text-light text-xs md:text-base">of donations distributed</p>
+            </div>
           </div>
         </div>
       </section>
@@ -224,7 +230,7 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* insta carousel */}
-      <section className="bg-white md:hidden">
+      <section className="bg-white md:hidden pb-2">
       <Carousel swipeable={true}>
                 {instagramFeed?.map((pic) => {
             return (
