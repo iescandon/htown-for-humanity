@@ -52,7 +52,7 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
       onSubmit={handleOnSubmit}
     >
       <h2 className="font-extrabold text-[1.3em] md:text-[2em] lg:text-[3em]">{contactFormTitle}</h2>
-      <select name="reason" id="reason" className="mt-5 border bg-white rounded">
+      <select name="reason" id="reason" className="mt-2 md:mt-4 border bg-white rounded">
       {contactFormDropdownOptions.map((dropdownOption) => {
               return (
                 <option key={dropdownOption} value={dropdownOption}>
@@ -62,7 +62,7 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
             })}
       </select>
       <input
-        className="mt-5 border rounded"
+        className="mt-2 md:mt-4 border rounded"
         id="name"
         type="name"
         name="name"
@@ -70,7 +70,7 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
         required
       />
       <input
-        className="mt-5 border rounded"
+        className="mt-2 md:mt-4 border rounded"
         id="email"
         type="email"
         name="email"
@@ -78,14 +78,14 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
         required
       />
       <textarea
-        className="mt-5 border rounded"
+        className="mt-2 md:mt-4 border rounded"
         id="message"
         name="message"
         placeholder="your message"
       ></textarea>
       {/* <div className="g-recaptcha" data-sitekey={process.env.RECAPTCHA_SITE_KEY}></div> */}
       <button
-        className="self-end w-1/3 p-3 mt-6 bg-black rounded text-white md:transition md:duration-200 md:ease-in-out md:w-1/6 submit-btn"
+        className="self-end w-full md:w-1/4 lg:w-1/5 p-3 mt-2 md:mt-5 bg-black rounded text-white md:transition md:duration-200 md:ease-in-out submit-btn"
         type="submit"
         disabled={serverState.submitting}
       >

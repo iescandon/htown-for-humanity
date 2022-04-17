@@ -43,7 +43,7 @@ export const Help = ({ content }) => {
         </Link>
         <img />
       </nav>
-      <div className="p-8 lg:p-12 flex flex-col">
+      <div className="p-6 lg:p-12 flex flex-col">
         <section className="flex flex-row justify-between items-center pb-12">
           <div className="hidden md:block w-[85px]"></div>
           <h2 className="text-[1.5em] lg:text-[3em] font-bold font-roboto">

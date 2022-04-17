@@ -88,7 +88,7 @@ export const Home = ({ content }) => {
       </section>
       {/* about/donate section */}
       <section className="md:py-12 pl-0 md:pl-8 lg:pl-24 flex flex-col md:flex-row items-center justify-center md:bg-flagYellow">
-        <div className="p-8 md:p-0 bg-white md:bg-transparent flex flex-col w-full md:w-45percent lg:w-60percent">
+        <div className="p-6 md:p-0 bg-white drop-shadow-md md:bg-transparent flex flex-col w-full md:w-45percent lg:w-60percent">
           <h3 className="text-[12px] lg:text-lg uppercase hidden md:block">
             {pageContent.paragraphSubtitle}
           </h3>
@@ -122,7 +122,7 @@ export const Home = ({ content }) => {
         </div>
       </section>
 
-      <section className="p-8 lg:p-12 space-y-8 md:space-y-16 lg:space-y-24 bg-[#ECF4FA]">
+      <section className="p-6 md:p-8 lg:p-12 space-y-8 md:space-y-16 lg:space-y-24 bg-[#ECF4FA]">
       {/* stats section */}
         <section className="md:pt-8 lg:pt-12 flex flex-col md:flex-row justify-center items-center">
           <div className="w-full md:w-1/3 flex flex-row justify-center items-center">
@@ -158,7 +158,7 @@ export const Home = ({ content }) => {
             </div>
           </div>
           <div className="w-full md:w-1/3 flex flex-row justify-center items-center">
-            <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0 mx-4">
+            <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-2 md:mb-0 mx-4">
               <FontAwesomeIcon
                 className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
                 icon={faHandHoldingDollar}
@@ -194,7 +194,7 @@ export const Home = ({ content }) => {
         </section>
         </section>
         {/* other donations section */}
-        <section className="px-8 pb-10 pt-2 md:pt-0 md:pb-8 lg:px-12 lg:pb-12 bg-gradient-to-b from-[#ECF4FA] to-white flex flex-row items-center justify-around">
+        <section className="px-6 pb-10 pt-2 md:pt-0 md:pb-8 lg:px-12 lg:pb-12 bg-gradient-to-b from-[#ECF4FA] to-white flex flex-row items-center justify-around">
           <Link
             href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}
           >
