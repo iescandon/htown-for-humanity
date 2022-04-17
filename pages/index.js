@@ -24,6 +24,7 @@ export const Home = ({ content }) => {
   console.log(pageContent);
 
   useEffect(() => {
+    setPageContent(content[0].fields)
     fetch(
       `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url&access_token=${process.env.NEXT_PUBLIC_INSTAGRAM_API_ACCESS_TOKEN}`
     )
@@ -36,7 +37,7 @@ export const Home = ({ content }) => {
         const slicedArray = filteredArray?.slice(0, 8);
         setInstagramFeed(slicedArray);
       });
-  }, []);
+  }, [content]);
 
   return (
     <>
