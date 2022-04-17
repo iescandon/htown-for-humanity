@@ -76,6 +76,7 @@ input, select, textarea {
   height: 80px;
 }
 
+.carousel .thumbs-wrapper,
 .carousel-status {
   display: none;
 }
