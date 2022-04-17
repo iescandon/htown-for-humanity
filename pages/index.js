@@ -88,12 +88,12 @@ export const Home = ({ content }) => {
       </section>
       {/* about/donate section */}
       <section className="md:py-12 pl-0 md:pl-8 lg:pl-24 flex flex-col md:flex-row items-center justify-center md:bg-flagYellow">
-        <div className="p-6 md:p-0 bg-white drop-shadow-sm md:bg-transparent flex flex-col w-full md:w-45percent lg:w-60percent">
+        <div className="px-6 py-10 md:p-0 md:bg-transparent flex flex-col w-full md:w-45percent lg:w-60percent">
           <h3 className="text-[12px] lg:text-lg uppercase hidden md:block">
             {pageContent.paragraphSubtitle}
           </h3>
-          <h2 className="softTitle text-[2em] lg:text-[3em] font-extrabold text-white pb-8 leading-tight hidden md:block">
-            {pageContent.paragraphTitle}
+          <h2 className="text-[2em] lg:text-[3em] font-extrabold text-black pb-8 leading-tight hidden md:block">
+          {pageContent.instagramHashtagText}
           </h2>
           {pageContent.paragraphText.content.map((paragraph) => {
             return (
@@ -108,35 +108,7 @@ export const Home = ({ content }) => {
             </span>
           </Link>
         </div>
-        {/* mobile other donations section */}
-        <div className="md:hidden p-6 py-10 bg-[#ECF4FA] flex flex-row items-center justify-around w-full">
-          <Link
-            href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}
-          >
-            <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
-              <img
-                className="h-[20px] md:h-[35px] lg:h-[50px]"
-                src="/images/google-sheets.png"
-              />
-              <span className="ml-1 font-roboto text-[10px] md:text-xs lg:text-base">
-                Non-perishable food & other supplies
-              </span>
-            </div>
-          </Link>
-          <Link href={pageContent.otherDonationUrls.amazonWishlistUrl}>
-            <img
-              className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer p-4"
-              src="/images/amazon-wishlist.png"
-            />
-          </Link>
-          <Link href={pageContent.otherDonationUrls.targetGiftRegistryUrl}>
-            <img
-              className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer p-4"
-              src="/images/target-registry.png"
-            />
-          </Link>
-        </div>
-        <div className="px-6 md:p-0 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center bg-[#ECF4FA] md:bg-transparent">
+        <div className="px-6 md:p-0 hidden md:flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center md:bg-transparent">
           <iframe
             className=""
             src="https://donorbox.org/embed/h-town-for-humanity"
@@ -148,10 +120,78 @@ export const Home = ({ content }) => {
             width="375px"
           ></iframe>
         </div>
+        {/* mobile other donations section */}
+        <div className="bg-white md:bg-transparent drop-shadow-sm">
+          <div className="md:hidden px-6 md:p-0 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center md:bg-transparent">
+            <iframe
+              className=""
+              src="https://donorbox.org/embed/h-town-for-humanity"
+              name="donorbox"
+              allowpaymentrequest="allowpaymentrequest"
+              seamless="seamless"
+              scrolling="no"
+              height="500px"
+              width="375px"
+            ></iframe>
+          </div>
+          <div className="md:hidden px-6 pb-8 flex flex-row items-center justify-around w-full">
+            <Link
+              href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}
+            >
+              <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
+                <img
+                  className="h-[20px] md:h-[35px] lg:h-[50px]"
+                  src="/images/google-sheets.png"
+                />
+                <span className="ml-1 font-roboto text-[10px] md:text-xs lg:text-base">
+                  Non-perishable food & other supplies
+                </span>
+              </div>
+            </Link>
+            <Link href={pageContent.otherDonationUrls.amazonWishlistUrl}>
+              <img
+                className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer p-4"
+                src="/images/amazon-wishlist.png"
+              />
+            </Link>
+            <Link href={pageContent.otherDonationUrls.targetGiftRegistryUrl}>
+              <img
+                className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer p-4"
+                src="/images/target-registry.png"
+              />
+            </Link>
+          </div>
+        </div>
       </section>
-      <section className="p-6 md:p-8 lg:p-12 space-y-8 md:space-y-16 lg:space-y-24 bg-[#ECF4FA]">
+      {/* other donations section */}
+      <section className="bg-white drop-shadow hidden p-6 md:flex flex-row items-center justify-around">
+        <Link href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}>
+          <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
+            <img
+              className="h-[20px] md:h-[35px] lg:h-[50px]"
+              src="/images/google-sheets.png"
+            />
+            <span className="ml-1 font-roboto text-[10px] md:text-xs lg:text-base">
+              Non-perishable food & other supplies
+            </span>
+          </div>
+        </Link>
+        <Link href={pageContent.otherDonationUrls.amazonWishlistUrl}>
+          <img
+            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer p-4"
+            src="/images/amazon-wishlist.png"
+          />
+        </Link>
+        <Link href={pageContent.otherDonationUrls.targetGiftRegistryUrl}>
+          <img
+            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer p-4"
+            src="/images/target-registry.png"
+          />
+        </Link>
+      </section>
+      <section className="p-6 md:p-8 lg:p-12 space-y-6 md:space-y-16 lg:space-y-24 bg-[#ECF4FA]">
         {/* stats section */}
-        <section className="md:pt-8 lg:pt-12 flex flex-col md:flex-row justify-center items-center">
+        <section className="pt-7 flex flex-col md:flex-row justify-center items-center">
           <div className="w-full md:w-1/3 flex flex-row justify-center items-center">
             <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0 mx-4">
               <FontAwesomeIcon
@@ -201,15 +241,35 @@ export const Home = ({ content }) => {
             </div>
           </div>
         </section>
-        {/* contact form section */}
-        <section className="hidden md:flex w-full flex-row">
-          <div className="mask w-1/3 relative hidden md:block mr-8">
-            <img
-              className="w-full h-full object-cover mx-4"
-              src={pageContent.contactAsideImage.fields.file.url}
-            />
-            <div className="blueOverlayLight absolute w-full h-full flex flex-col top-0 justify-between"></div>
+        {/* insta feed */}
+        <section className="bg-[#ECF4FA] flex-col hidden md:flex relative">
+          {/* <div className="top-3 right-3 z-10 absolute">
+          <h2 className="font-extrabold text-[2em] lg:text-[3em] text-white">
+            {pageContent.instagramHashtagText}
+          </h2>
+        </div> */}
+          {/* <h2 className="font-extrabold text-[2em] lg:text-[3em] text-right">
+            {pageContent.instagramHashtagText}
+          </h2> */}
+          <div className="hidden md:flex flex-row md:h-[350px] lg:h-[600px] w-full min-h-min flex-wrap justify-center">
+            {instagramFeed?.map((pic, i) => {
+              return (
+                <div key={`div-${pic.id}`} className="h-1/2 w-1/4 relative">
+                  <img
+                    className="h-full w-full object-cover"
+                    key={pic.id}
+                    src={pic.media_url}
+                  />
+                  {/* {i < 4 ? (
+                  <div className="absolute h-full w-full inset-0 blackOverlay z-1"></div>
+                ) : null} */}
+                </div>
+              );
+            })}
           </div>
+        </section>
+        {/* contact form section */}
+        <section className="pb-6 hidden md:flex w-full flex-row">
           <div className="h-full w-full md:w-2/3 flex flex-row justify-center items-center">
             <ContactForm
               contactFormTitle={pageContent.contactFormTitle}
@@ -218,57 +278,14 @@ export const Home = ({ content }) => {
               }
             />
           </div>
-        </section>
-      </section>
-      {/* other donations section */}
-      <section className="hidden px-6 pb-10 pt-2 md:pt-0 md:pb-8 lg:px-12 lg:pb-12 bg-gradient-to-b from-[#ECF4FA] to-white md:flex flex-row items-center justify-around">
-        <Link href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}>
-          <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
+          <div className="mask w-1/3 relative hidden md:block mr-8">
             <img
-              className="h-[20px] md:h-[35px] lg:h-[50px]"
-              src="/images/google-sheets.png"
+              className="w-full h-full object-cover mx-4"
+              src={pageContent.contactAsideImage.fields.file.url}
             />
-            <span className="ml-1 font-roboto text-[10px] md:text-xs lg:text-base">
-              Non-perishable food & other supplies
-            </span>
+            <div className="blueOverlayLight absolute w-full h-full flex flex-col top-0 justify-between"></div>
           </div>
-        </Link>
-        <Link href={pageContent.otherDonationUrls.amazonWishlistUrl}>
-          <img
-            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer p-4"
-            src="/images/amazon-wishlist.png"
-          />
-        </Link>
-        <Link href={pageContent.otherDonationUrls.targetGiftRegistryUrl}>
-          <img
-            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer p-4"
-            src="/images/target-registry.png"
-          />
-        </Link>
-      </section>
-      {/* insta feed */}
-      <section className="p-8 lg:p-12 bg-white flex flex-col hidden md:flex relative">
-        <div className="bottom-12 right-16 z-10 absolute">
-          <h2 className=" font-extrabold text-[2em] lg:text-[3em] text-white">
-            {pageContent.instagramHashtagText}
-          </h2>
-        </div>
-        <div className="hidden md:flex flex-row md:h-[350px] lg:h-[600px] w-full min-h-min flex-wrap justify-center">
-          {instagramFeed?.map((pic, i) => {
-            return (
-              <div key={`div-${pic.id}`} className="h-1/2 w-1/4 relative">
-                <img
-                  className="h-full w-full object-cover"
-                  key={pic.id}
-                  src={pic.media_url}
-                />
-                {i > 3 ? (
-                  <div className="absolute h-full w-full inset-0 blackOverlay z-1"></div>
-                ) : null}
-              </div>
-            );
-          })}
-        </div>
+        </section>
       </section>
       {/* insta carousel */}
       <section className="pt-6 md:hidden bg-[#ECF4FA]">
