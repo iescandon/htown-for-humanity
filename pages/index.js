@@ -42,12 +42,6 @@ export const Home = ({ content }) => {
   return (
     <>
       <Head>
-        {/* <script
-          type="text/javascript"
-          defer
-          src="https://donorbox.org/install-popup-button.js"
-        ></script>
-        <script type="text/javascript" src="/js/popup.js"></script> */}
         <script
           src="https://donorbox.org/widget.js"
           paypalExpress="false"
@@ -87,13 +81,13 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* about/donate section */}
-      <section className="md:py-12 pl-0 md:pl-8 lg:pl-24 flex flex-col md:flex-row items-center justify-center md:bg-flagYellow w-full">
+      <section className="md:py-12 pl-0 md:pl-8 flex flex-col md:flex-row items-center justify-center md:bg-flagYellow w-full">
         <div className="px-6 py-10 md:p-0 md:bg-transparent flex flex-col w-full md:w-45percent lg:w-60percent">
           <h3 className="text-[12px] lg:text-lg uppercase hidden md:block">
             {pageContent.paragraphSubtitle}
           </h3>
           <h2 className="text-[2em] lg:text-[3em] font-extrabold text-black pb-8 leading-tight hidden md:block">
-          {pageContent.instagramHashtagText}
+            {pageContent.instagramHashtagText}
           </h2>
           {pageContent.paragraphText.content.map((paragraph) => {
             return (
@@ -108,7 +102,7 @@ export const Home = ({ content }) => {
             </span>
           </Link>
         </div>
-        <div className="px-6 md:p-0 hidden md:flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center md:bg-transparent">
+        <div className="px-6 md:p-0 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center md:bg-transparent">
           <iframe
             className=""
             src="https://donorbox.org/embed/h-town-for-humanity"
@@ -120,129 +114,81 @@ export const Home = ({ content }) => {
             width="375px"
           ></iframe>
         </div>
-        {/* mobile other donations and donate form section */}
-        <div className="bg-white md:bg-transparent drop-shadow-sm w-full md:hidden">
-          <div className="px-6 md:p-0 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center md:bg-transparent">
-            <iframe
-              className=""
-              src="https://donorbox.org/embed/h-town-for-humanity"
-              name="donorbox"
-              allowpaymentrequest="allowpaymentrequest"
-              seamless="seamless"
-              scrolling="no"
-              height="500px"
-              width="375px"
-            ></iframe>
-          </div>
-          <div className="px-6 pb-8 flex flex-row items-center justify-around">
-            <Link
-              href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}
-            >
-              <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
-                <img
-                  className="h-[20px] md:h-[35px] lg:h-[50px]"
-                  src="/images/google-sheets.png"
-                />
-                <span className="ml-1 font-roboto text-[10px] md:text-xs lg:text-base">
-                  Non-perishable food & other supplies
-                </span>
-              </div>
-            </Link>
-            <Link href={pageContent.otherDonationUrls.amazonWishlistUrl}>
-              <img
-                className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer px-2 py-4"
-                src="/images/amazon-wishlist.png"
-              />
-            </Link>
-            <Link href={pageContent.otherDonationUrls.targetGiftRegistryUrl}>
-              <img
-                className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer px-2 py-4"
-                src="/images/target-registry.png"
-              />
-            </Link>
-          </div>
-        </div>
       </section>
       {/* other donations section */}
-      <section className="bg-white drop-shadow-sm hidden p-6 md:flex flex-row items-center justify-around">
+      <section className="pt-0 pb-8 md:p-6 flex flex-row items-center justify-around drop-shadow-sm w-full">
         <Link href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}>
-          <div className="flex flex-row justify-center items-center w-[100px] md:w-[175px] lg:w-[225px] cursor-pointer">
+          <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
             <img
               className="h-[20px] md:h-[35px] lg:h-[50px]"
               src="/images/google-sheets.png"
             />
-            <span className="ml-2 font-roboto text-[10px] md:text-sm lg:text-base">
+            <span className="ml-1 font-roboto text-[10px] md:text-xs lg:text-base">
               Non-perishable food & other supplies
             </span>
           </div>
         </Link>
         <Link href={pageContent.otherDonationUrls.amazonWishlistUrl}>
           <img
-            className="w-[100px] md:w-[175px] lg:w-[225px] cursor-pointer p-4"
+            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer px-2 py-4"
             src="/images/amazon-wishlist.png"
           />
         </Link>
         <Link href={pageContent.otherDonationUrls.targetGiftRegistryUrl}>
           <img
-            className="w-[100px] md:w-[175px] lg:w-[225px] cursor-pointer p-4"
+            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer px-2 py-4"
             src="/images/target-registry.png"
           />
         </Link>
       </section>
-      <section className="p-6 md:p-8 lg:p-12 space-y-6 md:space-y-16 lg:space-y-24 bg-[#ECF4FA]">
+      <div className="pt-6 md:py-8 lg:py-12 bg-[#ECF4FA]">
         {/* stats section */}
-        <section className="pt-7 flex flex-col md:flex-row justify-center items-center">
-          <div className="w-full md:w-1/3 flex flex-row justify-center items-center">
-            <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0 mx-4">
-              <FontAwesomeIcon
-                className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
-                icon={faMoneyBill1Wave}
-              />
-              <div className="w-3/4">
-                <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
-                  ${pageContent.numberOfDollarsDonated}
-                </p>
-                <p className="uppercase text-light text-xs md:text-base">
-                  raised in total
-                </p>
-              </div>
+        <section className="p-6 md:p-8 lg:p-12 space-y-6 md:space-y-0 flex flex-col md:flex-row justify-center items-center">
+          <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mx-4">
+            <FontAwesomeIcon
+              className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
+              icon={faMoneyBill1Wave}
+            />
+            <div className="w-3/4">
+              <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
+                ${pageContent.numberOfDollarsDonated}
+              </p>
+              <p className="uppercase text-light text-xs md:text-base">
+                raised in total
+              </p>
             </div>
           </div>
-          <div className="w-full md:w-1/3 flex flex-row justify-center items-center">
-            <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0 mx-4">
-              <FontAwesomeIcon
-                className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
-                icon={faPeopleGroup}
-              />
-              <div className="w-3/4">
-                <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
-                  {pageContent.numberOfRefugeesHelped}
-                </p>
-                <p className="uppercase text-light text-xs md:text-base">
-                  refugees helped
-                </p>
-              </div>
+          <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0 mx-4">
+            <FontAwesomeIcon
+              className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
+              icon={faPeopleGroup}
+            />
+            <div className="w-3/4">
+              <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
+                {pageContent.numberOfRefugeesHelped}
+              </p>
+              <p className="uppercase text-light text-xs md:text-base">
+                refugees helped
+              </p>
             </div>
           </div>
-          <div className="w-full md:w-1/3 flex flex-row justify-center items-center">
-            <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-2 md:mb-0 mx-4">
-              <FontAwesomeIcon
-                className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
-                icon={faHandHoldingDollar}
-              />
-              <div className="w-3/4">
-                <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
-                  100%
-                </p>
-                <p className="uppercase text-light text-xs md:text-base">
-                  of donations distributed
-                </p>
-              </div>
+          <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-2 md:mb-0 mx-4">
+            <FontAwesomeIcon
+              className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
+              icon={faHandHoldingDollar}
+            />
+            <div className="w-3/4">
+              <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
+                100%
+              </p>
+              <p className="uppercase text-light text-xs md:text-base">
+                of donations distributed
+              </p>
             </div>
           </div>
         </section>
         {/* insta feed */}
-        <section className="bg-[#ECF4FA] flex-col hidden md:flex relative">
+        <section className="p-6 md:p-8 lg:p-12 space-y-6 flex-col hidden md:flex relative">
           {/* <div className="top-3 right-3 z-10 absolute">
           <h2 className="font-extrabold text-[2em] lg:text-[3em] text-white">
             {pageContent.instagramHashtagText}
@@ -268,8 +214,24 @@ export const Home = ({ content }) => {
             })}
           </div>
         </section>
+        {/* insta carousel */}
+        <section className="pt-6 md:hidden">
+          <Carousel swipeable={true}>
+            {instagramFeed?.map((pic) => {
+              return (
+                <div key={`div-${pic.id}`} className="">
+                  <img
+                    className="h-full w-full object-cover"
+                    key={pic.id}
+                    src={pic.media_url}
+                  />
+                </div>
+              );
+            })}
+          </Carousel>
+        </section>
         {/* contact form section */}
-        <section className="pb-6 hidden md:flex w-full flex-row">
+        <section className="px-6 pt-6 pb-12 md:p-8 lg:p-12 space-y-6 bg-white md:bg-[#ECF4FA] flex w-full flex-row">
           <div className="h-full w-full md:w-2/3 flex flex-row justify-center items-center">
             <ContactForm
               contactFormTitle={pageContent.contactFormTitle}
@@ -278,55 +240,31 @@ export const Home = ({ content }) => {
               }
             />
           </div>
-          <div className="mask w-1/3 relative hidden md:block mr-8">
+          <div className="mask w-1/3 relative hidden md:block">
             <img
-              className="w-full h-full object-cover mx-4"
+              className="w-full h-full object-cover"
               src={pageContent.contactAsideImage.fields.file.url}
             />
             <div className="blueOverlayLight absolute w-full h-full flex flex-col top-0 justify-between"></div>
           </div>
         </section>
-      </section>
-      {/* insta carousel */}
-      <section className="pt-6 md:hidden bg-[#ECF4FA]">
-        <Carousel swipeable={true}>
-          {instagramFeed?.map((pic) => {
-            return (
-              <div key={`div-${pic.id}`} className="">
-                <img
-                  className="h-full w-full object-cover"
-                  key={pic.id}
-                  src={pic.media_url}
-                />
-              </div>
-            );
-          })}
-        </Carousel>
-      </section>
-      {/* mobile contact form section */}
-      <section className="p-6 md:hidden w-full flex flex-row">
-        <div className="mask w-1/3 relative hidden md:block mr-8">
-          <img
-            className="w-full h-full object-cover mx-4"
-            src={pageContent.contactAsideImage.fields.file.url}
-          />
-          <div className="blueOverlayLight absolute w-full h-full flex flex-col top-0 justify-between"></div>
-        </div>
-        <div className="h-full w-full md:w-2/3 flex flex-row justify-center items-center">
-          <ContactForm
-            contactFormTitle={pageContent.contactFormTitle}
-            contactFormDropdownOptions={pageContent.contactFormDropdownOptions}
-          />
-        </div>
-      </section>
-      <footer className="bg-black h-[160px] md:h-[80px] flex flex-col md:flex-row items-center p-6 justify-between">
-        <div className="flex flex-col text-white text-xs font-light">
+      </div>
+      {/* footer section */}
+      <footer className="bg-black flex flex-col md:flex-row items-center px-6 py-6 md:py-3  justify-between">
+        <div className="flex flex-col text-white text-xs font-light space-y-2 md:space-y-0 pb-6 md:pb-0">
           <p>
             H Town for humanity Inc is a 501(c)(3) not-for-profit organization.
             EIN number 88-1595598.
           </p>
-          <p>Copyright H Town for humanity Inc, 2022.</p>
+          {/* <p>Copyright H Town for humanity Inc, 2022.</p> */}
+          <p>
+            Website created by{" "}
+            <Link href="https://inescandon.vercel.app/">Inez Escandon</Link>
+          </p>
         </div>
+        {/* <div className="cursor-pointer text-white text-xs font-light">
+          <p>Created by <Link href="https://inescandon.vercel.app/">Inez Escandon</Link></p>
+          </div> */}
         <div className="md:text-[3em]">
           <Link href={pageContent.socialMediaInfo.facebookUrl}>
             <FontAwesomeIcon
