@@ -259,7 +259,8 @@ export const Home = ({ content }) => {
           {/* <p>Copyright H Town for humanity Inc, 2022.</p> */}
           <p>
             Website created by{" "}
-            <Link href="https://inescandon.vercel.app/">Inez Escandon</Link>
+            <Link href="https://inescandon.vercel.app/">
+              <span className="underline cursor-pointer text-blue-200">Inez Escandon</span></Link>
           </p>
         </div>
         {/* <div className="cursor-pointer text-white text-xs font-light">
