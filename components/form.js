@@ -47,7 +47,8 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
 
   return (
     <form
-      className="px-6 h-full w-full flex flex-col justify-center"
+      // className="px-6 h-full w-full flex flex-col justify-center"
+      className="h-full w-full flex flex-col justify-center"
       onSubmit={handleOnSubmit}
     >
       <h2 className="font-extrabold text-[1.3em] md:text-[2em] lg:text-[3em]">{contactFormTitle}</h2>
@@ -84,7 +85,7 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
       ></textarea>
       {/* <div className="g-recaptcha" data-sitekey={process.env.RECAPTCHA_SITE_KEY}></div> */}
       <button
-        className="self-end w-1/3 p-3 mt-10 bg-black rounded text-white md:transition md:duration-200 md:ease-in-out md:w-1/6 submit-btn"
+        className="self-end w-1/3 p-3 mt-6 bg-black rounded text-white md:transition md:duration-200 md:ease-in-out md:w-1/6 submit-btn"
         type="submit"
         disabled={serverState.submitting}
       >
