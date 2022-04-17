@@ -37,7 +37,7 @@ export const Help = ({ content }) => {
       <nav className="bg-flagYellow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center justify-between pl-6">
         <Link href="/">
           <FontAwesomeIcon
-            className="text-3xl cursor-pointer"
+            className="text-2xl cursor-pointer"
             icon={faArrowLeft}
           />
         </Link>

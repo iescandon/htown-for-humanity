@@ -47,7 +47,6 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
 
   return (
     <form
-      // className="px-6 h-full w-full flex flex-col justify-center"
       className="h-full w-full flex flex-col justify-center"
       onSubmit={handleOnSubmit}
     >
@@ -97,9 +96,6 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
             !serverState.status.ok ? "errorMsg" : ""
           }`}
         >
-                {/* <p
-          className="fixed rounded top-5 right-5 py-6 px-6 bg-green-700 w-[300px] text-lg text-white text-center"
-        > */}
           {serverState.status.msg}
         </p>
       )}

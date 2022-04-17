@@ -8,7 +8,6 @@ body {
   padding: 0;
   margin: 0;
   @apply font-lato;
-  /* background-color: #ECF4FA; */
 }
 
 a {
@@ -28,11 +27,6 @@ input, select, textarea {
   text-shadow: 0 0 20px #000000;
 }
 
-.softTitle {
-  text-shadow: 0 0 40px #b49902;
-}
-
-
 .blackOverlay {
   background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 1));
 }
@@ -50,6 +44,17 @@ input, select, textarea {
   box-shadow: 0 3px 15px 0 rgba(52, 51, 66, 0.12);
   background-color: rgba(255, 255, 255);
 }
+
+.mask {
+  -webkit-mask-image: url(https://i.imgur.com/Ryhs05J.png);
+  mask-image: url(https://i.imgur.com/Ryhs05J.png);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;   
+  mask-size: 100%;
+  mask-position: center;
+}
+
+/* contact form recaptcha */
 /* 
 #g-recaptcha-response {
   display: block !important;
@@ -59,15 +64,7 @@ input, select, textarea {
   opacity: 0;
   } */
 
-  .mask {
-  -webkit-mask-image: url(https://i.imgur.com/Ryhs05J.png);
-  mask-image: url(https://i.imgur.com/Ryhs05J.png);
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;   
-  mask-size: 100%;
-  mask-position: center;
-}
-
+/* carousel */
 .carousel .slide img {
   height: 350px;
 }
@@ -81,14 +78,15 @@ input, select, textarea {
   display: none;
 }
 
-/* .toggle-wrapper label {
-	padding: 0.3em;
+
+/* toggle */
+.toggle-wrapper label {
+	/* padding: 0.3em;
 	font-size: 17px;
-	display: block;
-} */
+	display: block; */
+}
 
 .toggleContainer {
-	/* width: 100%; */
 	width: 85px;
 	position: relative;
 	background: #ffffff;
@@ -105,12 +103,9 @@ input, select, textarea {
 	z-index: 1;
 	text-align: center;
 	vertical-align: middle;
-	/* height: 40px; */
-	/* line-height: 1.15 !important; */
 	cursor: pointer;
 	transition: all 0.5s ease-in-out;
 	color: #807b77;
-	/* font-size: 1em; */
 	font-size: 24px;
 	font-weight: 800;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -118,9 +113,9 @@ input, select, textarea {
 		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-/* .togglesize {
-	font-size: 24px;
-} */
+.togglesize {
+	/* font-size: 24px; */
+}
 
 .toggle {
 	border-radius: 46%;
@@ -134,7 +129,8 @@ input, select, textarea {
 	cursor: initial;
 }
 
-/* .toggleContainer */
+/* .toggleContainer {
+}*/
 
 .toggleContainer .toggle {
 	height: 100%;
@@ -148,9 +144,6 @@ input, select, textarea {
 }
 
 .toggle-wrapper {
-	/* line-height: 1 !important; */
-	/* line-height: 1.15 !important; */
-	/* width: 100% !important; */
 	align-items: center !important;
 	align-content: center !important;
 }
