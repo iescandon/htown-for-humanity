@@ -55,7 +55,7 @@ export const Home = ({ content }) => {
       </Head>
       {/* nav section */}
       <nav className="md:hidden bg-flagYellow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center pl-6">
-      {pageContent.instagramHashtagText}
+        {pageContent.instagramHashtagText}
       </nav>
       {/* hero image section */}
       <section className="relative h-[200px] md:h-[400px] lg:h-[550px]">
@@ -87,7 +87,7 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* about/donate section */}
-      <section className="md:py-12 pl-0 md:pl-8 lg:pl-24 flex flex-col md:flex-row items-center justify-center md:bg-flagYellow">
+      <section className="md:py-12 pl-0 md:pl-8 lg:pl-24 flex flex-col md:flex-row items-center justify-center md:bg-flagYellow w-full">
         <div className="px-6 py-10 md:p-0 md:bg-transparent flex flex-col w-full md:w-45percent lg:w-60percent">
           <h3 className="text-[12px] lg:text-lg uppercase hidden md:block">
             {pageContent.paragraphSubtitle}
@@ -120,9 +120,9 @@ export const Home = ({ content }) => {
             width="375px"
           ></iframe>
         </div>
-        {/* mobile other donations section */}
-        <div className="bg-white md:bg-transparent drop-shadow-sm">
-          <div className="md:hidden px-6 md:p-0 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center md:bg-transparent">
+        {/* mobile other donations and donate form section */}
+        <div className="bg-white md:bg-transparent drop-shadow-sm w-full md:hidden">
+          <div className="px-6 md:p-0 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center md:bg-transparent">
             <iframe
               className=""
               src="https://donorbox.org/embed/h-town-for-humanity"
@@ -134,7 +134,7 @@ export const Home = ({ content }) => {
               width="375px"
             ></iframe>
           </div>
-          <div className="md:hidden px-6 pb-8 flex flex-row items-center justify-around w-full">
+          <div className="px-6 pb-8 flex flex-row items-center justify-around">
             <Link
               href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}
             >
@@ -150,13 +150,13 @@ export const Home = ({ content }) => {
             </Link>
             <Link href={pageContent.otherDonationUrls.amazonWishlistUrl}>
               <img
-                className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer p-4"
+                className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer px-2 py-4"
                 src="/images/amazon-wishlist.png"
               />
             </Link>
             <Link href={pageContent.otherDonationUrls.targetGiftRegistryUrl}>
               <img
-                className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer p-4"
+                className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer px-2 py-4"
                 src="/images/target-registry.png"
               />
             </Link>
@@ -164,27 +164,27 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* other donations section */}
-      <section className="bg-white drop-shadow hidden p-6 md:flex flex-row items-center justify-around">
+      <section className="bg-white drop-shadow-sm hidden p-6 md:flex flex-row items-center justify-around">
         <Link href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}>
-          <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
+          <div className="flex flex-row justify-center items-center w-[100px] md:w-[175px] lg:w-[225px] cursor-pointer">
             <img
               className="h-[20px] md:h-[35px] lg:h-[50px]"
               src="/images/google-sheets.png"
             />
-            <span className="ml-1 font-roboto text-[10px] md:text-xs lg:text-base">
+            <span className="ml-2 font-roboto text-[10px] md:text-sm lg:text-base">
               Non-perishable food & other supplies
             </span>
           </div>
         </Link>
         <Link href={pageContent.otherDonationUrls.amazonWishlistUrl}>
           <img
-            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer p-4"
+            className="w-[100px] md:w-[175px] lg:w-[225px] cursor-pointer p-4"
             src="/images/amazon-wishlist.png"
           />
         </Link>
         <Link href={pageContent.otherDonationUrls.targetGiftRegistryUrl}>
           <img
-            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer p-4"
+            className="w-[100px] md:w-[175px] lg:w-[225px] cursor-pointer p-4"
             src="/images/target-registry.png"
           />
         </Link>
