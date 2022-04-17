@@ -55,7 +55,7 @@ export const Home = ({ content }) => {
       </Head>
       {/* nav section */}
       <nav className="md:hidden bg-flagYellow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center pl-6">
-        htownforhumanity.org
+      {pageContent.instagramHashtagText}
       </nav>
       {/* hero image section */}
       <section className="relative h-[200px] md:h-[400px] lg:h-[550px]">
