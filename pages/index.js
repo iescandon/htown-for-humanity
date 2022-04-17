@@ -116,7 +116,7 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* other donations section */}
-      <section className="pt-0 pb-8 md:p-6 flex flex-row items-center justify-around drop-shadow-sm w-full">
+      <section className="pt-0 pb-8 md:p-6 flex flex-row items-center justify-around w-full">
         <Link href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}>
           <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
             <img
