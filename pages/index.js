@@ -15,7 +15,7 @@ import {
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 export const Home = ({ content }) => {
