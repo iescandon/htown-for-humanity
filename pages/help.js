@@ -59,7 +59,7 @@ export const Help = ({ content }) => {
               return (
                 <AccordionItem className="border" key={`item-${q}`}>
                   <h2>
-                    <AccordionButton className="font-roboto hover:bg-[#ECF4FA]">
+                    <AccordionButton className="font-roboto md:hover:bg-[#ECF4FA]">
                     <div className="flex flex-row md:h-[40px] min-h-min p-6 w-full justify-between items-center">
                       <div>
                         {q}
