@@ -88,7 +88,7 @@ export const Home = ({ content }) => {
       </section>
       {/* about/donate section */}
       <section className="md:py-12 pl-0 md:pl-8 lg:pl-24 flex flex-col md:flex-row items-center justify-center md:bg-flagYellow">
-        <div className="p-6 md:p-0 bg-white drop-shadow md:bg-transparent flex flex-col w-full md:w-45percent lg:w-60percent">
+        <div className="p-6 md:p-0 bg-white drop-shadow-sm md:bg-transparent flex flex-col w-full md:w-45percent lg:w-60percent">
           <h3 className="text-[12px] lg:text-lg uppercase hidden md:block">
             {pageContent.paragraphSubtitle}
           </h3>
