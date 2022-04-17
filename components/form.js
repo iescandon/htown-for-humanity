@@ -92,8 +92,8 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
       </button>
       {serverState.status && (
         <p
-          className={`fixed rounded top-5 right-5 py-6 px-6 bg-green-700 w-[300px] text-lg text-white text-center ${
-            !serverState.status.ok ? "errorMsg" : ""
+          className={`fixed z-50 rounded top-5 right-5 p-4 lg:p-6 bg-white bg-opacity-95 shadow-lg border-l-4 w-[200px] lg:w-[300px] text-black text-center ${
+            !serverState.status.ok ? "errorMsg border-red-600" : "border-green-600"
           }`}
         >
           {serverState.status.msg}
