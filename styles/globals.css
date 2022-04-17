@@ -8,7 +8,7 @@ body {
   padding: 0;
   margin: 0;
   @apply font-lato;
-  background-color: #ECF4FA;
+  /* background-color: #ECF4FA; */
 }
 
 a {

@@ -107,7 +107,7 @@ export const Home = ({ content }) => {
             </span>
           </Link>
         </div>
-        <div className="px-8 pt-14 md:p-0 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center">
+        <div className="px-8 pt-14 md:p-0 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center bg-[#ECF4FA] md:bg-transparent">
           <iframe
             className=""
             src="https://donorbox.org/embed/h-town-for-humanity"
@@ -121,7 +121,7 @@ export const Home = ({ content }) => {
         </div>
       </section>
 
-      <section className="p-8 lg:p-12 space-y-8 md:space-y-16 lg:space-y-24">
+      <section className="p-8 lg:p-12 space-y-8 md:space-y-16 lg:space-y-24 bg-[#ECF4FA]">
       {/* stats section */}
         <section className="md:pt-8 lg:pt-12 flex flex-col md:flex-row justify-center items-center">
           <div className="w-full md:w-1/3 flex flex-row justify-center items-center">

@@ -1,15 +1,7 @@
 import { createClient } from "contentful";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHandHoldingDollar,
-  faPeopleGroup,
-  faMoneyBill1Wave,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faFacebook,
-  faInstagram,
-  faTiktok,
-} from "@fortawesome/free-brands-svg-icons";
+import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
+
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
@@ -21,13 +13,20 @@ export const Help = ({ content }) => {
   }, []);
 
   return (
-    <div className="m-20">
-      <h1>HELP</h1>
-      <br></br>
-      <Link href="/">
-        <button>BACK</button>
-      </Link>
-    </div>
+    <>
+      <nav className="bg-flagYellow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center justify-between pl-6">
+        <Link href="/">
+          <FontAwesomeIcon
+            className="text-3xl cursor-pointer"
+            icon={faArrowLeftLong}
+          />
+        </Link>
+        <img />
+      </nav>
+      <div className="p-8 lg:p-12 flex flex-row justify-center">
+        <h2 className="text-[2em] lg:text-[3em] font-extrabold">Help</h2>
+      </div>
+    </>
   );
 };
 
