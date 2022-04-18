@@ -80,8 +80,7 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* about/donate section */}
-      <section className="md:pl-8 lg:pl-12 flex flex-col md:flex-row items-center justify-center md:bg-flagYellow w-full">
-      {/* <section className="px-6 py-10 md:p-0 pl-0 md:pl-8 md:py-12 flex flex-col md:flex-row items-center justify-center md:bg-flagYellow w-full"> */}
+      <section className="md:pl-8 lg:pl-16 flex flex-col md:flex-row items-center justify-center md:bg-flagYellow w-full">
         <div className="px-6 py-8 md:p-0 md:bg-transparent flex flex-col w-full md:w-45percent lg:w-60percent">
           <h3 className="text-[12px] lg:text-lg uppercase hidden md:block">
             {pageContent.paragraphSubtitle}
@@ -116,7 +115,7 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* other donations section */}
-      <section className="px-6 pt-0 pb-8 md:p-6 flex flex-row items-center justify-around w-full">
+      <section className="bg-white drop-shadow-md px-6 pt-0 pb-8 md:p-6 flex flex-row items-center justify-around w-full">
         <Link href={pageContent.otherDonationUrls.googleSheetsUrl}>
           <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
             <img
