@@ -10,7 +10,6 @@ import {
 import {
   faFacebook,
   faInstagram,
-  faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -117,58 +116,6 @@ export const Home = ({ content }) => {
       </section>
       {/* other donations section */}
       <section className="px-6 pt-0 pb-8 md:p-6 flex flex-row items-center justify-around w-full">
-      {/* <section className="px-6 pt-0 pb-8 md:p-6 flex flex-row items-center justify-between w-full"> */}
-      {/* <h2 className="text-[1.3em] md:text-[2em] lg:text-[3em] font-extrabold hidden md:block">Donate</h2> */}
-      
-        {/* <Link href={pageContent.otherDonationUrls.googleSheetsUrl}>
-          <div className="flex flex-col justify-center items-center cursor-pointer">
-            <img
-            className="h-[25px] md:h-[35px] lg:h-[50px]"
-              src="/images/google-sheets-logo.png"
-            />
-          </div>
-        </Link>
-        <Link href={pageContent.otherDonationUrls.amazonUrl}>
-          <div className="flex flex-col justify-center items-center cursor-pointer">
-            <img
-               className="h-[25px] md:h-[35px] lg:h-[50px]"
-              src="/images/amazon-logo.png"
-            />
-          </div>
-        </Link>
-        <Link href={pageContent.otherDonationUrls.targetUrl}>
-          <div className="flex flex-col justify-center items-center cursor-pointer">
-            <img
-                className="h-[25px] md:h-[35px] lg:h-[50px]"
-              src="/images/target-logo.png"
-            />
-          </div>
-        </Link>
-        <Link href={pageContent.otherDonationUrls.zelleUrl}>
-          <div className="flex flex-col justify-center items-center cursor-pointer h-[20px]">
-            <img
-               className="h-[25px] md:h-[35px] lg:h-[50px]"
-              src="/images/zelle-logo.png"
-            />
-          </div>
-        </Link>
-        <Link href={pageContent.otherDonationUrls.venmoUrl}>
-          <div className="flex flex-col justify-center items-center cursor-pointer">
-            <img
-              className="h-[25px] md:h-[35px] lg:h-[50px]"
-              src="/images/venmo-logo.png"
-            />
-          </div>
-        </Link>
-        <Link href={pageContent.otherDonationUrls.paypalUrl}>
-          <div className="flex flex-col justify-center items-center cursor-pointer md:mr-8 lg:mr-12">
-            <img
-            className="h-[25px] md:h-[35px] lg:h-[50px]"
-              src="/images/paypal-logo.png"
-            />
-          </div>
-        </Link> */}
-
         <Link href={pageContent.otherDonationUrls.googleSheetsUrl}>
           <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
             <img
@@ -192,7 +139,6 @@ export const Home = ({ content }) => {
             src="/images/target-registry.png"
           />
         </Link>
-
       </section>
       <div className="pt-6 md:py-8 lg:py-12 bg-[#ECF4FA]">
         {/* stats section */}
