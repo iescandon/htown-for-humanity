@@ -47,7 +47,7 @@ export const Home = ({ content }) => {
         ></script>
       </Head>
       {/* nav section */}
-      <nav className="md:hidden bg-flagYellow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center pl-6">
+      <nav className="md:hidden bg-flagYellow drop-shadow-md h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center pl-6">
         {pageContent.paragraphTitle}
       </nav>
       {/* hero image section */}
