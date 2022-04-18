@@ -142,8 +142,8 @@ export const Home = ({ content }) => {
       </section>
       <div className="pt-6 md:py-8 lg:py-12 bg-[#ECF4FA]">
         {/* stats section */}
-        <section className="p-6 md:p-8 lg:p-12 space-y-6 md:space-y-0 flex flex-col md:flex-row justify-center items-center">
-          <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mx-4">
+        <section className="p-6 md:p-8 lg:p-12 space-y-6 md:space-y-0 flex flex-col md:flex-row justify-center items-center md:space-x-6 md:lg:space-x-8">
+          <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8">
             <FontAwesomeIcon
               className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
               icon={faMoneyBill1Wave}
@@ -157,7 +157,7 @@ export const Home = ({ content }) => {
               </p>
             </div>
           </div>
-          <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0 mx-4">
+          <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0">
             <FontAwesomeIcon
               className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
               icon={faPeopleGroup}
@@ -171,7 +171,7 @@ export const Home = ({ content }) => {
               </p>
             </div>
           </div>
-          <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-2 md:mb-0 mx-4">
+          <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-2 md:mb-0">
             <FontAwesomeIcon
               className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
               icon={faHandHoldingDollar}
