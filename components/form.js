@@ -27,7 +27,7 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
     setServerState({ submitting: true });
     axios({
       method: "post",
-      url: "https://formspree.io/f/mrgjykba",
+      url: process.env.NEXT_PUBLIC_FORMSPREE_URL,
       data: new FormData(form),
     })
       .then((r) => {

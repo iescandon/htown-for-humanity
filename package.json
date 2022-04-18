@@ -16,6 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@fortawesome/react-fontawesome": "^0.1.18",
     "axios": "^0.26.1",
+    "chart.js": "^3.7.1",
     "contentful": "^9.1.21",
     "next": "12.1.4",
     "react": "18.0.0",

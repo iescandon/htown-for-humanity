@@ -187,7 +187,8 @@ export const Home = ({ content }) => {
           </div>
         </section>
         {/* insta feed */}
-        <section className="p-6 md:p-8 lg:p-12 space-y-6 flex-col hidden md:flex relative">
+        {/* <section className="p-6 md:p-8 lg:p-12 flex-col hidden md:flex relative"> */}
+        <section className="py-6 md:py-8 lg:py-12 flex-col hidden md:flex relative">
           {/* <div className="top-3 right-3 z-10 absolute">
           <h2 className="font-extrabold text-[2em] lg:text-[3em] text-white">
             {pageContent.instagramHashtagText}
@@ -231,7 +232,7 @@ export const Home = ({ content }) => {
         </section>
         {/* contact form section */}
         <section className="px-6 pt-6 pb-12 md:p-8 lg:p-12 space-y-6 bg-white md:bg-[#f3f6fd] flex w-full flex-row">
-          <div className="h-full w-full md:w-2/3 flex flex-row justify-center items-center">
+          <div className="h-full w-full md:w-2/3 flex flex-row justify-center items-center md:mr-4 lg:mr-8">
             <ContactForm
               contactFormTitle={pageContent.contactFormTitle}
               contactFormDropdownOptions={
