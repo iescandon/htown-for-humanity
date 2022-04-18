@@ -9,8 +9,8 @@ const groupOptions = [
     // optionClass: 'checkmark',
   },
   {
-    displayName: "🇷🇺",
-    value: "russian",
+    displayName: "🇺🇸",
+    value: "english",
     // optionClass: 'xmark',
   },
 ];

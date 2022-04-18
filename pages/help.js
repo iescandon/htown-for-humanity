@@ -26,10 +26,10 @@ export const Help = ({ content }) => {
       setQuestions(pageContent.ukrainianQuestions);
       setAnswers(pageContent.ukrainianAnswers);
     } else {
-      setHeaderTitle(pageContent.russianHeaderTitle);
-      setQuestions(pageContent.russianQuestions);
-      setAnswers(pageContent.russianAnswers);
-    }  
+      setHeaderTitle(pageContent.englishHeaderTitle);
+      setQuestions(pageContent.englishQuestions);
+      setAnswers(pageContent.englishAnswers);
+    }
   }, [content, language, headerTitle, questions, answers]);
 
   return (
@@ -43,10 +43,10 @@ export const Help = ({ content }) => {
         </Link>
         <img />
       </nav>
-      <div className="p-6 lg:p-12 flex flex-col">
+      <div className={`p-6 lg:p-12 flex flex-col ${language === 'ukrainian' ? 'font-roboto font-bold' : 'font-lato font-extrabold'}`}>
         <section className="flex flex-row justify-between items-center pb-12">
           <div className="hidden md:block w-[85px]"></div>
-          <h2 className="text-[1.5em] lg:text-[3em] font-bold font-roboto">
+          <h2 className="text-[1.5em] md:text-[2em] lg:text-[3em]">
             {headerTitle}
           </h2>
           <div>

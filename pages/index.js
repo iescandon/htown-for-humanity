@@ -49,7 +49,7 @@ export const Home = ({ content }) => {
       </Head>
       {/* nav section */}
       <nav className="md:hidden bg-flagYellow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center pl-6">
-        {pageContent.instagramHashtagText}
+        {pageContent.paragraphTitle}
       </nav>
       {/* hero image section */}
       <section className="relative h-[200px] md:h-[400px] lg:h-[550px]">
@@ -87,7 +87,7 @@ export const Home = ({ content }) => {
             {pageContent.paragraphSubtitle}
           </h3>
           <h2 className="text-[2em] lg:text-[3em] font-extrabold text-black pb-8 leading-tight hidden md:block">
-            {pageContent.instagramHashtagText}
+            {pageContent.paragraphTitle}
           </h2>
           {pageContent.paragraphText.content.map((paragraph) => {
             return (
@@ -116,8 +116,59 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* other donations section */}
-      <section className="pt-0 pb-8 md:p-6 flex flex-row items-center justify-around w-full">
-        <Link href={pageContent.otherDonationUrls.otherDonationsSpreadsheetUrl}>
+      <section className="px-6 pt-0 pb-8 md:p-6 flex flex-row items-center justify-between w-full">
+      <h2 className="text-[1.3em] md:text-[2em] lg:text-[3em] font-extrabold hidden md:block">Donate</h2>
+      
+        {/* <Link href={pageContent.otherDonationUrls.googleSheetsUrl}>
+          <div className="flex flex-col justify-center items-center cursor-pointer">
+            <img
+            className="h-[25px] md:h-[35px] lg:h-[50px]"
+              src="/images/google-sheets-logo.png"
+            />
+          </div>
+        </Link>
+        <Link href={pageContent.otherDonationUrls.amazonUrl}>
+          <div className="flex flex-col justify-center items-center cursor-pointer">
+            <img
+               className="h-[25px] md:h-[35px] lg:h-[50px]"
+              src="/images/amazon-logo.png"
+            />
+          </div>
+        </Link>
+        <Link href={pageContent.otherDonationUrls.targetUrl}>
+          <div className="flex flex-col justify-center items-center cursor-pointer">
+            <img
+                className="h-[25px] md:h-[35px] lg:h-[50px]"
+              src="/images/target-logo.png"
+            />
+          </div>
+        </Link>
+        <Link href={pageContent.otherDonationUrls.zelleUrl}>
+          <div className="flex flex-col justify-center items-center cursor-pointer h-[20px]">
+            <img
+               className="h-[25px] md:h-[35px] lg:h-[50px]"
+              src="/images/zelle-logo.png"
+            />
+          </div>
+        </Link>
+        <Link href={pageContent.otherDonationUrls.venmoUrl}>
+          <div className="flex flex-col justify-center items-center cursor-pointer">
+            <img
+              className="h-[25px] md:h-[35px] lg:h-[50px]"
+              src="/images/venmo-logo.png"
+            />
+          </div>
+        </Link>
+        <Link href={pageContent.otherDonationUrls.paypalUrl}>
+          <div className="flex flex-col justify-center items-center cursor-pointer md:mr-8 lg:mr-12">
+            <img
+            className="h-[25px] md:h-[35px] lg:h-[50px]"
+              src="/images/paypal-logo.png"
+            />
+          </div>
+        </Link> */}
+
+        <Link href={pageContent.otherDonationUrls.googleSheetsUrl}>
           <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
             <img
               className="h-[20px] md:h-[35px] lg:h-[50px]"
@@ -128,18 +179,19 @@ export const Home = ({ content }) => {
             </span>
           </div>
         </Link>
-        <Link href={pageContent.otherDonationUrls.amazonWishlistUrl}>
+        <Link href={pageContent.otherDonationUrls.amazonUrl}>
           <img
             className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer px-2 py-4"
             src="/images/amazon-wishlist.png"
           />
         </Link>
-        <Link href={pageContent.otherDonationUrls.targetGiftRegistryUrl}>
+        <Link href={pageContent.otherDonationUrls.targetUrl}>
           <img
-            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer px-2 py-4"
+            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer px-2 py-4 mr-0 md:mr-8 lg:mr-12"
             src="/images/target-registry.png"
           />
         </Link>
+
       </section>
       <div className="pt-6 md:py-8 lg:py-12 bg-[#ECF4FA]">
         {/* stats section */}
@@ -253,14 +305,17 @@ export const Home = ({ content }) => {
       <footer className="bg-black flex flex-col md:flex-row items-center px-6 py-6 md:py-3  justify-between">
         <div className="flex flex-col text-white text-xs font-light space-y-2 md:space-y-0 pb-6 md:pb-0">
           <p>
-            H Town for humanity Inc is a 501(c)(3) not-for-profit organization.
-            EIN number 88-1595598.
+            H Town for humanity Inc is a Non-Profit Organization. EIN number
+            88-1595598.
           </p>
           {/* <p>Copyright H Town for humanity Inc, 2022.</p> */}
           <p>
             Website created by{" "}
             <Link href="https://inescandon.vercel.app/">
-              <span className="underline cursor-pointer text-blue-200">Inez Escandon</span></Link>
+              <span className="underline cursor-pointer text-blue-200">
+                Inez Escandon
+              </span>
+            </Link>
           </p>
         </div>
         {/* <div className="cursor-pointer text-white text-xs font-light">
@@ -277,12 +332,6 @@ export const Home = ({ content }) => {
             <FontAwesomeIcon
               className="cursor-pointer text-3xl text-white rounded-full p-2"
               icon={faInstagram}
-            />
-          </Link>
-          <Link href={pageContent.socialMediaInfo.tikTokUrl}>
-            <FontAwesomeIcon
-              className="cursor-pointer text-3xl text-white rounded-full py-2 pl-2"
-              icon={faTiktok}
             />
           </Link>
         </div>
