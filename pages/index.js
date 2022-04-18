@@ -80,8 +80,9 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* about/donate section */}
-      <section className="md:py-12 pl-0 md:pl-8 flex flex-col md:flex-row items-center justify-center md:bg-flagYellow w-full">
-        <div className="px-6 py-10 md:p-0 md:bg-transparent flex flex-col w-full md:w-45percent lg:w-60percent">
+      <section className="md:pl-8 lg:pl-12 flex flex-col md:flex-row items-center justify-center md:bg-flagYellow w-full">
+      {/* <section className="px-6 py-10 md:p-0 pl-0 md:pl-8 md:py-12 flex flex-col md:flex-row items-center justify-center md:bg-flagYellow w-full"> */}
+        <div className="px-6 py-8 md:p-0 md:bg-transparent flex flex-col w-full md:w-45percent lg:w-60percent">
           <h3 className="text-[12px] lg:text-lg uppercase hidden md:block">
             {pageContent.paragraphSubtitle}
           </h3>
@@ -101,7 +102,7 @@ export const Home = ({ content }) => {
             </span>
           </Link>
         </div>
-        <div className="px-6 md:p-0 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center md:bg-transparent">
+        <div className="md:pt-6 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center md:bg-transparent">
           <iframe
             className=""
             src="https://donorbox.org/embed/h-town-for-humanity"
@@ -140,7 +141,7 @@ export const Home = ({ content }) => {
           />
         </Link>
       </section>
-      <div className="pt-6 md:py-8 lg:py-12 bg-[#ECF4FA]">
+      <div className="pt-6 md:py-8 lg:py-12 bg-[#f3f6fd]">
         {/* stats section */}
         <section className="p-6 md:p-8 lg:p-12 space-y-6 md:space-y-0 flex flex-col md:flex-row justify-center items-center md:space-x-6 md:lg:space-x-8">
           <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8">
@@ -230,7 +231,7 @@ export const Home = ({ content }) => {
           </Carousel>
         </section>
         {/* contact form section */}
-        <section className="px-6 pt-6 pb-12 md:p-8 lg:p-12 space-y-6 bg-white md:bg-[#ECF4FA] flex w-full flex-row">
+        <section className="px-6 pt-6 pb-12 md:p-8 lg:p-12 space-y-6 bg-white md:bg-[#f3f6fd] flex w-full flex-row">
           <div className="h-full w-full md:w-2/3 flex flex-row justify-center items-center">
             <ContactForm
               contactFormTitle={pageContent.contactFormTitle}

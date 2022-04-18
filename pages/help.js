@@ -59,7 +59,7 @@ export const Help = ({ content }) => {
               return (
                 <AccordionItem className="border" key={`item-${q}`}>
                   <h2>
-                    <AccordionButton className="font-roboto md:hover:bg-[#ECF4FA]">
+                    <AccordionButton className="font-roboto md:hover:bg-[#f3f6fd]">
                     <div className="flex flex-row md:h-[40px] min-h-min p-3 md:p-6 w-full justify-between items-center">
                       <div className="text-left">
                         {q}
@@ -68,7 +68,7 @@ export const Help = ({ content }) => {
                       </div>
                     </AccordionButton>
                   </h2>
-                  <AccordionPanel className="font-roboto px-3 py-6 md:p-6 bg-[#ECF4FA]">
+                  <AccordionPanel className="font-roboto px-3 py-6 md:p-6 bg-[#f3f6fd]">
                     {answers[i]}
                   </AccordionPanel>
                 </AccordionItem>

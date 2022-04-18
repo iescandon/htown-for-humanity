@@ -90,7 +90,7 @@ input, select, textarea {
 	width: 85px;
 	position: relative;
 	background: #ffffff;
-	border: 1px solid #a7b8c3;
+	border: 1px solid #c0c8d7;
 	border-radius: 75px !important;
 }
 
@@ -135,7 +135,7 @@ input, select, textarea {
 .toggleContainer .toggle {
 	height: 100%;
 	transition: all 0.4s ease-in-out;
-	background: #d2e0ea;
+	background: #dce0ea;
 }
 
 .optionDisabled {
