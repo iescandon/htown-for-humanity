@@ -116,8 +116,9 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* other donations section */}
-      <section className="px-6 pt-0 pb-8 md:p-6 flex flex-row items-center justify-between w-full">
-      <h2 className="text-[1.3em] md:text-[2em] lg:text-[3em] font-extrabold hidden md:block">Donate</h2>
+      <section className="px-6 pt-0 pb-8 md:p-6 flex flex-row items-center justify-around w-full">
+      {/* <section className="px-6 pt-0 pb-8 md:p-6 flex flex-row items-center justify-between w-full"> */}
+      {/* <h2 className="text-[1.3em] md:text-[2em] lg:text-[3em] font-extrabold hidden md:block">Donate</h2> */}
       
         {/* <Link href={pageContent.otherDonationUrls.googleSheetsUrl}>
           <div className="flex flex-col justify-center items-center cursor-pointer">
@@ -187,7 +188,7 @@ export const Home = ({ content }) => {
         </Link>
         <Link href={pageContent.otherDonationUrls.targetUrl}>
           <img
-            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer px-2 py-4 mr-0 md:mr-8 lg:mr-12"
+            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer px-2 py-4"
             src="/images/target-registry.png"
           />
         </Link>
