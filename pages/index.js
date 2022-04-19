@@ -38,7 +38,6 @@ export const Home = ({ content }) => {
           src="https://donorbox.org/widget.js"
           paypalExpress="false"
         ></script>
-        {/* <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@2.0.0/dist/chartjs-plugin-deferred.min.js"></script> */}
       </Head>
       {/* nav section */}
       <nav className="md:hidden bg-flagYellow drop-shadow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center pl-6">
