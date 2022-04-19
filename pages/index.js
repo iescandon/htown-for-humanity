@@ -32,7 +32,7 @@ export const Home = ({ content }) => {
   }, [content]);
 
   return (
-    <>
+    <div className="relative">
       <Head>
         <script
           src="https://donorbox.org/widget.js"
@@ -260,7 +260,7 @@ export const Home = ({ content }) => {
           </Link>
         </div>
       </footer>
-    </>
+    </div>
   );
 };
 
