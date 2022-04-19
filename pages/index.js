@@ -140,56 +140,7 @@ export const Home = ({ content }) => {
       </section>
       <div className="pt-6 md:py-8 lg:py-12 bg-[#f3f6fd]">
         {/* stats section */}
-        {/* <section className="p-6 md:p-8 lg:p-12 space-y-6 md:space-y-0 md:space-x-6 lg:space-x-8 flex flex-col-reverse md:flex-row justify-center items-center"> */}
-        {/* <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8">
-            <FontAwesomeIcon
-              className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
-              icon={faMoneyBill1Wave}
-            />
-            <div className="w-3/4">
-              <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
-                ${pageContent.moneyRaised.total}
-              </p>
-              <p className="uppercase text-light text-xs md:text-base">
-                raised in total
-              </p>
-            </div>
-          </div>
-          <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-4 md:mb-0">
-            <FontAwesomeIcon
-              className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
-              icon={faPeopleGroup}
-            />
-            <div className="w-3/4">
-              <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
-                {pageContent.numberOfRefugeesHelped}
-              </p>
-              <p className="uppercase text-light text-xs md:text-base">
-                refugees helped
-              </p>
-            </div>
-          </div>
-          <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8 mb-2 md:mb-0">
-            <FontAwesomeIcon
-              className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
-              icon={faHandHoldingDollar}
-            />
-            <div className="w-3/4">
-              <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
-                100%
-              </p>
-              <p className="uppercase text-light text-xs md:text-base">
-                of donations distributed
-              </p>
-            </div>
-          </div> */}
-
         <section className="p-6 md:p-8 lg:p-12 flex flex-col-reverse md:flex-row justify-center md:justify-around items-center">
-          {/* <div className="leading-none hidden md:flex flex-col items-center md:px-4 lg:px-2">
-            <p className="text-[80px] lg:text-[150px] font-extrabold">{pageContent.numberOfRefugeesHelped}</p>
-            <img className="w-[80px] lg:w-[150px]" src="/images/team.png" />
-            <p className="text-[12px] lg:text-[23px] font-extrabold">refugees helped</p>
-          </div> */}
           <div className="relative flex flex-col items-center">
             <div className="w-[200px] lg:w-[300px]">
               <Chart content={pageContent.moneyRaised} />
@@ -216,30 +167,18 @@ export const Home = ({ content }) => {
             </div>
           </div>
           <div className="pb-12 md:pb-0 md:w-[400px] lg:w-[600px]">
-            <p className="text-2xl text-[1.5em] md:text-[2em] lg:text-[3em] font-extrabold pb-1 lg:pb-2">100% of donations</p>
-            <p className="">
-              given to H Town for humanity will be distributed to refugees in
-              need. Help us make a difference here in Houston!
-            </p>
+            <p className="text-2xl text-[1.5em] md:text-[2em] lg:text-[3em] font-extrabold pb-1 md:pb-2 lg:pb-3">{pageContent.asideTitle}</p>
+            {pageContent.asideText.content.map((paragraph) => {
+            return (
+              <p className="pb-1" key={paragraph.content[0].value}>
+                {paragraph.content[0].value}
+              </p>
+            );
+          })}
           </div>
-          {/* <div className="hidden md:flex flex-col items-center leading-tight">
-            <p className="text-[47px] lg:text-[73px] font-extrabold">100%</p>
-            <p className="text-[14px] lg:text-[23px] font-extrabold">of your donations</p>
-            <p className="text-[38px] lg:text-[62px] font-extrabold">will be</p>
-            <p className="text-[30px] lg:text-[50px] font-extrabold">given to</p>
-            <p className="text-[15px] lg:text-[24px] font-extrabold p-2">refugees in need</p>
-          </div> */}
         </section>
         {/* insta feed */}
         <section className="py-6 md:py-8 lg:py-12 flex-col hidden md:flex relative drop-shadow-md">
-          {/* <div className="top-3 right-3 z-10 absolute">
-          <h2 className="font-extrabold text-[2em] lg:text-[3em] text-white">
-            {pageContent.instagramHashtagText}
-          </h2>
-        </div> */}
-          {/* <h2 className="font-extrabold text-[2em] lg:text-[3em] text-right">
-            {pageContent.instagramHashtagText}
-          </h2> */}
           <div className="hidden md:flex flex-row md:h-[384px] lg:h-[720px] w-full min-h-min flex-wrap justify-center">
             {instagramFeed?.map((pic, i) => {
               return (
@@ -249,9 +188,6 @@ export const Home = ({ content }) => {
                     key={pic.id}
                     src={pic.media_url}
                   />
-                  {/* {i < 4 ? (
-                  <div className="absolute h-full w-full inset-0 blackOverlay z-1"></div>
-                ) : null} */}
                 </div>
               );
             })}
@@ -309,9 +245,6 @@ export const Home = ({ content }) => {
             </Link>
           </p>
         </div>
-        {/* <div className="cursor-pointer text-white text-xs font-light">
-          <p>Created by <Link href="https://inescandon.vercel.app/">Inez Escandon</Link></p>
-          </div> */}
         <div className="md:text-[3em]">
           <Link href={pageContent.socialMediaInfo.facebookUrl}>
             <FontAwesomeIcon
