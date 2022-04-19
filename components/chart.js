@@ -1,7 +1,6 @@
 import { Chart, ArcElement } from "chart.js";
 Chart.register(ArcElement);
 import { Doughnut } from "react-chartjs-2";
-import { useState, useEffect } from "react";
 
 function DonutChart({content}) {
   const data = {
@@ -21,12 +20,13 @@ function DonutChart({content}) {
   };
 
   const config = {
-    plugins: {
-      // show legends for our graph
-      legend: {
-        display: true,
-      },
-    },
+        // plugins: {
+        //   deferred: {
+        //     xOffset: 150,   // defer until 150px of the canvas width are inside the viewport
+        //     yOffset: '50%', // defer until 50% of the canvas height are inside the viewport
+        //     delay: 500      // delay of 500 ms after the canvas is considered inside the viewport
+        //   }
+        // },
     responsive: true,
   };
 

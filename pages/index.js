@@ -38,9 +38,10 @@ export const Home = ({ content }) => {
           src="https://donorbox.org/widget.js"
           paypalExpress="false"
         ></script>
+        {/* <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@2.0.0/dist/chartjs-plugin-deferred.min.js"></script> */}
       </Head>
       {/* nav section */}
-      <nav className="md:hidden bg-flagYellow drop-shadow-md h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center pl-6">
+      <nav className="md:hidden bg-flagYellow drop-shadow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center pl-6">
         {pageContent.paragraphTitle}
       </nav>
       {/* hero image section */}
@@ -108,7 +109,7 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* other donations section */}
-      <section className="bg-white drop-shadow-md px-6 pt-0 pb-8 md:p-6 flex flex-row items-center justify-around w-full">
+      <section className="bg-white px-6 pt-0 pb-8 md:p-6 flex flex-row items-center justify-around w-full">
         <Link href={pageContent.otherDonationUrls.googleSheetsUrl}>
           <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
             <img
@@ -133,7 +134,7 @@ export const Home = ({ content }) => {
           />
         </Link>
       </section>
-      <div className="pt-6 md:py-8 lg:py-12 bg-[#f3f6fd]">
+      <div className="pt-6 md:py-8 lg:py-12 bg-[#f3f6fd] shadow-inner">
         {/* stats section */}
         <section className="p-6 md:p-8 lg:p-12 flex flex-col-reverse md:flex-row justify-center md:justify-around items-center">
           <div className="relative flex flex-col items-center">
@@ -173,7 +174,7 @@ export const Home = ({ content }) => {
           </div>
         </section>
         {/* insta feed */}
-        <section className="py-6 md:py-8 lg:py-12 flex-col hidden md:flex relative drop-shadow-md">
+        <section className="py-6 md:py-8 lg:py-12 flex-col hidden md:flex relative">
           <div className="hidden md:flex flex-row md:h-[384px] lg:h-[720px] w-full min-h-min flex-wrap justify-center">
             {instagramFeed?.map((pic, i) => {
               return (
@@ -189,7 +190,7 @@ export const Home = ({ content }) => {
           </div>
         </section>
         {/* insta carousel */}
-        <section className="pt-6 md:hidden drop-shadow-md">
+        <section className="pt-6 md:hidden">
           <Carousel swipeable={true}>
             {instagramFeed?.map((pic) => {
               return (

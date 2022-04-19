@@ -34,7 +34,7 @@ export const Help = ({ content }) => {
 
   return (
     <>
-      <nav className="bg-flagYellow drop-shadow-md h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center justify-between pl-6">
+      <nav className="bg-flagYellow drop-shadow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center justify-between pl-6">
         <Link href="/">
           <FontAwesomeIcon
             className="text-2xl cursor-pointer"
