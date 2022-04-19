@@ -54,16 +54,6 @@ input, select, textarea {
   mask-position: center;
 }
 
-/* contact form recaptcha */
-/* 
-#g-recaptcha-response {
-  display: block !important;
-  position: absolute;
-  margin: -50px 0 0 0 !important;
-  z-index: -999999;
-  opacity: 0;
-  } */
-
 /* carousel */
 .carousel .slide img {
   height: 350px;
