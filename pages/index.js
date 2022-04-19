@@ -231,7 +231,7 @@ export const Home = ({ content }) => {
           </div> */}
         </section>
         {/* insta feed */}
-        <section className="py-6 md:py-8 lg:py-12 flex-col hidden md:flex relative">
+        <section className="py-6 md:py-8 lg:py-12 flex-col hidden md:flex relative drop-shadow-md">
           {/* <div className="top-3 right-3 z-10 absolute">
           <h2 className="font-extrabold text-[2em] lg:text-[3em] text-white">
             {pageContent.instagramHashtagText}
@@ -258,7 +258,7 @@ export const Home = ({ content }) => {
           </div>
         </section>
         {/* insta carousel */}
-        <section className="pt-6 md:hidden">
+        <section className="pt-6 md:hidden drop-shadow-md">
           <Carousel swipeable={true}>
             {instagramFeed?.map((pic) => {
               return (
