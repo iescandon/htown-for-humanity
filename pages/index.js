@@ -141,8 +141,7 @@ export const Home = ({ content }) => {
       <div className="pt-6 md:py-8 lg:py-12 bg-[#f3f6fd]">
         {/* stats section */}
         {/* <section className="p-6 md:p-8 lg:p-12 space-y-6 md:space-y-0 md:space-x-6 lg:space-x-8 flex flex-col-reverse md:flex-row justify-center items-center"> */}
-        <section className="p-6 md:p-8 lg:p-12 flex flex-col-reverse md:flex-row justify-center md:justify-around items-center">
-          {/* <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8">
+        {/* <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8">
             <FontAwesomeIcon
               className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
               icon={faMoneyBill1Wave}
@@ -184,18 +183,22 @@ export const Home = ({ content }) => {
               </p>
             </div>
           </div> */}
-          <div className="mt-12 mb-6 md:mt-0 md:mb-0 leading-none flex flex-col items-center md:px-4 lg:px-2">
+
+        <section className="p-6 md:p-8 lg:p-12 flex flex-col-reverse md:flex-row justify-center md:justify-around items-center">
+          {/* <div className="leading-none hidden md:flex flex-col items-center md:px-4 lg:px-2">
             <p className="text-[80px] lg:text-[150px] font-extrabold">{pageContent.numberOfRefugeesHelped}</p>
-            <img className="w-[80px] lg:w-[150px]" src="./images/group.png" />
+            <img className="w-[80px] lg:w-[150px]" src="/images/team.png" />
             <p className="text-[12px] lg:text-[23px] font-extrabold">refugees helped</p>
-          </div>
-          <div className="mt-12 md:mt-0 relative flex flex-col items-center">
-            <div className="">
+          </div> */}
+          <div className="relative flex flex-col items-center">
+            <div className="w-[200px] lg:w-[300px]">
               <Chart content={pageContent.moneyRaised} />
             </div>
-            <div className="absolute top-[7.3rem] left-[6rem]">
-              <p className="text-[3em] font-extrabold leading-none">${pageContent.moneyRaised.total}</p>
-              <p className="pl-2 font-bold">raised in total</p>
+            <div className="absolute top-[5rem] left-[4rem] lg:top-[7.3rem] lg:left-[6rem]">
+              <p className="text-[2em] lg:text-[3em] font-extrabold leading-none">
+                ${pageContent.moneyRaised.total}
+              </p>
+              <p className="text-xs lg:text-base pl-1 md:pl-2">raised in total</p>
             </div>
             <div className="pl-1 pt-6 w-[200px]">
               <div className="flex flex-row items-center">
@@ -212,13 +215,20 @@ export const Home = ({ content }) => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center leading-tight">
+          <div className="pb-12 md:pb-0 md:w-[400px] lg:w-[600px]">
+            <p className="text-2xl text-[1.5em] md:text-[2em] lg:text-[3em] font-extrabold pb-1 lg:pb-2">100% of donations</p>
+            <p className="">
+              given to H Town for humanity will be distributed to refugees in
+              need. Help us make a difference here in Houston!
+            </p>
+          </div>
+          {/* <div className="hidden md:flex flex-col items-center leading-tight">
             <p className="text-[47px] lg:text-[73px] font-extrabold">100%</p>
             <p className="text-[14px] lg:text-[23px] font-extrabold">of your donations</p>
             <p className="text-[38px] lg:text-[62px] font-extrabold">will be</p>
             <p className="text-[30px] lg:text-[50px] font-extrabold">given to</p>
             <p className="text-[15px] lg:text-[24px] font-extrabold p-2">refugees in need</p>
-          </div>
+          </div> */}
         </section>
         {/* insta feed */}
         <section className="py-6 md:py-8 lg:py-12 flex-col hidden md:flex relative">
