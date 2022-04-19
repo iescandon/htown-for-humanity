@@ -7,15 +7,13 @@ import {
   faPeopleGroup,
   faMoneyBill1Wave,
 } from "@fortawesome/free-solid-svg-icons";
-import {
-  faFacebook,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import Chart from "../components/chart";
 
 export const Home = ({ content }) => {
   const [pageContent, setPageContent] = useState(content[0].fields);
@@ -122,7 +120,7 @@ export const Home = ({ content }) => {
               className="h-[20px] md:h-[35px] lg:h-[50px]"
               src="/images/google-sheets.png"
             />
-            <span className="ml-1 font-roboto text-[10px] md:text-xs lg:text-base">
+            <span className="ml-1 text-[10px] md:text-xs lg:text-base">
               Non-perishable food & other supplies
             </span>
           </div>
@@ -142,15 +140,16 @@ export const Home = ({ content }) => {
       </section>
       <div className="pt-6 md:py-8 lg:py-12 bg-[#f3f6fd]">
         {/* stats section */}
-        <section className="p-6 md:p-8 lg:p-12 space-y-6 md:space-y-0 flex flex-col md:flex-row justify-center items-center md:space-x-6 md:lg:space-x-8">
-          <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8">
+        {/* <section className="p-6 md:p-8 lg:p-12 space-y-6 md:space-y-0 md:space-x-6 lg:space-x-8 flex flex-col-reverse md:flex-row justify-center items-center"> */}
+        <section className="p-6 md:p-8 lg:p-12 flex flex-col-reverse md:flex-row justify-center md:justify-around items-center">
+          {/* <div className="w-full md:h-[220px] card flex flex-row md:flex-col justify-center items-center text-center p-4 md:p-6 lg:p-8">
             <FontAwesomeIcon
               className="text-2xl md:text-4xl lg:text-5xl md:mb-4 lg:mb-6 bg-flagBlue text-white p-3 md:p-4 rounded-full"
               icon={faMoneyBill1Wave}
             />
             <div className="w-3/4">
               <p className="text-2xl md:text-4xl lg:text-5xl font-extrabold">
-                ${pageContent.numberOfDollarsDonated}
+                ${pageContent.moneyRaised.total}
               </p>
               <p className="uppercase text-light text-xs md:text-base">
                 raised in total
@@ -184,10 +183,44 @@ export const Home = ({ content }) => {
                 of donations distributed
               </p>
             </div>
+          </div> */}
+          <div className="mt-12 mb-6 md:mt-0 md:mb-0 leading-none flex flex-col items-center md:px-4 lg:px-2">
+            <p className="text-[80px] lg:text-[150px] font-extrabold">{pageContent.numberOfRefugeesHelped}</p>
+            <img className="w-[80px] lg:w-[150px]" src="./images/group.png" />
+            <p className="text-[12px] lg:text-[23px] font-extrabold">refugees helped</p>
+          </div>
+          <div className="mt-12 md:mt-0 relative flex flex-col items-center">
+            <div className="">
+              <Chart content={pageContent.moneyRaised} />
+            </div>
+            <div className="absolute top-[7.3rem] left-[6rem]">
+              <p className="text-[3em] font-extrabold leading-none">${pageContent.moneyRaised.total}</p>
+              <p className="pl-2 font-bold">raised in total</p>
+            </div>
+            <div className="pl-1 pt-6 w-[200px]">
+              <div className="flex flex-row items-center">
+                <div className="h-4 w-4 bg-[#FF6384] mr-4"></div>
+                Cash/Online Donations
+              </div>
+              <div className="flex flex-row items-center">
+                <div className="h-4 w-4 bg-[#37A2EB] mr-4"></div>
+                Gift Card Donations
+              </div>
+              <div className="flex flex-row items-center">
+                <div className="h-4 w-4 bg-[#FFCD56] mr-4"></div>
+                In Kind Donations
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center leading-tight">
+            <p className="text-[47px] lg:text-[73px] font-extrabold">100%</p>
+            <p className="text-[14px] lg:text-[23px] font-extrabold">of your donations</p>
+            <p className="text-[38px] lg:text-[62px] font-extrabold">will be</p>
+            <p className="text-[30px] lg:text-[50px] font-extrabold">given to</p>
+            <p className="text-[15px] lg:text-[24px] font-extrabold p-2">refugees in need</p>
           </div>
         </section>
         {/* insta feed */}
-        {/* <section className="p-6 md:p-8 lg:p-12 flex-col hidden md:flex relative"> */}
         <section className="py-6 md:py-8 lg:py-12 flex-col hidden md:flex relative">
           {/* <div className="top-3 right-3 z-10 absolute">
           <h2 className="font-extrabold text-[2em] lg:text-[3em] text-white">
@@ -197,7 +230,7 @@ export const Home = ({ content }) => {
           {/* <h2 className="font-extrabold text-[2em] lg:text-[3em] text-right">
             {pageContent.instagramHashtagText}
           </h2> */}
-          <div className="hidden md:flex flex-row md:h-[350px] lg:h-[600px] w-full min-h-min flex-wrap justify-center">
+          <div className="hidden md:flex flex-row md:h-[384px] lg:h-[720px] w-full min-h-min flex-wrap justify-center">
             {instagramFeed?.map((pic, i) => {
               return (
                 <div key={`div-${pic.id}`} className="h-1/2 w-1/4 relative">

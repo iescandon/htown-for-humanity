@@ -20,6 +20,7 @@
     "contentful": "^9.1.21",
     "next": "12.1.4",
     "react": "18.0.0",
+    "react-chartjs-2": "^4.1.0",
     "react-dom": "18.0.0",
     "react-multi-toggle": "^1.1.0",
     "react-responsive-carousel": "^3.2.23"

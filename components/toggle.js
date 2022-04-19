@@ -1,7 +1,5 @@
 import MultiToggle from "react-multi-toggle";
 
-import { useState, useEffect } from "react";
-
 const groupOptions = [
   {
     displayName: "🇺🇦",
