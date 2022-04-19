@@ -242,19 +242,19 @@ export const Home = ({ content }) => {
         <div className="md:text-[3em]">
           <Link href={pageContent.socialMediaInfo.facebookUrl}>
             <FontAwesomeIcon
-              className="cursor-pointer text-3xl text-white rounded-full p-2"
+              className="cursor-pointer text-3xl text-white p-2"
               icon={faFacebook}
             />
           </Link>
           <Link href={pageContent.socialMediaInfo.instagramUrl}>
             <FontAwesomeIcon
-              className="cursor-pointer text-3xl text-white rounded-full p-2"
+              className="cursor-pointer text-3xl text-white p-2"
               icon={faInstagram}
             />
           </Link>
           <Link href={pageContent.socialMediaInfo.linkedInUrl}>
             <FontAwesomeIcon
-              className="cursor-pointer text-3xl text-white rounded-full p-2"
+              className="cursor-pointer text-3xl text-white p-2"
               icon={faLinkedinIn}
             />
           </Link>
