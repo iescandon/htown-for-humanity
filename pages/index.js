@@ -2,12 +2,7 @@
 import { createClient } from "contentful";
 import ContactForm from "../components/form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHandHoldingDollar,
-  faPeopleGroup,
-  faMoneyBill1Wave,
-} from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
@@ -149,7 +144,7 @@ export const Home = ({ content }) => {
               <p className="text-[2em] lg:text-[3em] font-extrabold leading-none">
                 ${pageContent.moneyRaised.total}
               </p>
-              <p className="text-xs lg:text-base pl-1 md:pl-2">raised in total</p>
+              <p className="text-xs lg:text-base pl-1 lg:pl-2">raised in total</p>
             </div>
             <div className="pl-1 pt-6 w-[200px]">
               <div className="flex flex-row items-center">
@@ -235,7 +230,6 @@ export const Home = ({ content }) => {
             H Town for humanity Inc is a Non-Profit Organization. EIN number
             88-1595598.
           </p>
-          {/* <p>Copyright H Town for humanity Inc, 2022.</p> */}
           <p>
             Website created by{" "}
             <Link href="https://inescandon.vercel.app/">
@@ -256,6 +250,12 @@ export const Home = ({ content }) => {
             <FontAwesomeIcon
               className="cursor-pointer text-3xl text-white rounded-full p-2"
               icon={faInstagram}
+            />
+          </Link>
+          <Link href={pageContent.socialMediaInfo.linkedInUrl}>
+            <FontAwesomeIcon
+              className="cursor-pointer text-3xl text-white rounded-full p-2"
+              icon={faLinkedinIn}
             />
           </Link>
         </div>
