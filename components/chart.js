@@ -4,10 +4,10 @@ import { Doughnut } from "react-chartjs-2";
 
 function DonutChart({content}) {
   const data = {
-    labels: ["Red", "Blue", "Yellow"],
+    labels: [content.cashOnlineDonations, content.giftCardDonations, content.inKindDonations],
     datasets: [
       {
-        label: "My First Dataset",
+        label: "Donation Pie Chart",
         data: [content.cashOnlineDonations, content.giftCardDonations, content.inKindDonations],
         backgroundColor: [
           "rgb(255, 99, 132)",
