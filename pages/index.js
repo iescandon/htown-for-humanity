@@ -96,7 +96,7 @@ export const Home = ({ content }) => {
             );
           })}
           <a href="/help" className="max-w-max">
-            <span className="font-roboto underline cursor-pointer">
+            <span className="font-roboto underline cursor-pointer hover:no-underline">
               {pageContent.ukrainianCta}
             </span>
           </a>
@@ -250,7 +250,7 @@ export const Home = ({ content }) => {
           <p>
             Website created by{" "}
             <a href="https://inescandon.vercel.app/">
-              <span className="underline cursor-pointer text-blue-200">
+              <span className="underline cursor-pointer text-blue-200 hover:text-white">
                 Inez Escandon
               </span>
             </a>
