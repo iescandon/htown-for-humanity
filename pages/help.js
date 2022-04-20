@@ -37,9 +37,9 @@ export const Help = ({ content }) => {
   return (
     <>
       <Head>
-        <title>H Town for humanity | Help for Refugees</title>
+        <title>Help for Refugees | H Town for humanity </title>
         <meta name="description" content="If you are a refugee in need of assistance, please contact us so we can help you." />
-        <meta name="keywords" content="refugees, asylum, houston, texas, h-town, h town, htx, helps, donate, donations, ukraine, ukrainians, families, crisis" />
+        <meta name="keywords" content="refugees, asylum, houston, texas, h-town, h town, htown, for, humanity, htx, helps, donate, donations, ukraine, ukrainians, families, crisis" />
       </Head>
       <nav className="bg-flagYellow drop-shadow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center justify-between pl-4">
         <a href="/" aria-label="back button">

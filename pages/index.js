@@ -41,9 +41,9 @@ export const Home = ({ content }) => {
   return (
     <>
       <Head>
-        <title>H Town for Humanity</title>
+        <title>Home | H Town for Humanity</title>
         <meta name="description" content="H Town for humanity is a non-profit organization helping refugees in Houston, Texas." />
-        <meta name="keywords" content="refugees, asylum, houston, texas, h-town, h town, htx, helps, donate, donations, ukraine, ukrainians, families, crisis" />
+        <meta name="keywords" content="refugees, asylum, houston, texas, h-town, h town, htown, for, humanity, htx, helps, donate, donations, ukraine, ukrainians, families, crisis" />
       </Head>
       {/* nav section */}
       <nav className="md:hidden bg-flagYellow drop-shadow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center pl-6">
