@@ -20,7 +20,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 export const Home = ({ content }) => {
   const [pageContent, setPageContent] = useState(content[0].fields);
   const [instagramFeed, setInstagramFeed] = useState(null);
-  console.log(pageContent);
+  // console.log(pageContent);
 
   useEffect(() => {
     setPageContent(content[0].fields);

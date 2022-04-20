@@ -19,7 +19,7 @@ function Toggle({ language, setLanguage }) {
   useEffect(()=>{
     const btns = document.querySelectorAll('.toggleOption')
     var btnsArr = Array.prototype.slice.call(btns);
-    console.log(btnsArr)
+    // console.log(btnsArr)
     if (btnsArr) {
       btnsArr.map((btn) => {
         btn.tabIndex = 0;
