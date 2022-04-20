@@ -97,7 +97,7 @@ export const Home = ({ content }) => {
         </div>
         <div className="md:pt-6 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center md:bg-transparent">
           <iframe
-            className=""
+            title="donation form"
             src="https://donorbox.org/embed/h-town-for-humanity"
             name="donorbox"
             allowpaymentrequest="allowpaymentrequest"
@@ -245,19 +245,19 @@ export const Home = ({ content }) => {
           </p>
         </div>
         <div className="">
-          <a href={pageContent.socialMediaInfo.facebookUrl}>
+          <a href={pageContent.socialMediaInfo.facebookUrl} aria-label="link to facebook page">
             <FontAwesomeIcon
               className="cursor-pointer text-2xl text-white p-2"
               icon={faFacebook}
             />
           </a>
-          <a href={pageContent.socialMediaInfo.instagramUrl}>
+          <a href={pageContent.socialMediaInfo.instagramUrl} aria-label="link to instagram page">
             <FontAwesomeIcon
               className="cursor-pointer text-2xl text-white p-2"
               icon={faInstagram}
             />
           </a>
-          <a href={pageContent.socialMediaInfo.linkedInUrl}>
+          <a href={pageContent.socialMediaInfo.linkedInUrl} aria-label="link to linked in page">
             <FontAwesomeIcon
               className="cursor-pointer text-2xl text-white p-2"
               icon={faLinkedinIn}

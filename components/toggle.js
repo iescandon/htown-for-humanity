@@ -25,19 +25,19 @@ function Toggle({ language, setLanguage }) {
         btn.tabIndex = 0;
         btn.addEventListener('keydown', keyboardToggle);
         btn.dataset.language = btn.innerText;
+        if (btn.dataset.language === "🇺🇦") {
+          btn.dataset.language = 'ukrainian'
+        } else {
+          btn.dataset.language = 'english'
+        }
+        btn.ariaLabel = `${btn.dataset.language} toggle`;
       });
     }
   },[])
 
   const keyboardToggle = (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
-      let option = e.target.dataset.language;
-      if (option === "🇺🇦") {
-        option = 'ukrainian'
-      } else {
-        option = 'english'
-      }
-      onToggle(option);
+      onToggle(e.target.dataset.language);
     }
   }
 

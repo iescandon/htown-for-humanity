@@ -3,6 +3,7 @@ import { createClient } from "contentful";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import Toggle from "../components/toggle.js";
+import Head from "next/head";
 import {
   Accordion,
   AccordionItem,
@@ -35,6 +36,11 @@ export const Help = ({ content }) => {
 
   return (
     <>
+      <Head>
+        <title>H Town for humanity | Help for Refugees</title>
+        <meta name="description" content="If you are a refugee in need of assistance, please contact us so we can help you." />
+        <meta name="keywords" content="refugees, asylum, houston, texas, h-town, h town, htx, helps, donate, donations, ukraine, ukrainians, families, crisis" />
+      </Head>
       <nav className="bg-flagYellow drop-shadow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center justify-between pl-4">
         <a href="/" aria-label="back button">
           <FontAwesomeIcon
@@ -70,7 +76,7 @@ export const Help = ({ content }) => {
                   </h2>
                   <AccordionPanel className="font-roboto px-3 py-6 md:p-6 bg-[#f3f6fd]">
                     {answers[i]}
-                  </AccordionPanel>
+                  </AccordionPanel> 
                 </AccordionItem>
               );
             })}
