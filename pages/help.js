@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { createClient } from "contentful";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
@@ -34,14 +35,13 @@ export const Help = ({ content }) => {
 
   return (
     <>
-      <nav className="bg-flagYellow drop-shadow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center justify-between pl-6">
-        <Link href="/">
+      <nav className="bg-flagYellow drop-shadow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center justify-between pl-4">
+        <a href="/" aria-label="back button">
           <FontAwesomeIcon
-            className="text-2xl cursor-pointer"
+            className="text-2xl cursor-pointer p-2"
             icon={faArrowLeft}
           />
-        </Link>
-        <img />
+        </a>
       </nav>
       <div className="p-6 lg:p-12 flex flex-col">
         <section className="flex flex-row justify-between items-center pb-12">

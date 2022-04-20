@@ -1,8 +1,13 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 /* eslint-disable @next/next/no-sync-scripts */
 import { createClient } from "contentful";
 import ContactForm from "../components/form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Head from "next/head";
@@ -34,6 +39,7 @@ export const Home = ({ content }) => {
   return (
     <>
       <Head>
+        <title>H Town for Humanity</title>
         <script
           src="https://donorbox.org/widget.js"
           paypalExpress="false"
@@ -48,6 +54,7 @@ export const Home = ({ content }) => {
         <div className="blueOverlay absolute w-full h-full flex flex-col top-0 justify-between">
           <div className="flex flex-row w-full justify-end">
             <img
+              alt="htown for humanity logo"
               src={pageContent.logoPictureOnly.fields.file.url}
               className="mx-6 md:mx-12 lg:mx-24 mt-6 md:mt-12 h-[50px] md:h-[100px] lg:h-[150px] w-auto"
             />
@@ -66,10 +73,10 @@ export const Home = ({ content }) => {
         <div className="absolute border-r-4 border-b-4 border-flagYellow md:w-[150px] md:h-[150px] lg:w-[250px] lg:h-[250px] md:bottom-8 md:right-8 lg:bottom-16 lg:right-16 hidden md:block"></div>
         <div className="w-full h-full">
           <img
+            alt="htown for humanity hero image"
             src={pageContent.heroImage.fields.file.url}
-            alt="hero image"
             className="w-full h-full object-cover"
-          ></img>
+          />
         </div>
       </section>
       {/* about/donate section */}
@@ -88,11 +95,11 @@ export const Home = ({ content }) => {
               </p>
             );
           })}
-          <Link href="/help">
-            <span className="font-roboto underline cursor-pointer max-w-max">
+          <a href="/help" className="max-w-max">
+            <span className="font-roboto underline cursor-pointer">
               {pageContent.ukrainianCta}
             </span>
-          </Link>
+          </a>
         </div>
         <div className="md:pt-6 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center md:bg-transparent">
           <iframe
@@ -109,29 +116,32 @@ export const Home = ({ content }) => {
       </section>
       {/* other donations section */}
       <section className="bg-white px-6 pt-0 pb-8 md:p-6 flex flex-row items-center justify-around w-full drop-shadow-md">
-        <Link href={pageContent.otherDonationUrls.googleSheetsUrl}>
-          <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer">
+        <a href={pageContent.otherDonationUrls.googleSheetsUrl}>
+          <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer mx-2 my-4">
             <img
               className="h-[20px] md:h-[35px] lg:h-[50px]"
               src="/images/google-sheets.png"
+              alt="google sheets icon"
             />
             <span className="ml-1 text-[10px] md:text-xs lg:text-base">
               Non-perishable food & other supplies
             </span>
           </div>
-        </Link>
-        <Link href={pageContent.otherDonationUrls.amazonUrl}>
+        </a>
+        <a href={pageContent.otherDonationUrls.amazonUrl}>
           <img
-            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer px-2 py-4"
+            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer mx-2 my-4"
             src="/images/amazon-wishlist.png"
+            alt="amazon wishlist icon"
           />
-        </Link>
-        <Link href={pageContent.otherDonationUrls.targetUrl}>
+        </a>
+        <a href={pageContent.otherDonationUrls.targetUrl}>
           <img
-            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer px-2 py-4"
+            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer mx-2 my-4"
             src="/images/target-registry.png"
+            alt="target gift registry icon"
           />
-        </Link>
+        </a>
       </section>
       <div className="pt-6 md:py-8 lg:py-12 bg-[#f3f6fd]">
         {/* stats section */}
@@ -144,7 +154,9 @@ export const Home = ({ content }) => {
               <p className="text-[2em] lg:text-[3em] font-extrabold leading-none">
                 ${pageContent.moneyRaised.total}
               </p>
-              <p className="text-xs lg:text-base pl-1 lg:pl-2">raised in total</p>
+              <p className="text-xs lg:text-base pl-1 lg:pl-2">
+                raised in total
+              </p>
             </div>
             <div className="pl-1 pt-6 w-[200px]">
               <div className="flex flex-row items-center">
@@ -162,14 +174,16 @@ export const Home = ({ content }) => {
             </div>
           </div>
           <div className="pb-12 md:pb-0 md:w-[400px] lg:w-[600px]">
-            <p className="text-2xl text-[1.5em] md:text-[2em] lg:text-[3em] font-extrabold pb-1 md:pb-2 lg:pb-3">{pageContent.asideTitle}</p>
+            <p className="text-2xl text-[1.5em] md:text-[2em] lg:text-[3em] font-extrabold pb-1 md:pb-2 lg:pb-3">
+              {pageContent.asideTitle}
+            </p>
             {pageContent.asideText.content.map((paragraph) => {
-            return (
-              <p className="pb-1" key={paragraph.content[0].value}>
-                {paragraph.content[0].value}
-              </p>
-            );
-          })}
+              return (
+                <p className="pb-1" key={paragraph.content[0].value}>
+                  {paragraph.content[0].value}
+                </p>
+              );
+            })}
           </div>
         </section>
         {/* insta feed */}
@@ -182,6 +196,7 @@ export const Home = ({ content }) => {
                     className="h-full w-full object-cover"
                     key={pic.id}
                     src={pic.media_url}
+                    alt="instagram photo"
                   />
                 </div>
               );
@@ -198,6 +213,7 @@ export const Home = ({ content }) => {
                     className="h-full w-full object-cover"
                     key={pic.id}
                     src={pic.media_url}
+                    alt={pic.caption}
                   />
                 </div>
               );
@@ -218,13 +234,14 @@ export const Home = ({ content }) => {
             <img
               className="w-full h-full object-cover"
               src={pageContent.contactAsideImage.fields.file.url}
+              alt="image in shape of texas state"
             />
             <div className="blueOverlayLight absolute w-full h-full flex flex-col top-0 justify-between"></div>
           </div>
         </section>
       </div>
       {/* footer section */}
-      <footer className="bg-black flex flex-col md:flex-row items-center px-6 py-6 md:py-3  justify-between">
+      <footer className="bg-black flex flex-col md:flex-row items-center px-6 py-6 justify-between">
         <div className="flex flex-col text-white text-xs font-light space-y-2 md:space-y-0 pb-6 md:pb-0">
           <p>
             H Town for humanity Inc is a Non-Profit Organization. EIN number
@@ -232,32 +249,32 @@ export const Home = ({ content }) => {
           </p>
           <p>
             Website created by{" "}
-            <Link href="https://inescandon.vercel.app/">
+            <a href="https://inescandon.vercel.app/">
               <span className="underline cursor-pointer text-blue-200">
                 Inez Escandon
               </span>
-            </Link>
+            </a>
           </p>
         </div>
-        <div className="md:text-[3em]">
-          <Link href={pageContent.socialMediaInfo.facebookUrl}>
+        <div className="">
+          <a href={pageContent.socialMediaInfo.facebookUrl}>
             <FontAwesomeIcon
-              className="cursor-pointer text-3xl text-white p-2"
+              className="cursor-pointer text-2xl text-white p-2"
               icon={faFacebook}
             />
-          </Link>
-          <Link href={pageContent.socialMediaInfo.instagramUrl}>
+          </a>
+          <a href={pageContent.socialMediaInfo.instagramUrl}>
             <FontAwesomeIcon
-              className="cursor-pointer text-3xl text-white p-2"
+              className="cursor-pointer text-2xl text-white p-2"
               icon={faInstagram}
             />
-          </Link>
-          <Link href={pageContent.socialMediaInfo.linkedInUrl}>
+          </a>
+          <a href={pageContent.socialMediaInfo.linkedInUrl}>
             <FontAwesomeIcon
-              className="cursor-pointer text-3xl text-white p-2"
+              className="cursor-pointer text-2xl text-white p-2"
               icon={faLinkedinIn}
             />
-          </Link>
+          </a>
         </div>
       </footer>
     </>
