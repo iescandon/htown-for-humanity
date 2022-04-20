@@ -92,6 +92,7 @@ export async function getStaticProps() {
     props: {
       content: res.items,
     },
+    revalidate: 1
   };
 }
 

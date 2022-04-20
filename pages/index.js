@@ -9,11 +9,13 @@ import {
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import Head from "next/head";
+import Script from 'next/script'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Chart from "../components/chart";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 export const Home = ({ content }) => {
   const [pageContent, setPageContent] = useState(content[0].fields);
@@ -40,10 +42,12 @@ export const Home = ({ content }) => {
     <>
       <Head>
         <title>H Town for Humanity</title>
-        <script
+        <description></description>
+        <meta></meta>
+        {/* <script
           src="https://donorbox.org/widget.js"
           paypalExpress="false"
-        ></script>
+        ></script> */}
       </Head>
       {/* nav section */}
       <nav className="md:hidden bg-flagYellow drop-shadow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center pl-6">
@@ -88,13 +92,7 @@ export const Home = ({ content }) => {
           <h2 className="text-[2em] lg:text-[3em] font-extrabold text-black pb-8 leading-tight hidden md:block">
             {pageContent.paragraphTitle}
           </h2>
-          {pageContent.paragraphText.content.map((paragraph) => {
-            return (
-              <p className="pb-4" key={paragraph.content[0].value}>
-                {paragraph.content[0].value}
-              </p>
-            );
-          })}
+          <div className="space-y-4 pb-4">{documentToReactComponents(pageContent.paragraphText)}</div>
           <a href="/help" className="max-w-max">
             <span className="font-roboto underline cursor-pointer hover:no-underline">
               {pageContent.ukrainianCta}
@@ -177,13 +175,7 @@ export const Home = ({ content }) => {
             <p className="text-2xl text-[1.5em] md:text-[2em] lg:text-[3em] font-extrabold pb-1 md:pb-2 lg:pb-3">
               {pageContent.asideTitle}
             </p>
-            {pageContent.asideText.content.map((paragraph) => {
-              return (
-                <p className="pb-1" key={paragraph.content[0].value}>
-                  {paragraph.content[0].value}
-                </p>
-              );
-            })}
+            <div className="space-y-2">{documentToReactComponents(pageContent.asideText)}</div>
           </div>
         </section>
         {/* insta feed */}
@@ -277,6 +269,7 @@ export const Home = ({ content }) => {
           </a>
         </div>
       </footer>
+      <Script src="https://donorbox.org/widget.js" paypalExpress="false"></Script>
     </>
   );
 };
@@ -290,8 +283,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      content: res.items,
+      content: res.items, 
     },
+    revalidate: 1
   };
 }
 
