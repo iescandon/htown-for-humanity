@@ -247,19 +247,19 @@ export const Home = ({ content }) => {
         <div className="">
           <a href={pageContent.socialMediaInfo.facebookUrl} aria-label="link to facebook page">
             <FontAwesomeIcon
-              className="cursor-pointer text-4xl md:text-2xl text-white py-2 px-6 md:p-2"
+              className="cursor-pointer text-4xl md:text-2xl text-white py-2 px-6 md:py-2 md:px-3"
               icon={faFacebook}
             />
           </a>
           <a href={pageContent.socialMediaInfo.instagramUrl} aria-label="link to instagram page">
             <FontAwesomeIcon
-              className="cursor-pointer text-4xl md:text-2xl text-white py-2 px-6 md:p-2"
+              className="cursor-pointer text-4xl md:text-2xl text-white py-2 px-6 md:py-2 md:px-3"
               icon={faInstagram}
             />
           </a>
           <a href={pageContent.socialMediaInfo.linkedInUrl} aria-label="link to linked in page">
             <FontAwesomeIcon
-              className="cursor-pointer text-4xl md:text-2xl text-white py-2 px-6 md:p-2"
+              className="cursor-pointer text-4xl md:text-2xl text-white py-2 px-6 md:py-2 md:px-3"
               icon={faLinkedinIn}
             />
           </a>

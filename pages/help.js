@@ -75,7 +75,10 @@ export const Help = ({ content }) => {
                     </AccordionButton>
                   </h2>
                   <AccordionPanel className="font-roboto px-3 py-6 md:p-6 bg-[#f3f6fd]">
-                    {answers[i]}
+                    {answers ? <p>
+                      {answers[i] ? answers[i] : null}
+                    </p> : null
+                    }
                   </AccordionPanel> 
                 </AccordionItem>
               );
