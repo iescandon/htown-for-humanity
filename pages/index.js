@@ -20,7 +20,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 export const Home = ({ content }) => {
   const [pageContent, setPageContent] = useState(content[0].fields);
   const [instagramFeed, setInstagramFeed] = useState(null);
-  // console.log(pageContent);
+  console.log(pageContent);
 
   useEffect(() => {
     setPageContent(content[0].fields);
@@ -50,7 +50,7 @@ export const Home = ({ content }) => {
         {pageContent.paragraphTitle}
       </nav>
       {/* hero image section */}
-      <section className="relative h-[200px] md:h-[400px] lg:h-[550px]">
+      <section className="relative h-[200px] md:h-[400px]">
         <div className="blueOverlay absolute w-full h-full flex flex-col top-0 justify-between">
           <div className="flex flex-row w-full justify-end">
             <img

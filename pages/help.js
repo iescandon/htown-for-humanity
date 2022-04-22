@@ -20,17 +20,21 @@ export const Help = ({ content }) => {
   const [headerTitle, setHeaderTitle] = useState();
   const [questions, setQuestions] = useState(null);
   const [answers, setAnswers] = useState(null);
+  const [FAQs, setFAQs] = useState(null);
+  console.log(pageContent);
 
   useEffect(() => {
     setPageContent(content[0].fields)
     if (language === "ukrainian") {
       setHeaderTitle(pageContent.ukrainianHeaderTitle);
-      setQuestions(pageContent.ukrainianQuestions);
-      setAnswers(pageContent.ukrainianAnswers);
+      // setQuestions(pageContent.ukrainianQuestions);
+      // setAnswers(pageContent.ukrainianAnswers);
+      setFAQs(pageContent.ukrainianFAQs)
     } else {
       setHeaderTitle(pageContent.englishHeaderTitle);
-      setQuestions(pageContent.englishQuestions);
-      setAnswers(pageContent.englishAnswers);
+      // setQuestions(pageContent.englishQuestions);
+      // setAnswers(pageContent.englishAnswers);
+      setFAQs(pageContent.englishFAQs)
     }
   }, [content, language, headerTitle, questions, answers]);
 
@@ -59,7 +63,7 @@ export const Help = ({ content }) => {
             <Toggle language={language} setLanguage={setLanguage} />
           </div>
         </section>
-        <section className="md:mx-8 lg:mx-32">
+        {/* <section className="md:mx-8 lg:mx-32">
           <Accordion allowMultiple>
             {questions?.map((q, i) => {
               return (
@@ -79,6 +83,31 @@ export const Help = ({ content }) => {
                       {answers[i] ? answers[i] : null}
                     </p> : null
                     }
+                  </AccordionPanel> 
+                </AccordionItem>
+              );
+            })}
+          </Accordion>
+        </section> */}
+        <section className="md:mx-8 lg:mx-32">
+          <Accordion allowMultiple>
+            {FAQs?.map((item, i) => {
+              return (
+                <AccordionItem className="border" key={`faq-${i + 1}`}>
+                  <h2>
+                    <AccordionButton className="font-roboto md:hover:bg-[#f3f6fd]">
+                    <div className="flex flex-row md:h-[40px] min-h-min p-3 md:p-6 w-full justify-between items-center">
+                      <div className="text-left">
+                        {item.question}
+                      </div>
+                      <AccordionIcon />
+                      </div>
+                    </AccordionButton>
+                  </h2>
+                  <AccordionPanel className="font-roboto px-3 py-6 md:p-6 bg-[#f3f6fd]">
+                    <div className="whitespace-pre-line">
+                    {item.answer}
+                    </div>
                   </AccordionPanel> 
                 </AccordionItem>
               );
