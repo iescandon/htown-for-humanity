@@ -96,7 +96,7 @@ export const Help = ({ content }) => {
                 <AccordionItem className={`rounded border-t border-r border-l ${i + 1 === FAQs.length ? 'border-b' : ''}`} key={`faq-${i + 1}`}>
                   <h2>
                     <AccordionButton className="font-roboto md:hover:bg-[#f3f6fd]">
-                    <div className="flex flex-row md:h-[40px] min-h-min p-3 md:p-6 w-full justify items-center">
+                    <div className="flex flex-row md:h-[40px] min-h-min p-3 md:p-6 w-full justify-between items-center">
                       <div className="text-left">
                         {item.question}
                       </div>
