@@ -18,8 +18,8 @@ export const Help = ({ content }) => {
   const [pageContent, setPageContent] = useState(content[0].fields);
   const [language, setLanguage] = useState("ukrainian");
   const [headerTitle, setHeaderTitle] = useState();
-  const [questions, setQuestions] = useState(null);
-  const [answers, setAnswers] = useState(null);
+  // const [questions, setQuestions] = useState(null);
+  // const [answers, setAnswers] = useState(null);
   const [FAQs, setFAQs] = useState(null);
   console.log(pageContent);
 
@@ -36,7 +36,7 @@ export const Help = ({ content }) => {
       // setAnswers(pageContent.englishAnswers);
       setFAQs(pageContent.englishFAQs)
     }
-  }, [content, language, headerTitle, questions, answers]);
+  }, [content, language, headerTitle, FAQs]);
 
   return (
     <>
@@ -93,10 +93,10 @@ export const Help = ({ content }) => {
           <Accordion allowMultiple>
             {FAQs?.map((item, i) => {
               return (
-                <AccordionItem className="border" key={`faq-${i + 1}`}>
+                <AccordionItem className={`rounded border-t border-r border-l ${i + 1 === FAQs.length ? 'border-b' : ''}`} key={`faq-${i + 1}`}>
                   <h2>
                     <AccordionButton className="font-roboto md:hover:bg-[#f3f6fd]">
-                    <div className="flex flex-row md:h-[40px] min-h-min p-3 md:p-6 w-full justify-between items-center">
+                    <div className="flex flex-row md:h-[40px] min-h-min p-3 md:p-6 w-full justify items-center">
                       <div className="text-left">
                         {item.question}
                       </div>
