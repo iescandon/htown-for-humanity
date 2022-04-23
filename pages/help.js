@@ -45,23 +45,27 @@ export const Help = ({ content }) => {
         <meta name="description" content="If you are a refugee in need of assistance, please contact us so we can help you." />
         <meta name="keywords" content="refugees, asylum, houston, texas, h-town, h town, htown, for, humanity, htx, helps, donate, donations, ukraine, ukrainians, families, crisis" />
       </Head>
-      <nav className="bg-flagYellow drop-shadow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center justify-between pl-4">
+      <nav className="bg-flagYellow drop-shadow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center justify-between px-4">
         <a href="/" aria-label="back button">
           <FontAwesomeIcon
             className="text-2xl cursor-pointer p-2"
             icon={faArrowLeft}
           />
         </a>
+        <div className="pr-2">
+            <Toggle language={language} setLanguage={setLanguage} />
+          </div>
       </nav>
       <div className="p-6 lg:p-12 flex flex-col">
-        <section className="flex flex-row justify-between items-center pb-12">
-          <div className="hidden md:block w-[85px]"></div>
+        {/* <section className="flex flex-row justify-between items-center pb-12"> */}
+        <section className="flex flex-row justify-center items-center pb-12">
+          {/* <div className="hidden md:block w-[85px]"></div> */}
           <h2 className={`text-[1.5em] md:text-[2em] lg:text-[3em] ${language === 'ukrainian' ? 'font-roboto font-bold' : 'font-lato font-extrabold'}`}>
             {headerTitle}
           </h2>
-          <div>
+          {/* <div>
             <Toggle language={language} setLanguage={setLanguage} />
-          </div>
+          </div> */}
         </section>
         {/* <section className="md:mx-8 lg:mx-32">
           <Accordion allowMultiple>

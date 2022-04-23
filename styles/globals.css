@@ -114,7 +114,8 @@ div.toggleOption:focus-visible {
   width: 85px;
   position: relative;
   background: #ffffff;
-  border: 1px solid #e5e7eb;
+  /* border: 1px solid #e5e7eb; */
+  border: 2px solid white;
   border-radius: 75px !important;
 }
 
