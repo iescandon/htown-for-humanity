@@ -117,7 +117,7 @@ export const Home = ({ content }) => {
           ></iframe>
           <a
             tabIndex={-1}
-            className="custom-dbox-popup w-full text-center px-6 md:hidden"
+            className="w-full text-center px-6 md:hidden"
             href="https://donorbox.org/h-town-for-humanity"
           >
             <button
@@ -309,12 +309,6 @@ export const Home = ({ content }) => {
         src="https://donorbox.org/widget.js"
         paypalExpress="false"
       ></Script>
-      <Script
-        type="text/javascript"
-        defer
-        src="https://donorbox.org/install-popup-button.js"
-      ></Script>
-      <Script type="text/javascript" src="../components/donorbox.js"></Script>
       <style jsx>{`
         // button {
         //   padding: 20px;
