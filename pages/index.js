@@ -11,11 +11,11 @@ import {
 import React, { useState, useEffect } from "react";
 // import Link from "next/link";
 import Head from "next/head";
-import Script from 'next/script'
+import Script from "next/script";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Chart from "../components/chart";
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 export const Home = ({ content }) => {
   const [pageContent, setPageContent] = useState(content[0].fields);
@@ -42,8 +42,14 @@ export const Home = ({ content }) => {
     <>
       <Head>
         <title>H Town for Humanity</title>
-        <meta name="description" content="H Town for humanity is a non-profit organization helping refugees in Houston, Texas." />
-        <meta name="keywords" content="refugees, asylum, houston, texas, h-town, h town, htown, for, humanity, htx, helps, donate, donations, ukraine, ukrainians, families, crisis" />
+        <meta
+          name="description"
+          content="H Town for humanity is a non-profit organization helping refugees in Houston, Texas."
+        />
+        <meta
+          name="keywords"
+          content="refugees, asylum, houston, texas, h-town, h town, htown, for, humanity, htx, helps, donate, donations, ukraine, ukrainians, families, crisis"
+        />
       </Head>
       {/* nav section */}
       <nav className="md:hidden bg-flagYellow drop-shadow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center pl-6">
@@ -88,7 +94,9 @@ export const Home = ({ content }) => {
           <h2 className="text-[2em] lg:text-[3em] font-extrabold text-black pb-8 leading-tight hidden md:block">
             {pageContent.paragraphTitle}
           </h2>
-          <div className="space-y-4 pb-4">{documentToReactComponents(pageContent.paragraphText)}</div>
+          <div className="space-y-4 pb-4">
+            {documentToReactComponents(pageContent.paragraphText)}
+          </div>
           <a href="/help" className="max-w-max">
             <span className="font-roboto underline cursor-pointer hover:no-underline">
               {pageContent.ukrainianCta}
@@ -97,6 +105,7 @@ export const Home = ({ content }) => {
         </div>
         <div className="md:pt-6 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center md:bg-transparent">
           <iframe
+            className="hidden md:block"
             title="donation form"
             src="https://donorbox.org/embed/h-town-for-humanity"
             name="donorbox"
@@ -106,6 +115,14 @@ export const Home = ({ content }) => {
             height="500px"
             width="375px"
           ></iframe>
+          <a
+            className="custom-dbox-popup w-full text-center px-6 md:hidden"
+            href="https://donorbox.org/h-town-for-humanity"
+          >
+            <div className="bg-black text-white p-3 w-full rounded mb-3">
+              Click here to donate today
+            </div>
+          </a>
         </div>
       </section>
       {/* other donations section */}
@@ -171,7 +188,9 @@ export const Home = ({ content }) => {
             <p className="text-2xl text-[1.5em] md:text-[2em] lg:text-[3em] font-extrabold pb-1 md:pb-2 lg:pb-3">
               {pageContent.asideTitle}
             </p>
-            <div className="space-y-2">{documentToReactComponents(pageContent.asideText)}</div>
+            <div className="space-y-2">
+              {documentToReactComponents(pageContent.asideText)}
+            </div>
           </div>
         </section>
         {/* insta feed */}
@@ -179,7 +198,10 @@ export const Home = ({ content }) => {
           <div className="hidden md:flex flex-row min-h-min w-full min-h-min flex-wrap justify-center">
             {instagramFeed?.map((pic, i) => {
               return (
-                <div key={`div-${pic.id}`} className={`h-${window.innerWidth/4} w-1/4 relative`}>
+                <div
+                  key={`div-${pic.id}`}
+                  className={`h-${window.innerWidth / 4} w-1/4 relative`}
+                >
                   <img
                     className="h-full w-full object-cover"
                     key={pic.id}
@@ -245,19 +267,28 @@ export const Home = ({ content }) => {
           </p>
         </div>
         <div className="">
-          <a href={pageContent.socialMediaInfo.facebookUrl} aria-label="link to facebook page">
+          <a
+            href={pageContent.socialMediaInfo.facebookUrl}
+            aria-label="link to facebook page"
+          >
             <FontAwesomeIcon
               className="cursor-pointer text-4xl md:text-2xl text-white py-2 px-6 md:py-2 md:px-3"
               icon={faFacebook}
             />
           </a>
-          <a href={pageContent.socialMediaInfo.instagramUrl} aria-label="link to instagram page">
+          <a
+            href={pageContent.socialMediaInfo.instagramUrl}
+            aria-label="link to instagram page"
+          >
             <FontAwesomeIcon
               className="cursor-pointer text-4xl md:text-2xl text-white py-2 px-6 md:py-2 md:px-3"
               icon={faInstagram}
             />
           </a>
-          <a href={pageContent.socialMediaInfo.linkedInUrl} aria-label="link to linked in page">
+          <a
+            href={pageContent.socialMediaInfo.linkedInUrl}
+            aria-label="link to linked in page"
+          >
             <FontAwesomeIcon
               className="cursor-pointer text-4xl md:text-2xl text-white py-2 px-6 md:py-2 md:px-3"
               icon={faLinkedinIn}
@@ -265,7 +296,23 @@ export const Home = ({ content }) => {
           </a>
         </div>
       </footer>
-      <Script src="https://donorbox.org/widget.js" paypalExpress="false"></Script>
+      <Script
+        src="https://donorbox.org/widget.js"
+        paypalExpress="false"
+      ></Script>
+      <Script
+        type="text/javascript"
+        defer
+        src="https://donorbox.org/install-popup-button.js"
+      ></Script>
+      <Script type="text/javascript" src="../components/donorbox.js"></Script>
+      <style jsx>{`
+        // button {
+        //   padding: 20px;
+        //   background: #eee;
+        //   color: #999
+        // }
+      `}</style>
     </>
   );
 };
@@ -279,9 +326,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      content: res.items, 
+      content: res.items,
     },
-    revalidate: 1
+    revalidate: 1,
   };
 }
 
