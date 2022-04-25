@@ -58,7 +58,7 @@ export const Help = ({ content }) => {
       </nav>
       <div className="p-6 lg:p-12 flex flex-col">
         {/* <section className="flex flex-row justify-between items-center pb-12"> */}
-        <section className="flex flex-row justify-center items-center pb-12">
+        <section className="flex flex-row justify-center items-center pb-6 lg:pb-12">
           {/* <div className="hidden md:block w-[85px]"></div> */}
           <h2 className={`text-[1.5em] md:text-[2em] lg:text-[3em] ${language === 'ukrainian' ? 'font-roboto font-bold' : 'font-lato font-extrabold'}`}>
             {headerTitle}

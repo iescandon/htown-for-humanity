@@ -90,9 +90,9 @@ div.toggleOption:focus-visible {
 }
 
 /* carousel */
-.carousel .slide img {
+/* .carousel .slide img {
   height: 350px;
-}
+} */
 
 .carousel .thumb {
   height: 80px;

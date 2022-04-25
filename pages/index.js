@@ -176,10 +176,10 @@ export const Home = ({ content }) => {
         </section>
         {/* insta feed */}
         <section className="py-6 md:py-8 lg:py-12 flex-col hidden md:flex relative">
-          <div className="hidden md:flex flex-row md:h-[384px] lg:h-[720px] w-full min-h-min flex-wrap justify-center">
+          <div className="hidden md:flex flex-row min-h-min w-full min-h-min flex-wrap justify-center">
             {instagramFeed?.map((pic, i) => {
               return (
-                <div key={`div-${pic.id}`} className="h-1/2 w-1/4 relative">
+                <div key={`div-${pic.id}`} className={`h-${window.innerWidth/4} w-1/4 relative`}>
                   <img
                     className="h-full w-full object-cover"
                     key={pic.id}
@@ -196,7 +196,7 @@ export const Home = ({ content }) => {
           <Carousel swipeable={true}>
             {instagramFeed?.map((pic) => {
               return (
-                <div key={`div-${pic.id}`} className="">
+                <div key={`div-${pic.id}`} className={`h-${window.innerWidth}`}>
                   <img
                     className="h-full w-full object-cover"
                     key={pic.id}
