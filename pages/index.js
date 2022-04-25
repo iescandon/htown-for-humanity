@@ -116,12 +116,20 @@ export const Home = ({ content }) => {
             width="375px"
           ></iframe>
           <a
+            tabIndex={-1}
             className="custom-dbox-popup w-full text-center px-6 md:hidden"
             href="https://donorbox.org/h-town-for-humanity"
           >
-            <div className="bg-black text-white p-3 w-full rounded mb-3">
+            <button
+              className="submitBtn bg-black text-white p-3 w-full rounded mb-3"
+              // onKeyDown={(e) => {
+              //   if (e.key === " " || e.key === "Enter") {
+              //     console.log("clicked");
+              //   }
+              // }}
+            >
               Click here to donate today
-            </div>
+            </button>
           </a>
         </div>
       </section>

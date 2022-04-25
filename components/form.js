@@ -84,7 +84,7 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
       ></textarea>
       {/* <div className="g-recaptcha" data-sitekey={process.env.RECAPTCHA_SITE_KEY}></div> */}
       <button
-        className="submitBtn w-full md:w-1/4 lg:w-1/5 p-3 mt-2 md:mt-5 bg-black rounded text-white md:transition md:duration-200 md:ease-in-out"
+        className="submitBtn w-full md:w-1/4 lg:w-1/5 p-3 mt-2 md:mt-5 bg-black rounded text-white"
         type="submit"
         disabled={serverState.submitting}
       >
