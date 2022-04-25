@@ -121,14 +121,15 @@ export const Home = ({ content }) => {
             href="https://donorbox.org/h-town-for-humanity"
           >
             <button
-              className="submitBtn bg-black text-white p-3 w-full rounded mb-3"
+              className="submitBtn bg-black text-white p-3 w-full rounded mb-5"
               // onKeyDown={(e) => {
               //   if (e.key === " " || e.key === "Enter") {
               //     console.log("clicked");
               //   }
               // }}
             >
-              Click here to donate today
+              {/* <img className="inline mr-2" src="https://donorbox.org/images/red_logo.png" alt="" /> */}
+              <span>Click here to donate today</span>
             </button>
           </a>
         </div>
@@ -259,7 +260,7 @@ export const Home = ({ content }) => {
         </section>
       </div>
       {/* footer section */}
-      <footer className="bg-black flex flex-col md:flex-row items-center px-6 py-6 justify-between">
+      <footer className="bg-black flex flex-col md:flex-row px-6 py-6 justify-between">
         <div className="flex flex-col text-white text-xs font-light space-y-2 md:space-y-0 pb-6 md:pb-0">
           <p>
             H Town for humanity Inc is a Non-Profit Organization. EIN number
@@ -274,7 +275,7 @@ export const Home = ({ content }) => {
             </a>
           </p>
         </div>
-        <div className="">
+        <div className="flex flex-row justify-center">
           <a
             href={pageContent.socialMediaInfo.facebookUrl}
             aria-label="link to facebook page"
