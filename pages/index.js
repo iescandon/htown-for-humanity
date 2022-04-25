@@ -56,7 +56,7 @@ export const Home = ({ content }) => {
         {pageContent.paragraphTitle}
       </nav>
       {/* hero image section */}
-      <section className="relative h-[200px] md:h-[400px]">
+      <section className="relative h-[200px] md:h-[400px] lg:h-[550px]">
         <div className="blueOverlay absolute w-full h-full flex flex-col top-0 justify-between">
           <div className="flex flex-row w-full justify-end">
             <img
