@@ -60,7 +60,7 @@ textarea {
   mask-image: url(https://i.imgur.com/Ryhs05J.png);
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
-  mask-size: 100%;
+  mask-size: 85%;
   mask-position: center;
 }
 

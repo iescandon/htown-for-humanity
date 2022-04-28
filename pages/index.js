@@ -86,7 +86,8 @@ export const Home = ({ content }) => {
         </div>
       </section>
       {/* about/donate section */}
-      <section className="md:pl-8 lg:pl-16 flex flex-col md:flex-row items-center justify-center md:bg-flagYellow w-full">
+      <section className="md:pl-8 lg:pl-16 md:bg-flagYellow">
+        <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-[1800px] mx-auto">
         <div className="px-6 py-8 md:p-0 md:bg-transparent flex flex-col w-full md:w-45percent lg:w-60percent">
           <h3 className="text-[12px] lg:text-lg uppercase hidden md:block">
             {pageContent.paragraphSubtitle}
@@ -133,9 +134,11 @@ export const Home = ({ content }) => {
             </button>
           </a>
         </div>
+        </div>
       </section>
       {/* other donations section */}
-      <section className="bg-white px-6 pt-0 pb-8 md:p-6 flex flex-row items-center justify-around w-full drop-shadow-md">
+      <section className="bg-white px-6 pt-0 pb-8 md:p-6 drop-shadow-md">
+        <div className="flex flex-row items-center justify-around w-full max-w-[1920px] mx-auto">
         <a href={pageContent.otherDonationUrls.googleSheetsUrl}>
           <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer mx-2 my-4">
             <img
@@ -162,10 +165,11 @@ export const Home = ({ content }) => {
             alt="target gift registry icon"
           />
         </a>
+        </div>
       </section>
       <div className="pt-6 md:py-8 lg:py-12 bg-[#f3f6fd]">
         {/* stats section */}
-        <section className="p-6 md:p-8 lg:p-12 flex flex-col-reverse md:flex-row justify-center md:justify-around items-center">
+        <section className="p-6 md:p-8 lg:p-12 flex flex-col-reverse md:flex-row justify-center md:justify-around items-center max-w-[1600px] mx-auto">
           <div className="relative flex flex-col items-center">
             <div className="w-[200px] lg:w-[300px]">
               <Chart content={pageContent.moneyRaised} />
@@ -203,7 +207,7 @@ export const Home = ({ content }) => {
           </div>
         </section>
         {/* insta feed */}
-        <section className="py-6 md:py-8 lg:py-12 flex-col hidden md:flex relative">
+        <section className="py-6 md:py-8 lg:py-12 flex-col hidden md:flex relative max-w-[1920px] mx-auto">
           <div className="hidden md:flex flex-row min-h-min w-full min-h-min flex-wrap justify-center">
             {instagramFeed?.map((pic, i) => {
               return (
@@ -240,8 +244,9 @@ export const Home = ({ content }) => {
           </Carousel>
         </section>
         {/* contact form section */}
-        <section className="px-6 pt-6 pb-12 md:p-8 lg:p-12 space-y-6 bg-white md:bg-[#f3f6fd] flex w-full flex-row">
-          <div className="h-full w-full md:w-2/3 flex flex-row justify-center items-center md:mr-4 lg:mr-8">
+        <section className="px-6 pt-6 pb-12 md:p-8 lg:p-12 space-y-6 bg-white md:bg-[#f3f6fd] flex w-full flex-row justify-around max-w-[1700px] mx-auto">
+        {/* md:mr-4 lg:mr-8 */}
+          <div className="h-full w-full md:w-2/3 flex flex-row justify-center items-center md:max-w-[500px] lg:max-w-[700px]">
             <ContactForm
               contactFormTitle={pageContent.contactFormTitle}
               contactFormDropdownOptions={
