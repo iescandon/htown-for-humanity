@@ -56,7 +56,7 @@ export const Home = ({ content }) => {
         {pageContent.paragraphTitle}
       </nav>
       {/* hero image section */}
-      <section className="relative h-[200px] md:h-[400px] lg:h-[550px]">
+      <section className="relative h-[200px] md:h-[400px] lg:h-[520px]">
         <div className="blueOverlay absolute w-full h-full flex flex-col top-0 justify-between">
           <div className="flex flex-row w-full justify-end">
             <img
@@ -66,17 +66,17 @@ export const Home = ({ content }) => {
             />
           </div>
           <div className="title font-extrabold text-white leading-tight mx-6 md:mx-12 lg:mx-24 mb-6 md:mb-12">
-            <span className="text-[1.5em] md:text-[3em] lg:text-[4em]">
+            <span className="text-[1.5em] md:text-[2.5em] lg:text-[3.5em]">
               {pageContent.headerTitle}
             </span>
             <br></br>
-            <span className="text-[1.5em] md:text-[3em] lg:text-[4em]">
+            <span className="text-[1.5em] md:text-[2.5em] lg:text-[3.5em]">
               {pageContent.headerSubtitle}
             </span>
           </div>
         </div>
-        <div className="absolute border-l-4 border-t-4 border-flagYellow md:w-[150px] md:h-[150px] lg:w-[250px] lg:h-[250px] md:top-8 md:left-8 lg:top-16 lg:left-16 hidden md:block"></div>
-        <div className="absolute border-r-4 border-b-4 border-flagYellow md:w-[150px] md:h-[150px] lg:w-[250px] lg:h-[250px] md:bottom-8 md:right-8 lg:bottom-16 lg:right-16 hidden md:block"></div>
+        <div className="absolute border-l-4 border-t-4 border-flagYellow md:w-[150px] md:h-[150px] lg:w-[250px] lg:h-[200px] md:top-8 md:left-8 lg:top-16 lg:left-16 hidden md:block"></div>
+        <div className="absolute border-r-4 border-b-4 border-flagYellow md:w-[150px] md:h-[150px] lg:w-[250px] lg:h-[200px] md:bottom-8 md:right-8 lg:bottom-16 lg:right-16 hidden md:block"></div>
         <div className="w-full h-full">
           <img
             alt="htown for humanity hero image"
@@ -92,13 +92,13 @@ export const Home = ({ content }) => {
           <h3 className="text-[12px] lg:text-lg uppercase hidden md:block">
             {pageContent.paragraphSubtitle}
           </h3>
-          <h2 className="text-[2em] lg:text-[3em] font-extrabold text-black pb-8 leading-tight hidden md:block">
+          <h2 className="text-[2em] lg:text-[2.5em] font-extrabold text-black pb-8 leading-tight hidden md:block">
             {pageContent.paragraphTitle}
           </h2>
           <div className="space-y-4 pb-4">
             {documentToReactComponents(pageContent.paragraphText)}
           </div>
-          <a href="/help" className="max-w-max">
+          <a href="/help/how-we-can-help" className="max-w-max">
             <span className="font-roboto underline cursor-pointer hover:no-underline">
               {pageContent.ukrainianCta}
             </span>
@@ -142,7 +142,7 @@ export const Home = ({ content }) => {
         <a href={pageContent.otherDonationUrls.googleSheetsUrl}>
           <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer mx-2 my-4">
             <img
-              className="h-[20px] md:h-[35px] lg:h-[50px]"
+              className="h-[20px] md:h-[30px] lg:h-[40px]"
               src="/images/google-sheets.png"
               alt="google sheets icon"
             />
@@ -153,14 +153,14 @@ export const Home = ({ content }) => {
         </a>
         <a href={pageContent.otherDonationUrls.amazonUrl}>
           <img
-            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer mx-2 my-4"
+            className="w-[90px] md:w-[125px] lg:w-[150px] cursor-pointer mx-2 my-4"
             src="/images/amazon-wishlist.png"
             alt="amazon wishlist icon"
           />
         </a>
         <a href={pageContent.otherDonationUrls.targetUrl}>
           <img
-            className="w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer mx-2 my-4"
+            className="w-[90px] md:w-[125px] lg:w-[150px] cursor-pointer mx-2 my-4"
             src="/images/target-registry.png"
             alt="target gift registry icon"
           />
@@ -174,8 +174,8 @@ export const Home = ({ content }) => {
             <div className="w-[200px] lg:w-[300px]">
               <Chart content={pageContent.moneyRaised} />
             </div>
-            <div className="absolute top-[5rem] left-[4rem] lg:top-[7.3rem] lg:left-[6rem]">
-              <p className="text-[2em] lg:text-[3em] font-extrabold leading-none">
+            <div className="absolute top-[5rem] left-[3.9rem] lg:top-[7.7rem] lg:left-[6rem] flex flex-col items-center">
+              <p className="text-[1.5em] lg:text-[2em] font-extrabold leading-none">
                 ${pageContent.moneyRaised.total}
               </p>
               <p className="text-xs lg:text-base pl-1 lg:pl-2">
@@ -198,7 +198,7 @@ export const Home = ({ content }) => {
             </div>
           </div>
           <div className="pb-12 md:pb-0 md:w-[400px] lg:w-[600px]">
-            <p className="text-2xl text-[1.5em] md:text-[2em] lg:text-[3em] font-extrabold pb-1 md:pb-2 lg:pb-3">
+            <p className="text-2xl text-[1.5em] md:text-[2em] lg:text-[2.5em] font-extrabold pb-1 md:pb-2 lg:pb-3">
               {pageContent.asideTitle}
             </p>
             <div className="space-y-2">
@@ -264,6 +264,12 @@ export const Home = ({ content }) => {
           </div>
         </section>
       </div>
+      {/* media appearance section */}
+      <section className="h-[500px] bg-gradient-to-b from-[#f3f6fd] to-white hidden">
+      </section>
+      {/* meet the team section */}
+      <section className="h-[500px] hidden">
+      </section>
       {/* footer section */}
       <footer className="bg-black flex flex-col md:flex-row px-6 py-6 justify-between">
         <div className="flex flex-col text-white text-xs font-light space-y-2 md:space-y-0 pb-6 md:pb-0">
