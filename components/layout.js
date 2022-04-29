@@ -96,7 +96,7 @@ export const Layout = ({
           )
         })}
       </ul>
-      <div className="h-[400px] w-full relative">
+      <div className="h-[375px] w-full relative">
         <div className="h-full w-full absolute blackOverlay flex flex-col justify-center items-center">
         <h2 className={`text-[1.5em] md:text-[2em] lg:text-[3em] text-white title ${language === 'ukrainian' ? 'font-roboto font-bold' : 'font-lato font-extrabold'}`}>
             {headerTitle}
