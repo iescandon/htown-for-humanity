@@ -98,7 +98,7 @@ export const Home = ({ content }) => {
           <div className="space-y-4 pb-4">
             {documentToReactComponents(pageContent.paragraphText)}
           </div>
-          <a href="/help/how-we-can-help" className="max-w-max">
+          <a href="/help/faqs" className="max-w-max">
             <span className="font-roboto underline cursor-pointer hover:no-underline">
               {pageContent.ukrainianCta}
             </span>
