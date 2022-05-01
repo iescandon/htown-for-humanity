@@ -23,7 +23,7 @@ export const FAQs = ({ content }) => {
             {FAQs?.map((item, i) => {
               return (
                 // ${language === 'ukrainian' ? 'font-roboto' : 'font-lato'}
-                <AccordionItem className={`rounded border-t border-r border-l ${i + 1 === FAQs.length ? 'border-b' : ''}`} key={`faq-${i + 1}`}>
+                <AccordionItem className={`bg-white rounded border-t border-r border-l ${i + 1 === FAQs.length ? 'border-b' : ''}`} key={`faq-${i + 1}`}>
                   <h2>
                     <AccordionButton className="md:hover:bg-[#f3f6fd]">
                     <div className="flex flex-row md:h-[40px] min-h-min p-3 md:p-6 w-full justify-between items-center">

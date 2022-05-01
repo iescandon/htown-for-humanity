@@ -51,7 +51,7 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
       onSubmit={handleOnSubmit}
     >
       <h2 className="font-extrabold text-[1.3em] md:text-[2em] lg:text-[2.5em]">{contactFormTitle}</h2>
-      <select name="reason" id="reason" className="mt-2 md:mt-4 border bg-white rounded">
+      <select name="reason" id="reason" className="mt-2 md:mt-4 border rounded">
       {contactFormDropdownOptions.map((dropdownOption) => {
               return (
                 <option key={dropdownOption} value={dropdownOption}>
