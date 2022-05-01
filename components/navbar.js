@@ -1,65 +1,61 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faXmark,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useRouter } from "next/router";
 
-
 export const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const englishNav = [
-        {
-          tabText: "How we can help",
-          tabSlug: "how-we-can-help",
-        },
-        {
-          tabText: "Housing",
-          tabSlug: "housing",
-        },
-        {
-          tabText: "Learn English",
-          tabSlug: "learn-english",
-        },
-        {
-          tabText: "Job Support",
-          tabSlug: "job-support",
-        },
-        {
-          tabText: "Immigration Law",
-          tabSlug: "immigration-law",
-        },
-        {
-          tabText: "FAQs",
-          tabSlug: "faqs",
-        },
-        {
-          tabText: "Resources",
-          tabSlug: "resources",
-        },
-      ];
-      const [language, setLanguage] = useState("ukrainian");
-      const [navLinks, setNavLinks] = useState(englishNav);
-      const router = useRouter();
-      const route = router.pathname;
-      const [selectedTab, setSelectedTab] = useState("How we can help");
+  const [isOpen, setIsOpen] = useState(false);
+  const englishNav = [
+    {
+      tabText: "How we can help",
+      tabSlug: "how-we-can-help",
+    },
+    {
+      tabText: "Housing",
+      tabSlug: "housing",
+    },
+    {
+      tabText: "Learn English",
+      tabSlug: "learn-english",
+    },
+    {
+      tabText: "Job Support",
+      tabSlug: "job-support",
+    },
+    {
+      tabText: "Immigration Law",
+      tabSlug: "immigration-law",
+    },
+    {
+      tabText: "FAQs",
+      tabSlug: "faqs",
+    },
+    {
+      tabText: "Resources",
+      tabSlug: "resources",
+    },
+  ];
+  const [language, setLanguage] = useState("ukrainian");
+  const [navLinks, setNavLinks] = useState(englishNav);
+  const router = useRouter();
+  const route = router.pathname;
+  const [selectedTab, setSelectedTab] = useState("How we can help");
 
-      useEffect(() => {
-        // console.log(language)
-        setNavLinks(englishNav);
-    
-        // if (language === "ukrainian") {
-        //   setHeaderTitle(pageContent.ukrainianHeaderTitle);
-        //   setFAQs(pageContent.ukrainianFAQs)
-        // } else {
-        //   setHeaderTitle(pageContent.englishHeaderTitle);
-        //   setFAQs(pageContent.englishFAQs)
-        // }
-      }, [language, selectedTab]);
+  useEffect(() => {
+    // console.log(language)
+    setNavLinks(englishNav);
 
-console.log('navbar')
+    // if (language === "ukrainian") {
+    //   setHeaderTitle(pageContent.ukrainianHeaderTitle);
+    //   setFAQs(pageContent.ukrainianFAQs)
+    // } else {
+    //   setHeaderTitle(pageContent.englishHeaderTitle);
+    //   setFAQs(pageContent.englishFAQs)
+    // }
+  }, [language, selectedTab]);
+
+  console.log("navbar");
   return (
     <>
       <nav className="bg-flagYellow h-[60px] font-extrabold flex flex-row items-center justify-between px-6 sticky inset-0 z-30">
@@ -69,7 +65,7 @@ console.log('navbar')
         {/* <div className="">
           <Toggle language={language} setLanguage={setLanguage} />
         </div> */}
-                <button
+        <button
           className=""
           onClick={() => {
             setIsOpen(!isOpen);
@@ -112,9 +108,11 @@ console.log('navbar')
           })}
         </ul>
       </div>
+      {isOpen ? (
+        <div className="w-screen h-screen bg-black bg-opacity-60 absolute inset-0"></div>
+      ) : null}
     </>
   );
 };
-
 
 export default Navbar;
