@@ -117,7 +117,7 @@ export const Home = ({ content }) => {
           ></iframe>
           <a
             tabIndex={-1}
-            className="w-full text-center px-6 md:hidden"
+            className="w-full text-center px-4 md:hidden"
             href="https://donorbox.org/h-town-for-humanity"
           >
             <button
