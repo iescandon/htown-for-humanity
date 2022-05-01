@@ -42,7 +42,7 @@ export const Layout = ({ img, alt, headerTitle, children }) => {
         </div>
         <img className="h-full w-full object-cover" src={img} />
       </section>
-      <div className="p-6 lg:p-12 flex flex-col bg-white">
+      <div className="px-4 py-6 lg:p-12 flex flex-col bg-white">
         <section
           className={`md:mx-8 lg:mx-32 ${
             language === "ukrainian" ? "font-roboto" : "font-lato"
