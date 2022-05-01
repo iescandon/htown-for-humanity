@@ -87,7 +87,6 @@ export const Navbar = () => {
           {navLinks?.map((link) => {
             return (
               <>
-              {/* {isOpen ? */}
               <button
                 key={link.tabText}
                 tabIndex={isOpen ? 1 : -1}
@@ -99,7 +98,7 @@ export const Navbar = () => {
                 }}
               >
                 <li
-                  className={`cursor-pointer font-light ${
+                  className={`cursor-pointer ${
                     language === "ukrainian" ? "font-roboto" : "font-lato"
                   } ${`/help/${link.tabSlug}` === route ? "underline" : null}`}
                   key={link.tabSlug}
@@ -107,7 +106,6 @@ export const Navbar = () => {
                   {link.tabText}
                 </li>
               </button>
-              {/* : null } */}
               </>
             );
           })}
