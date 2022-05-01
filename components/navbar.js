@@ -78,7 +78,6 @@ export const Navbar = () => {
           )}
         </button>
       </nav>
-      {/* {isOpen ?  */}
       <div className="relative">
         <ul
           className={`flex flex-col space-y-6 w-full items-start p-6 drop-shadow-md bg-white z-20 absolute ease-in-out duration-500 ${
@@ -88,9 +87,10 @@ export const Navbar = () => {
           {navLinks?.map((link) => {
             return (
               <>
-              {isOpen ?
+              {/* {isOpen ? */}
               <button
                 key={link.tabText}
+                tabIndex={isOpen ? 1 : -1}
                 onClick={(e) => {
                   // e.preventDefault();
                   // setSelectedTab(link.tabText);
@@ -107,13 +107,12 @@ export const Navbar = () => {
                   {link.tabText}
                 </li>
               </button>
-              : null }
+              {/* : null } */}
               </>
             );
           })}
         </ul>
       </div>
-      {/* : null } */}
       {isOpen ? (
         <div className="w-screen h-screen bg-black bg-opacity-60 absolute inset-0"></div>
       ) : null}
