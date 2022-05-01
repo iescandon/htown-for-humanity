@@ -18,7 +18,7 @@ export const FAQs = ({ content }) => {
 
   return (
     <>
-    <Layout img={pageContent.heroImage.fields.file.url} alt={'yo'} headerTitle={pageContent.englishHeaderTitle}>
+    <Layout img={pageContent.heroImage.fields.file.url} alt={'yo'} headerTitle={pageContent.ukrainianHeaderTitle}>
         <Accordion allowMultiple>
             {FAQs?.map((item, i) => {
               return (
@@ -26,7 +26,7 @@ export const FAQs = ({ content }) => {
                 <AccordionItem className={`bg-white rounded border-t border-r border-l ${i + 1 === FAQs.length ? 'border-b' : ''}`} key={`faq-${i + 1}`}>
                   <h2>
                     <AccordionButton className="md:hover:bg-[#f3f6fd]">
-                    <div className="flex flex-row md:h-[40px] min-h-min p-3 md:p-6 w-full justify-between items-center">
+                    <div className="flex flex-row md:h-[40px] min-h-min m-3 md:m-3 w-full justify-between items-center">
                       <div className="text-left">
                         {item.question}
                       </div>

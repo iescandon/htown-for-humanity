@@ -55,14 +55,6 @@ textarea {
   background-color: rgba(255, 255, 255);
 }
 
-  /* @media screen and (max-width: 768px) {
-    .navmenu {
-      @apply ease-in-out duration-500;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-delay: 500ms;
-    }
-  } */
-
 
 .mask {
   -webkit-mask-image: url(https://i.imgur.com/Ryhs05J.png);

@@ -1,5 +1,10 @@
 import { useState } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCircleCheck,
+  faCircleXmark,
+} from "@fortawesome/free-solid-svg-icons";
 
 function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
   const [serverState, setServerState] = useState({
@@ -50,15 +55,17 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
       className="h-full w-full flex flex-col justify-center"
       onSubmit={handleOnSubmit}
     >
-      <h2 className="font-extrabold text-[1.3em] md:text-[2em] lg:text-[2.5em]">{contactFormTitle}</h2>
+      <h2 className="font-extrabold text-[1.3em] md:text-[2em] lg:text-[2.5em]">
+        {contactFormTitle}
+      </h2>
       <select name="reason" id="reason" className="mt-2 md:mt-4 border rounded">
-      {contactFormDropdownOptions.map((dropdownOption) => {
-              return (
-                <option key={dropdownOption} value={dropdownOption}>
-                {dropdownOption}
-              </option>
-              );
-            })}
+        {contactFormDropdownOptions.map((dropdownOption) => {
+          return (
+            <option key={dropdownOption} value={dropdownOption}>
+              {dropdownOption}
+            </option>
+          );
+        })}
       </select>
       <input
         className="mt-2 md:mt-4 border rounded"
@@ -92,11 +99,24 @@ function MyForm({ contactFormTitle, contactFormDropdownOptions }) {
       </button>
       {serverState.status && (
         <p
-          className={`fixed z-50 rounded top-5 right-5 p-4 lg:p-6 bg-white bg-opacity-95 shadow-lg border-l-4 w-[200px] lg:w-[300px] text-black text-center ${
-            !serverState.status.ok ? "errorMsg border-red-600" : "border-green-600"
+          className={`flex flex-row items-center fixed z-50 rounded top-5 right-5 p-4 lg:p-6 bg-white bg-opacity-95 shadow-lg border-l-4 w-[200px] lg:w-[300px] text-black text-center ${
+            !serverState.status.ok
+              ? "errorMsg border-red-600"
+              : "border-green-600"
           }`}
         >
-          {serverState.status.msg}
+          {!serverState.status.ok ? (
+            <FontAwesomeIcon
+              className="cursor-pointert text-red-600"
+              icon={faCircleXmark}
+            />
+          ) : (
+            <FontAwesomeIcon
+              className="cursor-pointert text-green-600"
+              icon={faCircleCheck}
+            />
+          )}
+          <span>{serverState.status.msg}</span>
         </p>
       )}
     </form>
