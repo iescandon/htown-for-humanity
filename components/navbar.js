@@ -58,7 +58,7 @@ export const Navbar = () => {
   console.log("navbar");
   return (
     <>
-      <nav className="bg-flagYellow h-[60px] font-extrabold flex flex-row items-center justify-between px-6 sticky inset-0 z-30">
+      <nav className="bg-flagYellow h-[60px] font-extrabold flex flex-row items-center justify-between px-4 md:px-6 sticky inset-0 z-30">
         <a href="/" aria-label="back button">
           <h2>#htownforhumanity</h2>
         </a>
