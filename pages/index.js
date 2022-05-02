@@ -267,84 +267,96 @@ export const Home = ({ content }) => {
       {/* <section className="h-[500px] bg-gradient-to-b from-[#f3f6fd] to-white hidden">
       </section> */}
 
-        {/* footer section */}
+      {/* footer section */}
       <footer className="px-4 md:px-8 lg:px-12 py-8 md:py-6 bg-black text-white ">
- {/* other contact/info section */}
-      <div className="md:h-[160px] font-light text-sm flex flex-col md:flex-row justify-between space-y-6 md:space-y-0">
-        <div className="flex flex-col">
-          <h4 className="font-bold uppercase">Follow</h4>
-          <div className="flex flex-row">
-            <a
-              href={pageContent.socialMediaInfo.facebookUrl}
-              aria-label="link to facebook page"
-            >
-              <FontAwesomeIcon
-                className="cursor-pointer text-4xl md:text-2xl py-2 pr-6 md:pr-3"
-                icon={faFacebook}
-              />
+        {/* other contact/info section */}
+        <div className="md:h-[160px] font-light text-sm flex flex-col md:flex-row justify-between space-y-6 md:space-y-0">
+          <div className="flex flex-col">
+            <h4 className="font-bold uppercase">Follow</h4>
+            <div className="flex flex-row">
+              <a
+                href={pageContent.socialMediaInfo.facebookUrl}
+                aria-label="link to facebook page"
+              >
+                <FontAwesomeIcon
+                  className="cursor-pointer text-4xl md:text-2xl py-2 pr-6 md:pr-3"
+                  icon={faFacebook}
+                />
+              </a>
+              <a
+                href={pageContent.socialMediaInfo.instagramUrl}
+                aria-label="link to instagram page"
+              >
+                <FontAwesomeIcon
+                  className="cursor-pointer text-4xl md:text-2xl py-2 pr-6 md:pr-3"
+                  icon={faInstagram}
+                />
+              </a>
+              <a
+                href={pageContent.socialMediaInfo.linkedInUrl}
+                aria-label="link to linked in page"
+              >
+                <FontAwesomeIcon
+                  className="cursor-pointer text-4xl md:text-2xl py-2 pr-6 md:pr-3"
+                  icon={faLinkedinIn}
+                />
+              </a>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <h4 className="font-bold uppercase">About</h4>
+            <a href="/about">Who are we</a>
+            <a href="/help/faqs">Help for Refugees</a>
+          </div>
+          <div className="flex flex-col">
+            <h4 className="font-bold uppercase">Contact</h4>
+            <a href="mailto:donations@htownforhumanity.org">
+              donations@htownforhumanity.org
             </a>
-            <a
-              href={pageContent.socialMediaInfo.instagramUrl}
-              aria-label="link to instagram page"
-            >
-              <FontAwesomeIcon
-                className="cursor-pointer text-4xl md:text-2xl py-2 pr-6 md:pr-3"
-                icon={faInstagram}
-              />
+            <a href="mailto:help@htownforhumanity.org">
+              help@htownforhumanity.org
             </a>
-            <a
-              href={pageContent.socialMediaInfo.linkedInUrl}
-              aria-label="link to linked in page"
-            >
-              <FontAwesomeIcon
-                className="cursor-pointer text-4xl md:text-2xl py-2 pr-6 md:pr-3"
-                icon={faLinkedinIn}
-              />
+            <a href="mailto:admin@htownforhumanity.org" className="mb-3">
+              admin@htownforhumanity.org
+            </a>
+            <a href="tel:8326302396">832-630-2396</a>
+          </div>
+          <div className="flex flex-col space-y-2 h-full pb-8 md:pb-0">
+            <h4 className="font-bold uppercase">Donate</h4>
+            <a href="https://paypal.me/htownforhumanity">
+              <div className="h-[35px] w-[150px] lg:w-[200px] bg-[#FEC238] rounded shadow-md flex flex-row justify-center items-center">
+                <img className="h-[30px]" src="/images/paypal.png" />
+              </div>
+            </a>
+            <a href="">
+              <div className="h-[35px] w-[150px] lg:w-[200px] bg-[#028DFF] rounded shadow-md flex flex-row justify-center items-center">
+                <img className="h-[20px]" src="/images/venmo.png" />
+              </div>
+            </a>
+            <a href="">
+              <div className="h-[35px] w-[150px] lg:w-[200px] bg-[#6C1CD3] rounded shadow-md flex flex-row justify-center items-center">
+                <img className="h-[25px]" src="/images/zelle.png" />
+              </div>
             </a>
           </div>
         </div>
-        <div className="flex flex-col">
-          <h4 className="font-bold uppercase">About</h4>
-          <a href="/about">Who are we</a>
-          <a href="/help/faqs">Help for Refugees</a>
-        </div>
-        <div className="flex flex-col">
-          <h4 className="font-bold uppercase">Contact</h4>
-          <a href="mailto:donations@htownforhumanity.org">donations@htownforhumanity.org</a>
-          <a href="mailto:help@htownforhumanity.org">help@htownforhumanity.org</a>
-          <a href="mailto:admin@htownforhumanity.org" className="mb-3">admin@htownforhumanity.org</a>
-          <a href="tel:8326302396">832-630-2396</a>
-        </div>
-        <div className="flex flex-col space-y-2 h-full pb-8 md:pb-0">
-          <h4 className="font-bold uppercase">Donate</h4>
-          <div className="h-[35px] w-[150px] lg:w-[200px] bg-[#FEC238] rounded shadow-md flex flex-row justify-center items-center">
-            <img className="h-[30px]" src="/images/paypal.png" />
-          </div>
-          <div className="h-[35px] w-[150px] lg:w-[200px] bg-[#028DFF] rounded shadow-md flex flex-row justify-center items-center">
-            <img className="h-[20px]" src="/images/venmo.png" />
-          </div>
-          <div className="h-[35px] w-[150px] lg:w-[200px] bg-[#6C1CD3] rounded shadow-md flex flex-row justify-center items-center">
-            <img className="h-[25px]" src="/images/zelle.png" />
+        {/* ein copyright section */}
+        <div className="flex flex-col md:flex-row">
+          <div className="flex flex-col text-sm font-light">
+            <p>
+              H Town for humanity Inc is a Non-Profit Organization. EIN number
+              88-1595598.
+            </p>
+            <p>
+              Website created by{" "}
+              <a href="https://inescandon.vercel.app/">
+                <span className="underline cursor-pointer text-blue-200 hover:text-white">
+                  Inez Escandon
+                </span>
+              </a>
+            </p>
           </div>
         </div>
-      </div>
-      {/* ein copyright section */}
-      <div className="flex flex-col md:flex-row">
-        <div className="flex flex-col text-sm font-light">
-          <p>
-            H Town for humanity Inc is a Non-Profit Organization. EIN number
-            88-1595598.
-          </p>
-          <p>
-            Website created by{" "}
-            <a href="https://inescandon.vercel.app/">
-              <span className="underline cursor-pointer text-blue-200 hover:text-white">
-                Inez Escandon
-              </span>
-            </a>
-          </p>
-        </div>
-      </div>
       </footer>
       <Script
         src="https://donorbox.org/widget.js"
