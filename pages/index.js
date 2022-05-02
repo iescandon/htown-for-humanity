@@ -87,83 +87,83 @@ export const Home = ({ content }) => {
       {/* about/donate section */}
       <section className="md:pl-8 lg:pl-16 md:bg-flagYellow">
         <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-[1800px] mx-auto">
-        <div className="px-4 py-8 md:p-0 md:bg-transparent flex flex-col w-full md:w-45percent lg:w-60percent">
-          <h3 className="text-[12px] lg:text-lg uppercase hidden md:block">
-            {pageContent.paragraphSubtitle}
-          </h3>
-          <h2 className="text-[2em] lg:text-[2.5em] font-extrabold text-black pb-8 leading-tight hidden md:block">
-            {pageContent.paragraphTitle}
-          </h2>
-          <div className="space-y-4 pb-4">
-            {documentToReactComponents(pageContent.paragraphText)}
+          <div className="px-4 py-8 md:p-0 md:bg-transparent flex flex-col w-full md:w-45percent lg:w-60percent">
+            <h3 className="text-[12px] lg:text-lg uppercase hidden md:block">
+              {pageContent.paragraphSubtitle}
+            </h3>
+            <h2 className="text-[2em] lg:text-[2.5em] font-extrabold text-black pb-8 leading-tight hidden md:block">
+              {pageContent.paragraphTitle}
+            </h2>
+            <div className="space-y-4 pb-4">
+              {documentToReactComponents(pageContent.paragraphText)}
+            </div>
+            <a href="/help/faqs" className="max-w-max">
+              <span className="font-roboto underline cursor-pointer hover:no-underline">
+                {pageContent.ukrainianCta}
+              </span>
+            </a>
           </div>
-          <a href="/help/faqs" className="max-w-max">
-            <span className="font-roboto underline cursor-pointer hover:no-underline">
-              {pageContent.ukrainianCta}
-            </span>
-          </a>
-        </div>
-        <div className="md:pt-6 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center md:bg-transparent">
-          <iframe
-            className="hidden md:block"
-            title="donation form"
-            src="https://donorbox.org/embed/h-town-for-humanity"
-            name="donorbox"
-            allowpaymentrequest="allowpaymentrequest"
-            seamless="seamless"
-            scrolling="no"
-            height="500px"
-            width="375px"
-          ></iframe>
-          <a
-            tabIndex={-1}
-            className="w-full text-center px-4 md:hidden"
-            href="https://donorbox.org/h-town-for-humanity"
-          >
-            <button
-              className="submitBtn bg-black text-white p-3 w-full rounded mb-5"
-              // onKeyDown={(e) => {
-              //   if (e.key === " " || e.key === "Enter") {
-              //     console.log("clicked");
-              //   }
-              // }}
+          <div className="md:pt-6 flex flex-col w-full md:w-55percent lg:w-40percent h-full items-center justify-center md:bg-transparent">
+            <iframe
+              className="hidden md:block"
+              title="donation form"
+              src="https://donorbox.org/embed/h-town-for-humanity"
+              name="donorbox"
+              allowpaymentrequest="allowpaymentrequest"
+              seamless="seamless"
+              scrolling="no"
+              height="500px"
+              width="375px"
+            ></iframe>
+            <a
+              tabIndex={-1}
+              className="w-full text-center px-4 md:hidden"
+              href="https://donorbox.org/h-town-for-humanity"
             >
-              {/* <img className="inline mr-2" src="https://donorbox.org/images/red_logo.png" alt="" /> */}
-              <span>Click here to donate today</span>
-            </button>
-          </a>
-        </div>
+              <button
+                className="submitBtn bg-black text-white p-3 w-full rounded mb-5"
+                // onKeyDown={(e) => {
+                //   if (e.key === " " || e.key === "Enter") {
+                //     console.log("clicked");
+                //   }
+                // }}
+              >
+                {/* <img className="inline mr-2" src="https://donorbox.org/images/red_logo.png" alt="" /> */}
+                <span>Click here to donate today</span>
+              </button>
+            </a>
+          </div>
         </div>
       </section>
       {/* other donations section */}
       <section className="bg-white px-4 pt-0 pb-8 md:p-6 drop-shadow-md">
         <div className="flex flex-row items-center justify-around w-full max-w-[1920px] mx-auto">
-        <a href={pageContent.otherDonationUrls.googleSheetsUrl}>
-          <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer mx-2 my-4">
+          <a href={pageContent.otherDonationUrls.googleSheetsUrl}>
+            <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer mx-2 my-4">
+              <img
+                className="h-[20px] md:h-[30px] lg:h-[40px]"
+                src="/images/google-sheets.png"
+                alt="google sheets icon"
+              />
+              <span className="ml-1 text-[10px] md:text-xs lg:text-base">
+                Non-perishable food & other supplies
+              </span>
+            </div>
+          </a>
+          <a href={pageContent.otherDonationUrls.amazonUrl}>
             <img
-              className="h-[20px] md:h-[30px] lg:h-[40px]"
-              src="/images/google-sheets.png"
-              alt="google sheets icon"
+              className="w-[90px] md:w-[125px] lg:w-[150px] cursor-pointer mx-2 my-4"
+              src="/images/amazon-wishlist.png"
+              alt="amazon wishlist icon"
             />
-            <span className="ml-1 text-[10px] md:text-xs lg:text-base">
-              Non-perishable food & other supplies
-            </span>
-          </div>
-        </a>
-        <a href={pageContent.otherDonationUrls.amazonUrl}>
-          <img
-            className="w-[90px] md:w-[125px] lg:w-[150px] cursor-pointer mx-2 my-4"
-            src="/images/amazon-wishlist.png"
-            alt="amazon wishlist icon"
-          />
-        </a>
-        <a href={pageContent.otherDonationUrls.targetUrl}>
-          <img
-            className="w-[90px] md:w-[125px] lg:w-[150px] cursor-pointer mx-2 my-4"
-            src="/images/target-registry.png"
-            alt="target gift registry icon"
-          />
-        </a>
+          </a>
+          <a href={pageContent.otherDonationUrls.targetUrl}>
+            <img
+              className="w-[90px] md:w-[125px] lg:w-[150px] cursor-pointer mx-2 my-4"
+              src="/images/target-registry.png"
+              alt="target gift registry icon"
+            />
+          </a>
         </div>
       </section>
       <div className="pt-6 md:py-8 lg:py-12 bg-[#f3f6fd]">
@@ -244,7 +244,7 @@ export const Home = ({ content }) => {
         </section>
         {/* contact form section */}
         <section className="px-4 pt-6 pb-12 md:p-8 lg:p-12 space-y-6 bg-white md:bg-[#f3f6fd] flex w-full flex-row justify-around max-w-[1700px] mx-auto">
-        {/* md:mr-4 lg:mr-8 */}
+          {/* md:mr-4 lg:mr-8 */}
           <div className="h-full w-full md:w-2/3 flex flex-row justify-center items-center md:max-w-[500px] lg:max-w-[700px]">
             <ContactForm
               contactFormTitle={pageContent.contactFormTitle}
@@ -264,14 +264,73 @@ export const Home = ({ content }) => {
         </section>
       </div>
       {/* media appearance section */}
-      <section className="h-[500px] bg-gradient-to-b from-[#f3f6fd] to-white hidden">
-      </section>
-      {/* meet the team section */}
-      <section className="h-[500px] hidden">
-      </section>
-      {/* footer section */}
-      <footer className="bg-black flex flex-col md:flex-row px-6 py-6 justify-between">
-        <div className="flex flex-col text-white text-xs font-light space-y-2 md:space-y-0 pb-6 md:pb-0">
+      {/* <section className="h-[500px] bg-gradient-to-b from-[#f3f6fd] to-white hidden">
+      </section> */}
+
+        {/* footer section */}
+      <footer className="px-4 md:px-8 lg:px-12 py-6 bg-black text-white ">
+ {/* other contact/info section */}
+      <div className="md:h-[160px] font-light text-sm flex flex-col md:flex-row justify-between space-y-6 md:space-y-0">
+        <div className="flex flex-col">
+          <h4 className="font-bold text-lg">Follow</h4>
+          <div className="flex flex-row">
+            <a
+              href={pageContent.socialMediaInfo.facebookUrl}
+              aria-label="link to facebook page"
+            >
+              <FontAwesomeIcon
+                className="cursor-pointer text-4xl md:text-2xl py-2 pr-3"
+                icon={faFacebook}
+              />
+            </a>
+            <a
+              href={pageContent.socialMediaInfo.instagramUrl}
+              aria-label="link to instagram page"
+            >
+              <FontAwesomeIcon
+                className="cursor-pointer text-4xl md:text-2xl py-2 pr-3"
+                icon={faInstagram}
+              />
+            </a>
+            <a
+              href={pageContent.socialMediaInfo.linkedInUrl}
+              aria-label="link to linked in page"
+            >
+              <FontAwesomeIcon
+                className="cursor-pointer text-4xl md:text-2xl py-2 pr-3"
+                icon={faLinkedinIn}
+              />
+            </a>
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <h4 className="font-bold text-lg">About</h4>
+          <p>Who are we</p>
+          <p>Help for Refugees</p>
+        </div>
+        <div className="flex flex-col">
+          <h4 className="font-bold text-lg">Contact</h4>
+          <p>donations@htownforhumanity.org</p>
+          <p>help@htownforhumanity.org</p>
+          <p>admin@htownforhumanity.org</p>
+          <p>832-630-2396</p>
+        </div>
+        <div className="flex flex-col space-y-2 h-full pb-8 md:pb-0">
+          <h4 className="font-bold text-lg">Donate</h4>
+          <div className="h-[35px] w-[150px] lg:w-[200px] bg-[#FEC238] rounded shadow-md flex flex-row justify-center items-center">
+            <img className="h-[30px]" src="/images/paypal.png" />
+          </div>
+          <div className="h-[35px] w-[150px] lg:w-[200px] bg-[#028DFF] rounded shadow-md flex flex-row justify-center items-center">
+            <img className="h-[20px]" src="/images/venmo.png" />
+          </div>
+          <div className="h-[35px] w-[150px] lg:w-[200px] bg-[#6C1CD3] rounded shadow-md flex flex-row justify-center items-center">
+            <img className="h-[25px]" src="/images/zelle.png" />
+          </div>
+        </div>
+      </div>
+      {/* ein copyright section */}
+      <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col text-sm font-light">
           <p>
             H Town for humanity Inc is a Non-Profit Organization. EIN number
             88-1595598.
@@ -285,35 +344,7 @@ export const Home = ({ content }) => {
             </a>
           </p>
         </div>
-        <div className="flex flex-row justify-center">
-          <a
-            href={pageContent.socialMediaInfo.facebookUrl}
-            aria-label="link to facebook page"
-          >
-            <FontAwesomeIcon
-              className="cursor-pointer text-4xl md:text-2xl text-white py-2 px-6 md:py-2 md:px-3"
-              icon={faFacebook}
-            />
-          </a>
-          <a
-            href={pageContent.socialMediaInfo.instagramUrl}
-            aria-label="link to instagram page"
-          >
-            <FontAwesomeIcon
-              className="cursor-pointer text-4xl md:text-2xl text-white py-2 px-6 md:py-2 md:px-3"
-              icon={faInstagram}
-            />
-          </a>
-          <a
-            href={pageContent.socialMediaInfo.linkedInUrl}
-            aria-label="link to linked in page"
-          >
-            <FontAwesomeIcon
-              className="cursor-pointer text-4xl md:text-2xl text-white py-2 px-6 md:py-2 md:px-3"
-              icon={faLinkedinIn}
-            />
-          </a>
-        </div>
+      </div>
       </footer>
       <Script
         src="https://donorbox.org/widget.js"
