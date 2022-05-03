@@ -65,6 +65,10 @@ textarea {
   mask-position: center;
 }
 
+footer a:hover {
+text-decoration: underline;
+}
+
 /* TABNAV */
 select:focus-visible,
 textarea:focus-visible,

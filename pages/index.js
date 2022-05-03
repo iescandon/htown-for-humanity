@@ -305,7 +305,7 @@ export const Home = ({ content }) => {
           </div>
           <div className="flex flex-col">
             <h4 className="font-bold uppercase">About</h4>
-            <a href="/about">Who are we</a>
+            <a href="/about">About H Town for Humanity</a>
             <a href="/help/faqs">Help for Refugees</a>
           </div>
           <div className="flex flex-col">
@@ -324,18 +324,22 @@ export const Home = ({ content }) => {
           <div className="flex flex-col space-y-2 h-full pb-8 md:pb-0">
             <h4 className="font-bold uppercase">Donate</h4>
             <a href="https://paypal.me/htownforhumanity">
-              <div className="h-[35px] w-[150px] lg:w-[200px] bg-[#FEC238] rounded shadow-md flex flex-row justify-center items-center">
+              <div className="h-[35px] w-[170px] lg:w-[200px] bg-[#FEC238] rounded shadow-md flex flex-row justify-center items-center">
                 <img className="h-[30px]" src="/images/paypal.png" />
               </div>
             </a>
             <a href="">
-              <div className="h-[35px] w-[150px] lg:w-[200px] bg-[#028DFF] rounded shadow-md flex flex-row justify-center items-center">
+              <div className="h-[35px] w-[170px] lg:w-[200px] bg-[#028DFF] rounded shadow-md flex flex-row justify-center items-center">
                 <img className="h-[20px]" src="/images/venmo.png" />
               </div>
             </a>
-            <a href="">
-              <div className="h-[35px] w-[150px] lg:w-[200px] bg-[#6C1CD3] rounded shadow-md flex flex-row justify-center items-center">
+            <a href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiSCBUT1dOIEZPUiBIVU1BTklUWSBJTkMiLCJhY3Rpb24iOiJwYXltZW50IiwidG9rZW4iOiI4MzI2MzAyMzk2In0=" className="hover:no-underline">
+              <div className="h-[80px] w-[170px] lg:w-[200px] bg-[#6C1CD3] rounded shadow-md flex flex-col justify-center items-center">
                 <img className="h-[25px]" src="/images/zelle.png" />
+                <div className="pt-2">
+                <p className="uppercase text-[10px] font-bold leading-tight text-[#5CDAB6]">Send payment to:</p>
+                <p className="text-[10px] font-semibold">donations@htownforhumanity.org</p>
+                </div>
               </div>
             </a>
           </div>

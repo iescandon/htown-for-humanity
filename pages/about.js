@@ -6,14 +6,17 @@ import Layout from "../components/layout";
 export const About = ({ content }) => {
   // const [pageContent, setPageContent] = useState(content[0].fields);
   // console.log(pageContent);
-  console.log(content)
-
+  console.log(content);
 
   return (
     <>
-    <Layout img={''} alt={'yo'} headerTitle={'About'}>
-    <h1>About content</h1>
-    </Layout>
+      {/* nav section */}
+      <nav className="bg-flagYellow drop-shadow h-[60px] font-extrabold sticky inset-0 z-50 flex flex-row items-center px-4 md:px-6">
+        <a href="/" aria-label="back button">
+          <h2>#htownforhumanity</h2>
+        </a>
+      </nav>
+      <h1 className="m-24">About content</h1>
     </>
   );
 };
