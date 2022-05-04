@@ -138,7 +138,7 @@ export const Home = ({ content }) => {
       {/* other donations section */}
       <section className="bg-white px-4 pt-0 pb-8 md:p-6 drop-shadow-md">
         <div className="flex flex-row items-center justify-around w-full max-w-[1920px] mx-auto">
-          <a href={pageContent.otherDonationUrls.googleSheetsUrl}>
+          <a href={pageContent.otherDonationUrls.googleSheetsUrl} aria-label="google sheet other acceptable donations list link">
             <div className="flex flex-row justify-center items-center w-[100px] md:w-[150px] lg:w-[200px] cursor-pointer mx-2 my-4">
               <img
                 className="h-[20px] md:h-[30px] lg:h-[40px]"
@@ -150,14 +150,14 @@ export const Home = ({ content }) => {
               </span>
             </div>
           </a>
-          <a href={pageContent.otherDonationUrls.amazonUrl}>
+          <a href={pageContent.otherDonationUrls.amazonUrl} aria-label="amazon donation link">
             <img
               className="w-[90px] md:w-[125px] lg:w-[150px] cursor-pointer mx-2 my-4"
               src="/images/amazon-wishlist.png"
               alt="amazon wishlist icon"
             />
           </a>
-          <a href={pageContent.otherDonationUrls.targetUrl}>
+          <a href={pageContent.otherDonationUrls.targetUrl} aria-label="target donation link">
             <img
               className="w-[90px] md:w-[125px] lg:w-[150px] cursor-pointer mx-2 my-4"
               src="/images/target-registry.png"
@@ -276,7 +276,7 @@ export const Home = ({ content }) => {
             <div className="flex flex-row">
               <a
                 href={pageContent.socialMediaInfo.facebookUrl}
-                aria-label="link to facebook page"
+                aria-label="facebook page link"
               >
                 <FontAwesomeIcon
                   className="cursor-pointer text-4xl md:text-2xl py-2 pr-6 md:pr-3"
@@ -285,7 +285,7 @@ export const Home = ({ content }) => {
               </a>
               <a
                 href={pageContent.socialMediaInfo.instagramUrl}
-                aria-label="link to instagram page"
+                aria-label="instagram page link"
               >
                 <FontAwesomeIcon
                   className="cursor-pointer text-4xl md:text-2xl py-2 pr-6 md:pr-3"
@@ -294,7 +294,7 @@ export const Home = ({ content }) => {
               </a>
               <a
                 href={pageContent.socialMediaInfo.linkedInUrl}
-                aria-label="link to linked in page"
+                aria-label="linked in page link"
               >
                 <FontAwesomeIcon
                   className="cursor-pointer text-4xl md:text-2xl py-2 pr-6 md:pr-3"
@@ -323,17 +323,17 @@ export const Home = ({ content }) => {
           </div>
           <div className="flex flex-col space-y-2 h-full pb-8 md:pb-0">
             <h4 className="font-bold uppercase">Donate</h4>
-            <a href="https://paypal.me/htownforhumanity">
+            <a href="https://paypal.me/htownforhumanity" aria-label="paypal donation link">
               <div className="h-[35px] w-[170px] lg:w-[200px] bg-[#FEC238] rounded shadow-md flex flex-row justify-center items-center">
                 <img className="h-[30px]" src="/images/paypal.png" />
               </div>
             </a>
-            <a href="">
+            <a href="https://venmo.com/code?user_id=3530905607996736831" aria-label="venmo donation link">
               <div className="h-[35px] w-[170px] lg:w-[200px] bg-[#028DFF] rounded shadow-md flex flex-row justify-center items-center">
                 <img className="h-[20px]" src="/images/venmo.png" />
               </div>
             </a>
-            <a href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiSCBUT1dOIEZPUiBIVU1BTklUWSBJTkMiLCJhY3Rpb24iOiJwYXltZW50IiwidG9rZW4iOiI4MzI2MzAyMzk2In0=" className="hover:no-underline">
+            <a href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiSCBUT1dOIEZPUiBIVU1BTklUWSBJTkMiLCJhY3Rpb24iOiJwYXltZW50IiwidG9rZW4iOiI4MzI2MzAyMzk2In0=" aria-label="zelle donation link" className="hover:no-underline">
               <div className="h-[80px] w-[170px] lg:w-[200px] bg-[#6C1CD3] rounded shadow-md flex flex-col justify-center items-center">
                 <img className="h-[25px]" src="/images/zelle.png" />
                 <div className="pt-2">
