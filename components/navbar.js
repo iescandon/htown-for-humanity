@@ -55,7 +55,6 @@ export const Navbar = () => {
     // }
   }, [language, selectedTab]);
 
-  console.log("navbar");
   return (
     <>
       <nav className="bg-flagYellow h-[60px] font-extrabold flex flex-row items-center justify-between px-4 md:px-6 sticky inset-0 z-30">
@@ -65,7 +64,9 @@ export const Navbar = () => {
         {/* <div className="">
           <Toggle language={language} setLanguage={setLanguage} />
         </div> */}
-        <button
+
+        {/* TODO: hamburger button */}
+        {/* <button
           className=""
           onClick={() => {
             setIsOpen(!isOpen);
@@ -76,7 +77,7 @@ export const Navbar = () => {
           ) : (
             <FontAwesomeIcon className="cursor-pointer" icon={faBars} />
           )}
-        </button>
+        </button> */}
       </nav>
       <div className="relative">
         <ul

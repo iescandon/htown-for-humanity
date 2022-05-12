@@ -16,7 +16,7 @@ export const About = ({ content }) => {
           <h2>#htownforhumanity</h2>
         </a>
       </nav>
-      <h1 className="m-24">About content</h1>
+      <h1 className="m-24">Coming soon...</h1>
     </>
   );
 };
