@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 export const About = ({ content }) => {
   // const [pageContent, setPageContent] = useState(content[0].fields);
   // console.log(pageContent);
+  // test
   console.log(content);
 
   return (
