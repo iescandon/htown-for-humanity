@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { createClient } from "contentful";
 import React, { useState, useEffect } from "react";
-import Layout from "../components/layout";
 
 export const About = ({ content }) => {
   // const [pageContent, setPageContent] = useState(content[0].fields);
