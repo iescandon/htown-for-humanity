@@ -211,7 +211,7 @@ export const Home = ({ content }) => {
               return (
                 <div
                   key={`div-${pic.id}`}
-                  className={`h-${window.innerWidth / 4} w-1/4 relative`}
+                  className={`h-[25vw] w-1/4 relative`}
                 >
                   <img
                     className="h-full w-full object-cover"
@@ -229,7 +229,7 @@ export const Home = ({ content }) => {
           <Carousel swipeable={true}>
             {instagramFeed?.map((pic) => {
               return (
-                <div key={`div-${pic.id}`} className={`h-${window.innerWidth}`}>
+                <div key={`div-${pic.id}`} className={`h-[100vw]`}>
                   <img
                     className="h-full w-full object-cover"
                     key={pic.id}
